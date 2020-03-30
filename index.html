@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Study</title>
+<link rel="stylesheet" href="css/master.css" />
+
+<style>
+
+.btn{margin-bottom:1em}
+
+fieldset{
+width:20%;
+min-width:16em;
+margin:0;
+padding:0;
+border:none
+}
+fieldset select{width:100%}
+</style>
+
+<noscript>
+<style>
+select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M18 15l-6-6-6 6'%3E%3C/path%3E%3C/svg%3E")}
+</style>
+</noscript
+</head>
+
+<body>
+	<header>
+	<h1>Framework</h1>
+</header>
+
+<main>
+
+	<div class="outer">
+		<button class="btn">Button Primary</button>
+		<button class="btn">Button Secondary</button>
+		<button class="btn outline">Button Outline</button>
+		<button class="btn outline-outer"><span>button outline</span></button>
+		<a href="#!" class="btn">Link Primary</a>
+		<a href="#!"><span class="btn">Link Primary</span></a>
+		<a href="#!" class="btn ripple">Link Ripple</a>
+		<button class="btn ripple">button ripple</button>
+		<button><span class="btn">button large</span></button>
+		<input type="submit" value="Submit input" class="btn" />
+		<input type="submit" value="Ripple Submit input" class="btn ripple" />
+		<label class="btn">Label</label>
+		<label role="button" class="btn">Label</label>
+		<label role="button" class="btn ripple">Ripple Label</label>
+	</div>
+
+	<div class="outer">
+		<p>
+			<button class="btn fs150%">Button large</button>
+			<button class="btn">Button Primary</button>
+			<button class="btn outline">Button Outline</button>
+			<button class="btn outline">button outline</button>
+			<a href="#!" class="btn">link primary</a>
+			<a href="#!"><span class="btn">Link Primary</span></a>
+			<button><span class="btn">button primary</span></button>
+		Primary base line (a <a href="#!">simple link</a>)</p>
+	</div>
+
+	<div class="outer">
+		<label class="checkbox no-select">One
+				<input type="checkbox" checked="checked">
+				<span class="check"></span>
+		</label>
+		<label class="checkbox no-select">Two
+		    <input type="checkbox">
+		    <span class="check"></span>
+		</label>
+		<label class="checkbox no-select">Three
+		    <input type="checkbox">
+		    <span class="check"></span>
+		</label>
+		<label class="radio no-select">Radio 1
+		    <input type="radio" checked="checked" name="radio">
+		    <span class="check"></span>
+		</label>
+		<label class="radio no-select">Radio 2
+		    <input type="radio" name="radio">
+		    <span class="check"></span>
+		</label>
+	</div>
+
+	<div class="outer">
+		<fieldset>
+		<label for="country">Select:</label>
+		<select class="select" name="country" id="country" onclick="document.getElementsByClassName('select')[0].classList.toggle('arrow-up');">
+				<option role="option" aria-label="Choose below:" class="option" value="default">Choose&hellip;</option>
+				<option role="option" aria-label="Andorra">Andorra</option>
+				<option role="option" aria-label="France">France</option>
+				<option role="option" aria-label="Deutschland">Deutschland</option>
+				<option role="option" aria-label="UK">UK</option>
+		</select>
+		</fieldset>
+	</div>
+
+</main>
+
+<script>
+// Source: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2
+function handleFirstTab(e){if(e.keyCode===9){document.body.classList.add('user-tabbing');window.removeEventListener('keydown',handleFirstTab);window.addEventListener('mousedown',handleMouseDownOnce);}}function handleMouseDownOnce(){document.body.classList.remove('user-tabbing');window.removeEventListener('mousedown',handleMouseDownOnce);window.addEventListener('keydown',handleFirstTab);}
+window.addEventListener('keydown',handleFirstTab);
+</script>
+
+</body></html>

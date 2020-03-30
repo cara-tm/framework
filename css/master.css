@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+:root{
+	--bg-action:#33e
+}
+
+/*! General rules */
+::-moz-focus-inner{padding:0;border-style:none}
+:-moz-focusring{outline:1px dotted ButtonText}
+:-moz-ui-invalid{box-shadow:none}
+a,area,button,input,label,select,summary,textarea,[tabindex]{-ms-touch-action:manipulation;touch-action:manipulation}
+
+.no-select{-moz-user-select:none;-webkit-user-drag:none;user-drag:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+.readers{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;white-space:nowrap;clip:rect(0 0 0 0)}
+
+
+/*! Buttons Styles (755 Bytes) Warning: depending of the content-area of custom fonts, vertical alignment could change. Keep the included fonts set */
+button,input,select{margin:0}button{padding-right:0;padding-left:0;background:none;border:0 none;font-size:100%;cursor:pointer;-moz-appearance:none;-webkit-appearance:none}.btn{position:relative;display:inline-block;min-width:0;margin-right:8px;vertical-align:baseline;background-color:#33e;border:0 none;text-align:center;text-decoration:none;color:#fff;border-radius:3px;border-radius:.2rem;border-style:outset;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer}.btn,a.btn,a span.btn{padding:8px 16px 12px;padding:.5em 1em .75em}a span.btn{margin-right:.45em}.btn:focus,.btn:active:focus,.btn.active:focus,.btn.focus,.btn:active.focus,.btn.active.focus{outline:thin none;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
+/*! Recommanded font familly: */
+.btn,input[type="checkbox"],label{font:normal 400 normal 1em/100% '-apple-system',system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}
+/*! Outline button Styles (543 Bytes) */
+.btn.outline{padding:7px 16px 12px;padding:.437em 1em .75em;border:.25px solid #e4e4e4;background:transparent;color:#333;color:currentColor;line-height:1.1;line-height:calc(1);box-shadow:0 0 1px 0 #fff inset,0 0 1px 0 #fff;border-radius:5px;*color:#333}.outline-outer{padding:0;border:.25px solid #dbdbdb;background:transparent;color:inherit;border-radius:5px}.outline-outer span{display:block;padding:5.6px 16px 10.41px;padding:.35em 1em .651em;color:inherit;line-height:1.156;border-radius:4px;box-shadow:0 0 1px 0 #fff inset,0 0 1px 0 #fff}
+/*! Additional button rendering: (932 Bytes) */
+.btn:active{border-color:#3273dc;box-shadow:0 0 0 .125em rgba(255,255,255,.2);text-shadow:-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5),-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5)}.btn:active:not(.outline),.btn:active:not(.outline-outer){filter:brightness(180%);text-shadow:-.0001px 0 hsla(0,0%,0%,.2),0 -.0001px hsla(0,0%,0%,.2),-.0001px 0 hsla(0,0%,0%,.2),0 -.0001px hsla(0,0%,0%,.2)}body:not(.user-tabbing) button:focus,body:not(.user-tabbing) .btn:focus,body:not(.user-tabbing) input:focus,body:not(.user-tabbing) select:focus,body:not(.user-tabbing) textarea:focus,body:not(.user-tabbing) select:focus,body:not(.user-tabbing) option:focus{outline:none}input:disabled,input[disabled],textarea:disabled,textarea[disabled],select:disabled,select[disabled],button:disabled,button[disabled],.btn:disabled,.btn[disabled],[role="button"]:disabled,[role="button"][disabled]{opacity:.75;cursor:not-allowed}
+/*! Ripple effect (725 Bytes) */
+.ripple{-webkit-transition-duration:0.4s;transition-duration:.4s}.btn.ripple::after{content:' ';overflow:hidden;opacity:0;display:block;position:fixed;z-index:-1;bottom:-3em;left:50%;width:8em;height:8em;margin-left:-4em;border:none;outline:1px thin #fff;background:#fff;border-radius:100%;-moz-transform:scale(2,2);-ms-transform:scale(2,2);transform:scale(2,2);-webkit-transition:all 0.8s;-o-transition:all 0.8s;-moz-transition:all 0.8s;transition:all 0.8s}
+.btn.ripple:active::after{z-index:0;opacity:1;outline:none;-webkit-transform:scale(0,0);-moz-transform:scale(0,0);-ms-transform:scale(0,0);transform:scale(0,0);-webkit-transition:0s;-o-transition:0s;-moz-transition:0s;transition:0}.ripple:focus-visible{outline:1px thin none}
+/* Optional: IE7 support (83 Bytes) */
+button.ripple{*position:relative;*top:-2px;*margin-right:-.7em;*padding:6px 16px}
+/*! Checkbox & Radio buttons Styles (1167 Bytes) */
+input[type="checkbox"]:focus{outline:0}.checkbox,.radio{display:table;position:relative;padding-left:2.1em;margin-bottom:.7em;line-height:1.45;font-size:100%;cursor:pointer}.checkbox input[type="checkbox"],.radio input[type="radio"]{opacity:0;position:absolute;z-index:1;top:.187em;left:.187em;width:1.5em;height:1.5em;cursor:pointer}.check{position:absolute;top:0;left:0;height:1.563em;width:1.563em;background-color:hsl(0,0%,93.3%)}.check::after{display:none;content:'\02715';position:absolute}.checkbox .check::after{left:0;top:0;width:100%;height:inherit;text-align:center;color:#fff}.radio input[type="radio"],.radio .check,.radio .check:after{border-radius:50%}.radio .check:after{display:none;content:'';position:absolute;top:50%;left:50%;width:.625em;height:.625em;margin:-.3125em auto 0 -.3125em;background:#fff;box-shadow:0 0 5px rgba(0,0,0,.5)}.radio input:checked ~ .check:after{display:block}label:hover input ~ .check{background-color:hsl(0,0%,80%)}label input[type="checkbox"]:checked ~ .check,label input[type="radio"]:checked ~ .check{background-color:#333;background-color:var(--bg-action,#333)}.checkbox input:checked ~ .check::after{display:block}
+/*! Select Styles (1169 Bytes) */
+select{display:block;max-height:calc(1.3em + 1.4em);height:calc(1.3em + 1.4em);margin:0;padding:.6em 1em .5em .8em;border:1px solid #bbb;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E") no-repeat right center;background-position:right .7em top 50%,0 0;background-size:1.5em auto,100%;background-position:right .7em top 50%,0 0;background-size:1.5em auto,100%;text-overflow:ellipsis;white-space:nowrap;color:#444;font-weight:700;-moz-appearance:none;-webkit-appearance:none;appearance:none;cursor:pointer}select::-ms-expand{display:none}:root select{padding:.6em 42px .7em .8em}select::-ms-expand{display:none}select:hover{border-color:#888}select:focus{border-color:#aaa;box-shadow:0 0 1px 3px rgba(59,153,252,.7);box-shadow:0 0 0 3px -moz-mac-focusring;color:#222;outline:none}select option{font-weight:400}select option:nth-child(even){background-color:#eee}@media all and (min-width:0\0) and (min-resolution:.001dpcm){select{padding:.6em 1em .5em .8em !important;background-image:none}}
+/*! Optional: for arrow up effect on select with javascript */
+select.arrow-up{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M18 15l-6-6-6 6'%3E%3C/path%3E%3C/svg%3E")}
+
+
+html .fs150\%{font-size:150%}
