@@ -7,6 +7,8 @@
 <title>Framework</title>
 <link rel="stylesheet" href="css/master.css" />
 
+<script>"use strict";document.documentElement.className="js "+(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect?"nosvg":"svg");var arr=['article','aside','footer','figcaption','figure','footer','header','nav','main','picture','section','small','template'];for(var i=0;i<arr.length;i++){document.createElement(arr[i]);}</script>
+
 <style>
 
 .btn{margin-bottom:1em}
@@ -29,39 +31,39 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 </head>
 
 <body>
-	<header>
+<header>
 	<h1>Framework</h1>
 </header>
 
 <main>
 
 	<div class="outer">
-		<button class="btn #33e-bg">Button Primary</button>
-		<button class="btn #33e-bg">Button Secondary</button>
-		<button class="btn outline #fff-bg">Button Outline</button>
-		<button class="btn outline-outer"><span class="#fff-bg">button outline</span></button>
-		<a href="#!" class="btn #33e-bg">Link Primary</a>
-		<a href="#!"><span class="btn #33e-bg">Link Primary</span></a>
-		<a href="#!" class="btn ripple #33e-bg">Link Ripple</a>
-		<button class="btn ripple #33e-bg">button ripple</button>
-		<button><span class="btn #33e-bg">button large</span></button>
+		<button class="btn no-select #33e-bg">Button Primary</button>
+		<button class="btn no-select #33e-bg">Button Secondary</button>
+		<button class="btn outline no-select #fff-bg">Button Outline</button>
+		<button class="btn outline-outer no-select"><span class="#fff-bg">button outline</span></button>
+		<a href="#!" class="btn no-select #33e-bg">Link Primary</a>
+		<a href="#!"><span class="btn no-select #33e-bg">Link Primary</span></a>
+		<a href="#!" class="btn no-select ripple #33e-bg">Link Ripple</a>
+		<button class="btn no-select ripple #33e-bg">button ripple</button>
+		<button><span class="btn no-select #33e-bg">button large</span></button>
 		<input type="submit" value="Submit input" class="btn #33e-bg" />
-		<input type="submit" value="Ripple Submit input" class="btn ripple #33e-bg" />
-		<label class="btn #33e-bg">Label</label>
-		<label role="button" class="btn #33e-bg">Label</label>
-		<label role="button" class="btn ripple #33e-bg">Ripple Label</label>
-		<a href="#!" class="btn trans">Transparent</a>
+		<input type="submit" value="Ripple Submit input" class="btn no-select ripple #33e-bg" />
+		<label class="btn no-select #33e-bg">Label</label>
+		<label role="button" class="btn no-select #33e-bg">Label</label>
+		<label role="button" class="btn no-select ripple #33e-bg">Ripple Label</label>
+		<a href="#!" class="btn trans no-select">Transparent</a>
 	</div>
 
 	<div class="outer">
 		<p>
-			<button class="btn #33e-bg fs150%">Button large</button>
-			<button class="btn #33e-bg">Button Primary</button>
-			<button class="btn outline">Button Outline</button>
-			<button class="btn outline">button outline</button>
-			<a href="#!" class="btn #33e-bg">link primary</a>
-			<a href="#!"><span class="btn #33e-bg">Link Primary</span></a>
-			<button><span class="btn #33e-bg">button primary</span></button>
+			<button class="btn no-select #33e-bg fs150%">Button large</button>
+			<button class="btn no-select #33e-bg">Button Primary</button>
+			<button class="btn outline no-select">Button Outline</button>
+			<button class="btn outline no-select">button outline</button>
+			<a href="#!" class="btn no-select #33e-bg">link primary</a>
+			<a href="#!"><span class="btn no-select #33e-bg">Link Primary</span></a>
+			<button><span class="btn no-select #33e-bg">button primary</span></button>
 		Primary base line (a <a href="#!">simple link</a>)</p>
 	</div>
 
@@ -106,7 +108,7 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 <script>
 // Source: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2
 function handleFirstTab(e){if(e.keyCode===9){document.body.classList.add('user-tabbing');window.removeEventListener('keydown',handleFirstTab);window.addEventListener('mousedown',handleMouseDownOnce);}}function handleMouseDownOnce(){document.body.classList.remove('user-tabbing');window.removeEventListener('mousedown',handleMouseDownOnce);window.addEventListener('keydown',handleFirstTab);}
-window.addEventListener('keydown',handleFirstTab);
+if(typeof addEventListener!="undefined"){window.addEventListener('keydown',handleFirstTab)};
 </script>
 
 </body></html>
