@@ -4,12 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Framework</title>
+<title>Woo CSS Framework</title>
 <link rel="stylesheet" href="css/master.css" />
 
 <script>"use strict";document.documentElement.className="js "+(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect?"nosvg":"svg");var arr=['article','aside','footer','figcaption','figure','footer','header','nav','main','picture','section','small','template'];for(var i=0;i<arr.length;i++){document.createElement(arr[i]);}</script>
 
 <style>
+
+/*!
+ * colors: https://websafecolors.info/color-chart
+*/
 
 .btn{margin-bottom:1em}
 
@@ -27,12 +31,12 @@ fieldset select{width:100%}
 <style>
 select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M18 15l-6-6-6 6'%3E%3C/path%3E%3C/svg%3E")}
 </style>
-</noscript
+</noscript>
 </head>
 
 <body>
 <header>
-	<h1>Framework</h1>
+	<h1>Woo CSS Framework</h1>
 </header>
 
 <main>
@@ -64,7 +68,11 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 			<a href="#!" class="btn no-select #33e-bg">link primary</a>
 			<a href="#!"><span class="btn no-select #33e-bg">Link Primary</span></a>
 			<button><span class="btn no-select #33e-bg">button primary</span></button>
-		Primary base line (a <a href="#!">simple link</a>)</p>
+		Primary base line (a <a href="#!" class="tooltip tooltip--bottom" aria-label="I'm a Tooltip">simple link</a>)</p>
+	</div>
+
+	<div class="outer">
+		<p><a href="#!" class="tooltip tooltip--bottom" aria-label="I'm a Tooltip">Link</a></p>
 	</div>
 
 	<div class="outer">
@@ -103,7 +111,30 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 		</fieldset>
 	</div>
 
+	<div class="outer"><p>&nbsp;</p></div>
+
+	<div class="outer">
+		<div class="search-box">
+			<div class="search-inner cf rel">
+				<form role="search" method="get" action="#" class="full fl-l">
+					<h4 class="readers">Search</h4>
+					<label label="Search" role="presentation" for="btn-search" class="abs icon">
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><switch><g><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></g><foreignObject width="0" height="0" overflow="hidden"><i>☑</i></foreignObject></switch></svg>
+						<input type="submit" value="Search" aria-label="Search" class="btn-search" id="btn-search">
+					</label>
+					<input name="q" type="search" aria-label="Write then press [Enter]" title="Write then press [Enter]" class="search" id="search" placeholder="Write your search here…">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="outer"><p>&nbsp;</p></div>
+
 </main>
+
+<footer class="outer">
+	<small>By cara-tm </small>
+</footer>
 
 <script>
 // Source: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2
