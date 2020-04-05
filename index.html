@@ -5,15 +5,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Woo CSS Framework</title>
-<link rel="stylesheet" href="css/master.css" />
 
 <script>"use strict";document.documentElement.className="js "+(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect?"nosvg":"svg");var arr=['article','aside','footer','figcaption','figure','footer','header','nav','main','picture','section','small','template'];for(var i=0;i<arr.length;i++){document.createElement(arr[i]);}</script>
+
+<link rel="stylesheet" href="css/master.css" />
 
 <style>
 
 /*!
  * colors: https://websafecolors.info/color-chart
 */
+
+header h1{margin:0 0 1em;padding-top:1em}
 
 .btn{margin-bottom:1em}
 
@@ -25,6 +28,19 @@ padding:0;
 border:none
 }
 fieldset select{width:100%}
+
+/*! For Tests */
+#navbar{
+position: -webkit-sticky;
+position: -ms-sticky;
+position: sticky;
+top: 0;
+width: 100%;
+height: 120px;
+margin:0;
+background-color: green
+}
+
 </style>
 
 <noscript>
@@ -35,6 +51,7 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 </head>
 
 <body>
+
 <header>
 	<h1>Woo CSS Framework</h1>
 </header>
@@ -45,7 +62,7 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 		<button class="btn no-select #33e-bg">Button Primary</button>
 		<button class="btn no-select #33e-bg">Button Secondary</button>
 		<button class="btn outline no-select #fff-bg">Button Outline</button>
-		<button class="btn outline-outer no-select"><span class="#fff-bg">button outline</span></button>
+		<button class="btn outline-outer no-select #fff-bg"><span class="">button outline</span></button>
 		<a href="#!" class="btn no-select #33e-bg">Link Primary</a>
 		<a href="#!"><span class="btn no-select #33e-bg">Link Primary</span></a>
 		<a href="#!" class="btn no-select ripple #33e-bg">Link Ripple</a>
@@ -72,7 +89,23 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 	</div>
 
 	<div class="outer">
-		<p><a href="#!" class="tooltip tooltip--bottom" aria-label="I'm a Tooltip">Link</a></p>
+		<p>A decorative button with growing effect into it: <a href="#!" class="btn #fff-bg grow"><i>👍</i> Upvote</a> or a simple one: <a href="#!" class="btn #fff-bg">☕ Ko-Fi</a></p>
+	</div>
+
+	<div class="outer">
+		<p>A button with a font size of 120% and a fucking SVG icon (fallback included for boomer's browsers): <a href="#!" class="btn fs120% #33e-bg"><i><svg role="img" aria-label="Discover" aria-hidden="true" focusable="false" width="22" height="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><switch><g><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></g><foreignObject width="0" height="0" overflow="hidden">→</foreignObject></switch></svg></i> Discover</a></p>
+	</div>
+
+	<div class="outer">
+		<p><a href="#!" class="btn #fff-bg">Prev</a> <a href="#!" class="btn trans">1</a> <a href="#!" class="btn trans">2</a> <a href="#!" class="btn trans">3</a> <span class="btn trans disabled">...</span><a href="#!" class="btn trans rounded">30</a> <a href="#!" class="btn trans rounded">31</a> <a href="#!" class="btn trans rounded">32</a> <span class="btn trans rounded no-shadow disabled">...</span> <a href="#!" class="btn #fff-bg">Next</a></p>
+	</div>
+
+	<div class="outer">
+		<p>A link with a white tooltip: <a href="#!" class="tooltip tooltip--top white" aria-label="A Tooltip A Tooltip A Tooltip 😋">Link</a></p>
+	</div>
+
+	<div class="outer">
+		<p>Here is a <a href="#!" class="over">Link with effect</a></p>
 	</div>
 
 	<div class="outer">
@@ -101,7 +134,7 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 	<div class="outer">
 		<fieldset>
 		<label for="country" class="select">Select:</label>
-		<select class="select" name="country" id="country" onclick="document.getElementsByClassName('select')[0].classList.toggle('arrow-up');">
+		<select class="select #fff-bg" name="country" id="country" onclick="document.getElementsByClassName('select')[0].classList.toggle('arrow-up');">
 				<option role="option" aria-label="Choose below:" class="option" value="default">Choose&hellip;</option>
 				<option role="option" aria-label="Andorra">Andorra</option>
 				<option role="option" aria-label="France">France</option>
@@ -116,9 +149,9 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 	<div class="outer">
 		<div class="search-box">
 			<div class="search-inner cf rel">
-				<form role="search" method="get" action="#" class="full fl-l">
+				<form role="search" method="get" action="#" class="full fl-l #fff-bg">
 					<h4 class="readers">Search</h4>
-					<label label="Search" role="presentation" for="btn-search" class="abs icon">
+					<label label="Search" role="presentation" for="btn-search" class="abs icon #fff-bg">
 						<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><switch><g><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></g><foreignObject width="0" height="0" overflow="hidden"><i>☑</i></foreignObject></switch></svg>
 						<input type="submit" value="Search" aria-label="Search" class="btn-search" id="btn-search">
 					</label>
@@ -133,13 +166,34 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 </main>
 
 <footer class="outer">
-	<small>By cara-tm </small>
+	<small>Woo CSS&nbsp;Framework by cara-tm </small>
 </footer>
 
 <script>
 // Source: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2
 function handleFirstTab(e){if(e.keyCode===9){document.body.classList.add('user-tabbing');window.removeEventListener('keydown',handleFirstTab);window.addEventListener('mousedown',handleMouseDownOnce);}}function handleMouseDownOnce(){document.body.classList.remove('user-tabbing');window.removeEventListener('mousedown',handleMouseDownOnce);window.addEventListener('keydown',handleFirstTab);}
 if(typeof addEventListener!="undefined"){window.addEventListener('keydown',handleFirstTab)};
+var _posSticky = function() {var el=document.createElement('a'),mStyle=el.style;mStyle.cssText="position:sticky;position:-webkit-sticky;position:-ms-sticky;";return mStyle.position.indexOf('sticky')!==-1;}();
+
+var lastScrollTop = 0;
+if(null!=document.getElementById("navbar")){
+	var navbar=document.getElementById("navbar");
+window.addEventListener("scroll", function(){
+	var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	if (scrollTop > lastScrollTop) {
+		if(true!=_posSticky){
+		navbar.style.top="-80px";
+		}else {
+			navbar.classList.add("sticky");
+		}
+	} else {
+		navbar.style.top="0px";
+	}
+	lastScrollTop = scrollTop;
+	});
+};
+
+
 </script>
 
 </body></html>

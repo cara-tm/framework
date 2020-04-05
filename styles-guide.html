@@ -20,7 +20,13 @@ margin:0 0 2em;
 padding:0;
 border:none
 }
+
 fieldset select{width:100%}
+
+header h1{
+margin:0 0 1em;
+padding-top:1em
+}
 
 h1 span{
 display:block;
@@ -30,7 +36,7 @@ line-height:1;
 font-weight:400
 }
 
-pre {
+pre{
 float:left;
 width:100%
 }
@@ -51,26 +57,31 @@ padding:2em 0 0;
 border-top:1px solid #ddd
 }
 
-.outer{
+.outer,
+.col2{
 float:left;
-clear: right;
-width:48%;
-min-height: 9em;
+clear:right
+}
+
+.outer{
+width:23%;
+min-height:9em;
 margin:0 1%
 }
 
-.outer strong{
-display:block
-}
+.col2{width:46%}
+
+.outer strong{display:block}
 
 .outer p{
 min-height:4.2em;
 margin:2.15em 0 0
 }
 
-.outer .btn{
-margin-bottom:0
-}
+.outer .btn{margin-bottom:0}
+
+.ml2col{margin-left:26%}
+.ml3col{margin-left:51%}
 
 footer{
 display:block;
@@ -118,11 +129,18 @@ body{
 }</code></pre>
 
 	<div class="full line">
+
 		<div class="outer txt-c">
 			<strong>Markup:</strong>
 		</div>
 		<div class="outer txt-c">
 			<strong>Result:</strong>
+		</div>
+		<div class="outer txt-c">
+			<strong>Class:</strong>
+		</div>
+		<div class="outer">
+			<strong>Usage:</strong>
 		</div>
 
 		<div class="outer">
@@ -135,6 +153,31 @@ body{
 <button class="btn no-select #33e-bg">Button</button>
 			</code></pre>
 		</div>
+		<div class="outer txt-c">
+			<pre><code>
+btn
+			</code></pre>
+		</div>
+		<div class="outer">
+			<p>General button class, required.<br>On clic event: brightness applied.</p>
+		</div>
+		<div class="outer ml2col txt-c">
+			<pre><code>
+no-select
+			</code></pre>
+		</div>
+		<div class="outer">
+			<p>Disable user's selection, optional.</p>
+		</div>
+		<div class="outer ml3col txt-c">
+			<pre><code>
+#33e-bg
+			</code></pre>
+		</div>
+		<div class="outer">
+			<p>Background color in Hex code (always 3 digits) followed by <code>-bg</code> suffix, optional. <br>
+			See the Custom CSS properties (CSS variables) where <code>--bg-action</code> defines this color.</p>
+		</div>
 
 		<div class="outer">
 			<pre><code>
@@ -146,10 +189,8 @@ body{
 <a href="#!" class="btn no-select #33e-bg">Link button</a>
 			</code></pre>
 		</div>
-
-	</div>
-
-	<div class="full">
+		<div class="outer ml3col txt-c">
+		</div>
 
 		<div class="outer">
 			<pre><code>
@@ -160,6 +201,8 @@ body{
 			<pre><code>
 <input type="submit" value="Input button" class="btn #33e-bg" />
 			</code></pre>
+		</div>
+		<div class="outer ml3col txt-c">
 		</div>
 
 		<div class="outer">
@@ -172,6 +215,16 @@ body{
 <input type="reset" value="Reset button" class="btn outline #fff-bg" />
 			</code></pre>
 		</div>
+		<div class="outer txt-c">
+			<pre><code>
+outline</code></pre>
+		</div>
+		<div class="outer">
+			<p>Creates outline element, optional.</p>
+			<p></p>
+		</div>
+
+
 
 		<div class="outer">
 			<pre><code>
@@ -183,6 +236,15 @@ body{
 <label role="button" class="btn no-select #33e-bg">Label button</label>
 			</code></pre>
 		</div>
+		<div class="outer">
+			<p></p>
+		</div>
+		<div class="outer">
+			<p></p>
+			<p></p>
+		</div>
+
+
 
 		<div class="outer">
 			<pre><code>
@@ -193,6 +255,15 @@ body{
 			<pre><code>
 <a href="#!" class="btn trans no-select">Transparent Link</a>
 			</code></pre>
+		</div>
+		<div class="outer txt-c">
+			<pre><code>
+trans
+			</code></pre>
+		</div>
+		<div class="outer txt-c">
+			<p>Creates transparent element, optional.</p>
+			<p></p>
 		</div>
 
 		<div class="outer">
@@ -205,81 +276,19 @@ body{
 <button class="btn no-select ripple #33e-bg">Button ripple</button>
 			</code></pre>
 		</div>
-
-	</div>
-
-
-	<div class="full line">
-
-		<div class="outer">
-			<strong class="txt-c">Class:</strong>
-		</div>
-		<div class="outer">
-			<strong class="">Usage:</strong>
-		</div>
-
 		<div class="outer txt-c">
 			<pre><code>
-btn
+ripple
 			</code></pre>
 		</div>
 		<div class="outer">
-
-			<p>General button class, required.<br>On clic event: brightness applied.</p>
+			<p>Adds a Google Material ripple effect on click event, optional.</p>
+			<p></p>
 		</div>
 
 
-		<div class="outer txt-c">
-			<pre><code>
-no-select
-			</code></pre>
-		</div>
-		<div class="outer">
-			<p>Disable user's selection, optional.</p>
-		</div>
 
-
-		<div class="outer txt-c">
-			<pre><code>
-#33e-bg
-			</code></pre>
-		</div>
-		<div class="outer">
-			<p>Background color in Hex code (always 3 digits) followed by <code>-bg</code> suffix, optional. <br>
-			See the Custom CSS properties (CSS variables) where <code>--bg-action</code> defines this color.</p>
-		</div>
-
-		<div class="outer txt-c">
-			<pre><code>
-outline
-			</code></pre>
-		</div>
-		<div class="outer">
-			<p>Create an outline element, optional.</p>
-		</div>
-
-		<div class="outer txt-c">
-			<pre><code>
-.trans
-			</code></pre>
-		</div>
-		<div class="outer">
-			<p>Creates a transparent element (shadowed with a thin line for fallback), optional.</p>
-		</div>
-		<div class="outer txt-c">
-			<pre><code>
-.ripple
-			</code></pre>
-		</div>
-		<div class="outer">
-			<p>Adds a Google Material ripple effect, optional.</p>
-		</div>
-
-	</div>
-
-	<div class="full line">
-
-		<div class="outer">
+		<div class="outer col2">
 			<pre><code>
 &lt;div class="full"&gt;
 		&lt;label class="checkbox no-select"&gt;One
@@ -299,9 +308,15 @@ outline
 				</div>
 
 		</div>
-	</div>
-	<div class="full">
 		<div class="outer">
+			<p>Checkboxes creation.</p>
+		</div>
+
+	</div>
+
+	<div class="full">
+
+		<div class="outer col2">
 			<pre><code>
 &lt;div class="full"&gt;
 	&lt;label class="radio no-select"&gt;Radio 1
@@ -330,9 +345,16 @@ outline
 
 		</div>
 
+		<div class="outer">
+			<p>Radio buttons creation.</p>
+			<p></p>
+		</div>
+
+	</div>
+
 		<div class="full">
 
-		<div class="outer">
+		<div class="outer col2">
 			<pre><code>
 &lt;div class="full">
 		&lt;fieldset>
@@ -349,17 +371,20 @@ outline
 			<div class="full" style="float:none;width:17em;margin:0 auto">
 				<fieldset>
 					<label for="country" class="select">Select:</label>
-					<select class="select" name="country" id="country" onclick="document.getElementsByClassName('select')[0].classList.toggle('arrow-up');">
+					<select class="select #fff-bg" name="country" id="country" onclick="document.getElementsByClassName('select')[0].classList.toggle('arrow-up');">
 							<option role="option" aria-label="Choose below:" class="option" value="default">Choose&hellip;</option>
 							<option role="option" aria-label="Andorra">Andorra</option>
 					</select>
 				</fieldset>
 			</div>
 		</div>
-
+		<div class="outer">
+			<p>Select boxes creation (no background, support for color codes).</p>
 		</div>
 
 	</div>
+
+
 
 <div class="full"><p>&nbsp;</p></div>
 
