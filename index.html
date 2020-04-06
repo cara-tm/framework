@@ -41,6 +41,10 @@ margin:0;
 background-color: green
 }
 
+
+[data-theme="dark"] .langs path{fill:#333}
+[data-theme="dark"] .langs a{color:#333}
+
 </style>
 
 <noscript>
@@ -93,7 +97,7 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 	</div>
 
 	<div class="outer">
-		<p>A button with a font size of 120% and a fucking SVG icon (fallback included for boomer's browsers): <a href="#!" class="btn effect fs120% #33e-bg"><i><svg role="img" aria-label="Discover" aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><switch><g><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></g><foreignObject width="0" height="0" overflow="hidden">→</foreignObject></switch></svg></i> Discover</a></p>
+		<p>A button with a font size of 120% and a fucking SVG icon (fallback included for boomer's browsers): <a href="#!" aria-label="Check Out our Offers" class="btn effect fs120% #33e-bg tooltip tooltip--bottom"><i><svg role="img" aria-label="Discover" aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><switch><g><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></g><foreignObject width="0" height="0" overflow="hidden">→</foreignObject></switch></svg></i> Discover</a></p>
 	</div>
 
 	<div class="outer">
@@ -146,6 +150,22 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 
 	<div class="outer"><p>&nbsp;</p></div>
 
+	<div aria-describedby="language-choice" class="langs-outer rel">
+		<span class="readers" id="language-choice">Languages switcher:</span>
+		<ul role="listbox" aria-label="Langues" aria-haspopup="true" tabindex="-1" class="langs rel no-list table">
+			<li role="option" aria-label="Switch selection" class="selector"><svg width="24" height="24" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="desktop-hide"><switch><g><path d="M13 21h5v2H6v-2h5v-1.05a10.002 10.002 0 0 1-7.684-4.988l1.737-.992A8 8 0 1 0 15.97 3.053l.992-1.737A9.996 9.996 0 0 1 22 10c0 5.185-3.947 9.449-9 9.95V21zm-1-4a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"></path></g><foreignObject width="24" height="0"><b class="icon">🌍</b></foreignObject></switch></svg>
+				<label for="check"><svg width="24" height="24" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><switch><g><path d="M13 21h5v2H6v-2h5v-1.05a10.002 10.002 0 0 1-7.684-4.988l1.737-.992A8 8 0 1 0 15.97 3.053l.992-1.737A9.996 9.996 0 0 1 22 10c0 5.185-3.947 9.449-9 9.95V21zm-1-4a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"></path></g><foreignObject width="24" height="0"><b class="icon">🌍</b></foreignObject></switch></svg></label>
+				<input type="checkbox" class="abs no-display" id="check">
+					<ul class="abs no-list" id="choices">
+						<li role="option" class="rel"><a aria-label="EN" href="#!">EN</a></li>
+						<li role="option" class="rel"><a aria-label="FR" href="#!">FR</a></li>
+					</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="outer"><p>&nbsp;</p></div>
+
 	<div class="outer">
 		<div class="search-box">
 			<div class="search-inner cf rel">
@@ -161,9 +181,12 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 		</div>
 	</div>
 
+
 	<div class="outer"><p>&nbsp;</p></div>
 
 </main>
+
+<div class="outer"><p>&nbsp;</p></div>
 
 <footer class="outer">
 	<small>Woo CSS&nbsp;Framework by cara-tm </small>
