@@ -143,7 +143,7 @@ margin-left:3%
 
 /*! Custom */
 hr{
-height:1px;
+height:2px;
 background:none;
 border:none;
 border-top:1px solid #ddd
@@ -227,7 +227,7 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 		<p>A link with a white tooltip: <a href="#!" class="tooltip tooltip--top white" aria-label="A Tooltip A Tooltip A Tooltip 😋">Link</a></p>
 	</div>
 
-	<div class="outer">
+	<div class="outer" style="margin-bottom:2em">
 		<p>Here is a <a href="#!" class="over">Link with effect</a></p>
 	</div>
 
@@ -308,7 +308,7 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 			<div class="search-inner cf rel">
 				<form role="search" method="get" action="#" class="full fl-l #fff-bg">
 					<h4 class="readers">Search</h4>
-					<label label="Search" role="presentation" for="btn-search" class="abs icon #fff-bg">
+					<label label="Search" role="presentation" aria-label="Find" for="btn-search" title="Find" class="abs icon #fff-bg">
 						<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><switch><g><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></g><foreignObject width="0" height="0" overflow="hidden"><i>☑</i></foreignObject></switch></svg>
 						<input type="submit" value="Search" aria-label="Search" class="btn-search" id="btn-search">
 					</label>
@@ -403,11 +403,26 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 				<h4 class="txt-c">Title (h4)</h4>
 				<p class="txt-c">Centered</p>
 			</div>
+
+			<div class="search-box right" style="margin-top:1em">
+				<div class="search-inner cf rel">
+					<form role="search" method="get" action="#" class="full fl-l #fff-bg">
+						<h4 class="readers">Search</h4>
+						<label label="Search" role="presentation" aria-label="Find" for="btn-search" title="Find" class="abs icon #fff-bg">
+							<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><switch><g><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></g><foreignObject width="0" height="0" overflow="hidden"><i>☑</i></foreignObject></switch></svg>
+							<input type="submit" value="Search" aria-label="Search" class="btn-search" id="btn-search">
+						</label>
+						<input name="q" type="search" aria-label="Write then press [Enter]" title="Write then press [Enter]" class="search" id="search" placeholder="Write your search here…">
+					</form>
+				</div>
+			</div>
 		</div>
 
 	</div>
 
 	<div class="full" style="margin-top:5em"> </div>
+
+	<hr />
 
 	<small>Woo CSS&nbsp;Framework by cara-tm. Tested successfully with:
 		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" class="icon"><title>Internet Explorer 8</title><switch><g><path d="M22.8 7.381c1.125-2.7 1.2-4.95-.15-6.3-1.5-1.499-5.1-1.05-8.924.75h-.45c-2.7 0-5.324.976-7.274 2.7-1.65 1.5-2.85 3.45-3.375 5.625.375-.45 2.475-2.925 4.875-4.275.075 0 .675-.375.675-.375-.075 0-1.2 1.125-1.425 1.35-5.25 5.4-8.324 13.574-5.924 15.973 1.574 1.575 4.424 1.2 7.724-.6 1.425.675 3 .975 4.724.975 2.25 0 4.35-.6 6.15-1.8 1.874-1.2 3.224-3.074 4.05-5.249h-5.85c-.75 1.425-2.475 2.4-4.275 2.4-2.55 0-4.65-2.1-4.724-4.5V13.83h15.298v-.225c0-.375.075-.825.075-1.124 0-1.8-.45-3.525-1.2-5.1zM2.477 22.38c-1.2-1.2-.824-3.524.6-6.299.675 1.875 1.8 3.525 3.225 4.725.45.375.975.75 1.5 1.05-2.4 1.274-4.35 1.5-5.325.524zm15.374-11.398H8.702v-.075c.15-2.325 2.324-4.35 4.874-4.35 2.4 0 4.35 1.875 4.5 4.35v.075zm4.574-4.2c-.45-.75-1.05-1.5-1.725-2.1a11.213 11.213 0 0 0-3.6-2.25c2.4-1.124 4.425-1.274 5.475-.224.825.975.75 2.624-.15 4.574 0 .075 0 .075 0 0 0 .075 0 .075 0 0z" fill="#0076d6"></path></g><foreignObject width="0" height="0"><span>Internet Explorer 8</span></foreignObject></switch></svg>
