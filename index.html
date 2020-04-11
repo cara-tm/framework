@@ -193,8 +193,8 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 		<input type="submit" value="Submit input" class="btn effect #33e-bg" />
 		<input type="submit" value="Ripple Submit input" class="btn no-select ripple effect #33e-bg" />
 		<label class="btn no-select effect #33e-bg">Label</label>
-		<label role="button" class="btn no-select effect #33e-bg">Label</label>
-		<label role="button" class="btn no-select ripple effect #33e-bg">Ripple Label</label>
+		<label class="btn no-select effect #33e-bg">Label</label>
+		<label class="btn no-select ripple effect #33e-bg">Ripple Label</label>
 		<a href="#!" class="btn trans no-select effect">Transparent</a>
 		<a href="#!" class="btn trans #f9f-bg no-select effect">Light Grey</a>
 	</div>
@@ -233,7 +233,7 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 
 	<div class="outer">
 		<h4 style="margin:0 0 .5em">Subscribe to our Newsletter:</h4>
-		<form method="get" action="" class="table" style="display:inline-flex;max-width:40em;max-width:calc(0)">
+		<form method="get" action="#top" class="table" style="display:inline-flex;max-width:40em;max-width:calc(0)">
 			<input type="text" name="field" value="" placeholder="Your email address..." class="fl-l table-cell" id="subscribe" style="flex-grow:1;flex-shrink:1" />
 			<input type="submit" value="Done it!" class="table-cell btn effect #33e-bg" style="flex-grow:1;flex-shrink:1" />
 		</form>
@@ -275,11 +275,11 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 		<fieldset>
 		<label for="country" class="select">Select:</label>
 		<select class="select #fff-bg" name="country" id="country" onclick="document.getElementsByClassName('select')[0].classList.toggle('arrow-up');">
-				<option role="option" aria-label="Choose below:" class="option" value="default">Choose&hellip;</option>
-				<option role="option" aria-label="Andorra">Andorra</option>
-				<option role="option" aria-label="France">France</option>
-				<option role="option" aria-label="Deutschland">Deutschland</option>
-				<option role="option" aria-label="UK">UK</option>
+				<option aria-label="Choose below:" class="option" value="default">Choose&hellip;</option>
+				<option aria-label="Andorra">Andorra</option>
+				<option aria-label="France">France</option>
+				<option aria-label="Deutschland">Deutschland</option>
+				<option aria-label="UK">UK</option>
 		</select>
 		</fieldset>
 	</div>
@@ -288,14 +288,14 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 
 	<div aria-describedby="language-choice" class="langs-outer rel">
 		<span class="readers" id="language-choice">Languages switcher:</span>
-		<ul role="listbox" aria-label="Langues" aria-haspopup="true" tabindex="-1" class="langs rel no-list table">
-			<li role="option" aria-label="Switch selection" class="selector"><svg width="24" height="24" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="desktop-hide"><switch><g><path d="M13 21h5v2H6v-2h5v-1.05a10.002 10.002 0 0 1-7.684-4.988l1.737-.992A8 8 0 1 0 15.97 3.053l.992-1.737A9.996 9.996 0 0 1 22 10c0 5.185-3.947 9.449-9 9.95V21zm-1-4a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"></path></g><foreignObject width="24" height="0"><b class="icon">🌍</b></foreignObject></switch></svg>
-				<label for="check"><svg width="24" height="24" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><switch><g><path d="M13 21h5v2H6v-2h5v-1.05a10.002 10.002 0 0 1-7.684-4.988l1.737-.992A8 8 0 1 0 15.97 3.053l.992-1.737A9.996 9.996 0 0 1 22 10c0 5.185-3.947 9.449-9 9.95V21zm-1-4a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"></path></g><foreignObject width="24" height="0"><b class="icon">🌍</b></foreignObject></switch></svg></label>
+		<ul aria-label="Langues" aria-haspopup="true" tabindex="-1" class="langs rel no-list table">
+			<li aria-label="Switch selection" class="selector"><svg width="24" height="24" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="desktop-hide"><switch><g><path d="M13 21h5v2H6v-2h5v-1.05a10.002 10.002 0 0 1-7.684-4.988l1.737-.992A8 8 0 1 0 15.97 3.053l.992-1.737A9.996 9.996 0 0 1 22 10c0 5.185-3.947 9.449-9 9.95V21zm-1-4a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"></path></g><foreignObject width="24" height="0"><b class="icon">🌍</b></foreignObject></switch></svg>
+				<label for="check"><svg width="24" height="24" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><switch><g><path d="M13 21h5v2H6v-2h5v-1.05a10.002 10.002 0 0 1-7.684-4.988l1.737-.992A8 8 0 1 0 15.97 3.053l.992-1.737A9.996 9.996 0 0 1 22 10c0 5.185-3.947 9.449-9 9.95V21zm-1-4a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"></path></g><foreignObject width="24" height="0"><b class="icon">🌍</b></foreignObject></switch></svg></label>
 				<input type="checkbox" class="abs no-display" id="check">
 					<ul class="abs no-list" id="choices">
-						<li role="option" class="rel"><a aria-label="DE" href="#!">DE</a></li>
-						<li role="option" class="rel"><a aria-label="EN" href="#!">EN</a></li>
-						<li role="option" class="rel"><a aria-label="FR" href="#!">FR</a></li>
+						<li class="rel"><a aria-label="DE" href="#!">DE</a></li>
+						<li class="rel"><a aria-label="EN" href="#!">EN</a></li>
+						<li class="rel"><a aria-label="FR" href="#!">FR</a></li>
 					</ul>
 			</li>
 		</ul>
@@ -306,9 +306,9 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 	<div class="outer">
 		<div class="search-box">
 			<div class="search-inner cf rel">
-				<form role="search" method="get" action="#" class="full fl-l #fff-bg">
+				<form role="search" method="get" action="#top" class="full fl-l #fff-bg">
 					<h4 class="readers">Search</h4>
-					<label label="Search" role="presentation" aria-label="Find" for="btn-search" title="Find" class="abs icon #fff-bg">
+					<label aria-label="Find" for="btn-search" title="Find" class="abs icon #fff-bg">
 						<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><switch><g><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></g><foreignObject width="0" height="0" overflow="hidden"><i>☑</i></foreignObject></switch></svg>
 						<input type="submit" value="Search" aria-label="Search" class="btn-search" id="btn-search">
 					</label>
@@ -406,13 +406,13 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 
 			<div class="search-box right" style="margin-top:1em">
 				<div class="search-inner cf rel">
-					<form role="search" method="get" action="#" class="full fl-l #fff-bg">
+					<form role="search" method="get" action="#top" class="full fl-l #fff-bg">
 						<h4 class="readers">Search</h4>
-						<label label="Search" role="presentation" aria-label="Find" for="btn-search" title="Find" class="abs icon #fff-bg">
+						<label aria-label="Find" for="search-f" title="Find" class="abs icon #fff-bg">
 							<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><switch><g><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></g><foreignObject width="0" height="0" overflow="hidden"><i>☑</i></foreignObject></switch></svg>
-							<input type="submit" value="Search" aria-label="Search" class="btn-search" id="btn-search">
+							<input type="submit" value="Search" aria-label="Search" class="btn-search" id="search-f">
 						</label>
-						<input name="q" type="search" aria-label="Write then press [Enter]" title="Write then press [Enter]" class="search" id="search" placeholder="Write your search here…">
+						<input name="q" type="search" aria-label="Write then press [Enter]" title="Write then press [Enter]" class="search" placeholder="Write your search here…">
 					</form>
 				</div>
 			</div>
