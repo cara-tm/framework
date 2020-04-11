@@ -150,7 +150,7 @@ border-top:1px solid #ddd
 }
 footer .icon{margin:0 .5em;cursor:help}
 footer a{text-decoration:none}
-footer,footer a{color:#9e9ea7}
+footer,footer a{color:#666}
 footer a:hover{color:#333}
 footer ul,footer ol{
 float:left;
@@ -232,20 +232,23 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 	</div>
 
 	<div class="outer">
-		<h4 style="margin:0 0 .5em">Subscribe to our Newsletter:</h4>
-		<form method="get" action="#top" class="table" style="display:inline-flex;max-width:40em;max-width:calc(0)">
+		<form method="get" action="#top">
+			<label for="subscribe" class="no-select" style="float:left;clear:both;width:100%;margin:0 0 1em">Subscribe to our Newsletter:</label>
+			<div class="table" style="display:inline-flex;max-width:40em;max-width:calc(0)">
 			<input type="text" name="field" value="" placeholder="Your email address..." class="fl-l table-cell" id="subscribe" style="flex-grow:1;flex-shrink:1" />
-			<input type="submit" value="Done it!" class="table-cell btn effect #33e-bg" style="flex-grow:1;flex-shrink:1" />
+			<input type="submit" value="Signup!" class="table-cell btn effect #33e-bg" style="flex-grow:1;flex-shrink:1" />
+			</div>
 		</form>
 	</div>
 
-	<div class="outer" style="margin-bottom:2em">
-		<p>Choose (activate or disable): <label class="slider">
-			<input type="checkbox" name="ac-376" value="1" aria-invalid="false" />
+	<div class="outer" style="margin:2em 0 4em">
+		<label for="slider" class="fl-l no-select">Choose (activate or disable):</label>
+		<div class="slider fl-l">
+			<input aria-invalid="false" type="checkbox" name="ac-376" value="1" id="slider" />
 			<span class="outer-slider">
 				<span class="inner-slider"></span>
 			</span>
-		</label></p>
+		</div>
 	</div>
 
 	<div class="outer">
@@ -273,7 +276,7 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 
 	<div class="outer">
 		<fieldset>
-		<label for="country" class="select">Select:</label>
+		<label for="country" class="select no-select">Select:</label>
 		<select class="select #fff-bg" name="country" id="country" onclick="document.getElementsByClassName('select')[0].classList.toggle('arrow-up');">
 				<option aria-label="Choose below:" class="option" value="default">Choose&hellip;</option>
 				<option aria-label="Andorra">Andorra</option>
