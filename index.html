@@ -154,64 +154,7 @@ footer,footer a{color:#666}
 footer a:hover{color:#333}
 footer ul,footer ol{
 float:left;
-font-size:smaller;
-/*
-line-height:3.25
-*/
-}
-/*
-footer h4{margin-bottom:.65em}
-*/
-
-
-.marquee{
-overflow:hidden;
-margin:.3em 0
-}
-
-html .fs685\%{
-font-size:685%;
-font-size: 8vw
-}
-
-.marquee--long{font-size:6.5em;font-size:1.25vw}
-
-.marquee span {
-display:inline-block;
-width:100%;
-width:40vw;
-text-align:center;
-white-space:nowrap;
-color:#00112c;
-/* Number of repeating word into the viewport width */
-text-shadow:40vw 0 currentColor,80vw 0 currentColor,120vw 0 currentColor,160vw 0 currentColor;
-will-change:transform;
-animation:marquee 2.5s linear infinite;
-animation-play-state:paused
-}
-/* IE9 hack */
-@media all and (min-width:0\0) and (min-resolution:.001dpcm){.marquee span{width:100%}}
-.marquee:hover span{animation-play-state:running}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-
-/*
- * on MacOs: System Preferences >
- *           Accessibility >
- *           Display > Reduce motion
- */
-
-@media (prefers-reduced-motion:reduce){
-
-	.marquee span {
-		display: block;
-		width: auto;
-		text-align: center;
-		white-space: normal;
-		line-height: 1.5;
-		text-shadow: none;
-		animation: none
-	}
-
+font-size:smaller
 }
 
 </style>

@@ -149,11 +149,31 @@ select.arrow-up{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://ww
 
 html .fs150\%{font-size:150%}
 html .fs120\%{font-size:120%}
+html .fs685\%{font-size:685%;font-size:8vw}
 
 html .\#fff-bg{background-color:#fff;color:#333}
 html .\#33e-bg{background-color:#33e;color:#fff}
 html .\#33e-brd{border-color:#33e!important}
 html .\#f9f-bg{background-color:#f9f9f9;color:#333}
+
+.marquee{overflow:hidden;margin:.3em 0}
+.marquee span{display:inline-block;width:100%;width:40vw;margin-left:-3vw;text-align:center;white-space:nowrap;color:currentColor;
+/* Number of repeating word into the viewport width */
+text-shadow:40vw 0 currentColor,80vw 0 currentColor,120vw 0 currentColor,160vw 0 currentColor;will-change:transform;animation:marquee 2.5s linear infinite;animation-play-state:paused}
+.marquee-auto span {animation-play-state:running}
+.marquee:hover span{animation-play-state:running}
+.marquee-auto:hover span{animation-play-state:paused}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+/* IE9 hack */
+@media all and (min-width:0\0) and (min-resolution:.001dpcm){.marquee span{width:100%}}
+
+/*
+ * on MacOs: System Preferences >
+ *           Accessibility >
+ *           Display > Reduce motion
+ */
+
+@media (prefers-reduced-motion:reduce){.marquee span{display:block;width:auto;text-align:center;white-space:normal;line-height:1.5;text-shadow:none;animation:none}}
 
 
 /*! Tooltips (2069 Bytes): Back/White background, top/left:right/bottom and rtl direction supported  */
