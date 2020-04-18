@@ -74,7 +74,9 @@ text-align:center;
 .outer:before,
 .outer:after {
 content:' ';
-display:table
+display:table;
+clear:both;
+height:1px
 }
 .row {
 clear:both;
@@ -142,6 +144,7 @@ margin-left:3%
 
 
 /*! Custom */
+.mb1em{margin-bottom:1em}
 hr{
 height:2px;
 background:none;
@@ -156,6 +159,9 @@ footer ul,footer ol{
 float:left;
 font-size:smaller
 }
+
+.txt-normal{text-transform:none}
+html .\#bbb-color{color:#bbb}
 
 </style>
 
@@ -189,7 +195,8 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 		<label class="btn no-select effect #33e-bg">Label</label>
 		<label class="btn no-select effect #33e-bg">label</label>
 		<label class="btn no-select ripple effect #33e-bg">Ripple Label</label>
-		<a href="#!" class="btn trans no-select effect">Transparent</a>
+		<a href="#!" class="btn trans no-select effect">Link Transparent</a>
+		<button type="submit" class="btn trans">Button Transparent</button>
 		<a href="#!" class="btn trans #f9f-bg no-select effect">Light Grey</a>
 	</div>
 
@@ -214,7 +221,7 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 	</div>
 
 	<div class="outer">
-		<p><a href="#!" class="btn #fff-bg">Prev</a> <a href="#!" class="btn trans #f9f-bg">1</a> <a href="#!" class="btn trans #f9f-bg">2</a> <a href="#!" class="btn trans #f9f-bg">3</a> <span class="btn trans disabled">...</span><a href="#!" class="btn trans rounded">30</a> <a href="#!" class="btn trans rounded">31</a> <a href="#!" class="btn trans rounded">32</a> <span class="btn trans rounded no-shadow disabled">...</span> <a href="#!" class="btn #f9f-bg">Next <i><svg role="img" aria-label="Discover" aria-hidden="true" focusable="false" width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><switch><g><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></g><foreignObject width="0" height="0" overflow="hidden">→</foreignObject></switch></svg></i></a></p>
+		<p><a href="#!" class="btn underline #fff-bg">Prev</a> <a href="#!" class="btn trans #f9f-bg">1</a> <a href="#!" class="btn trans #f9f-bg">2</a> <a href="#!" class="btn trans #f9f-bg">3</a> <span class="btn trans disabled">...</span><a href="#!" class="btn trans rounded">30</a> <a href="#!" class="btn trans rounded">31</a> <a href="#!" class="btn trans rounded">32</a> <span class="btn trans rounded no-shadow disabled">...</span> <a href="#!" class="btn #f9f-bg">Next <i><svg role="img" aria-label="Discover" aria-hidden="true" focusable="false" width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><switch><g><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></g><foreignObject width="0" height="0" overflow="hidden">→</foreignObject></switch></svg></i></a></p>
 	</div>
 
 	<div class="outer">
@@ -292,6 +299,46 @@ select:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 				<option aria-label="UK">UK</option>
 		</select>
 		</fieldset>
+	</div>
+
+	<div class="outer"><p>&nbsp;</p></div>
+
+	<div class="fl-l form-container" style="float:left;width:50%;margin:2em 3em 3em 0;padding:2em 2em 2em 1em;border-radius:.25rem;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);padding:1em 3em 3em 0;border:1px solid #edf2f7;border-radius:.25rem">
+		<form method="post" action="#" class="full" style="margin:1em 0 0 1em">
+			<div class="full">
+				<label for="email" style="width:96%;margin-right:2%;margin-left:2%;text-transform:uppercase;font-weight:bold">Your email address: <span class="txt-normal #bbb-color">(required)</span></label>
+			</div>
+			<div class="full mb1em">
+				<input type="email" name="email" value="" class="full" id="email" style="width:96%;margin-right:2%;margin-left:2%" />
+			</div>
+			<div class="full">
+				<label for="first-name" class="_1/2" style="width:45.9999%;margin-right:2%;margin-left:2%;text-transform:uppercase;font-weight:bold">Your First Name:</label>
+				<label for="last-name" class="_1/2" style="width:45.9999%;margin-right:2%;margin-left:2%;text-transform:uppercase;font-weight:bold">Your Last Name: <span class="txt-normal #bbb-color">(required)</span></label>
+			</div>
+			<div class="full mb1em">
+				<div class="_1/2" style="width:45.9999%;margin-right:2%;margin-left:2%">
+					<input type="text" name="first_name" value="" class="full" id="first-name" />
+				</div>
+				<div class="_1/2" style="width:45.9999%;margin-right:2%;margin-left:2%">
+					<input type="text" name="last_name" value="" class="full" id="last-name" />
+				</div>
+			</div>
+			<div class="full">
+				<label for="pass-word" class="_1/2" style="width:45.9999%;margin-right:2%;margin-left:2%;text-transform:uppercase;font-weight:bold">Your Password: <span class="txt-normal #bbb-color">(required)</span></label>
+				<label for="compagny" class="_1/2" style="width:45.9999%;margin-right:2%;margin-left:2%;text-transform:uppercase;font-weight:bold">Your Compagny:</label>
+			</div>
+			<div class="full mb1em">
+				<div class="_1/2" style="width:45.9999%;margin-right:2%;margin-left:2%">
+					<input type="password" name="password" value="" class="full" id="pass-word" />
+				</div>
+				<div class="_1/2" style="width:45.9999%;margin-right:2%;margin-left:2%">
+					<input type="text" name="compagny" value="" class="full" id="compagny" />
+				</div>
+			</div>
+			<div class="full">
+				<button type="submit" class="fl-r btn trans">Create Account</button>
+			</div>
+		</form>
 	</div>
 
 	<div class="outer"><p>&nbsp;</p></div>
