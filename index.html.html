@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Study</title>
+
+<meta name="supported-color-schemes" content="light dark">
+
+<style>
+
+/*!
+ *
+ * Compressed by: https://csscompressor.com/
+ *
+ * Tool: https://autoprefixer.github.io/
+ *
+ * References:
+ * https://iamvdo.me/blog/css-avance-metriques-des-fontes-line-height-et-vertical-align
+ * https://adrianroselli.com/2019/10/accessible-drop-caps.html
+ *
+ * Inspiration:
+ * https://codepen.io/halvves/pen/ExjxaKj
+ * https://codepen.io/aaroniker/full/qBdZEjQ
+ * https://freefrontend.com/css-neumorphism-examples/
+ */
+
+
+:root{
+
+	--bg-action:#33e
+}
+
+html{
+font:normal 300 normal 100%/1 'Inter','-apple-system','BlinkMacSystemFont','Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+cursor:default;
+-moz-tab-size:4;
+tab-size:4;
+-webkit-tap-highlight-color:transparent;
+-ms-text-size-adjust:100%;
+-webkit-text-size-adjust:100%;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+font-smoothing:antialiased;
+scroll-behavior:smooth;
+scrollbar-color:#ccc #eee;
+scrollbar-width:thin
+}
+@media screen and (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+body{
+float:left;
+clear:both;
+max-width:none;
+line-height:1.714;
+font-size:15.8px;
+font-size:calc(1em * .625);
+font-size:1rem;
+text-rendering:optimizelegibility;
+text-rendering:optimizeSpeed
+}
+
+/*! General rules */
+article,aside,figure,figcaption,footer,header,main,nav,section{display:block}
+
+body,
+[data-theme="light"] body{
+background-color:#f8f8ff;
+text-rendering:optimizeLegibility;
+text-rendering:geometricPrecision
+}
+
+.rel{position:relative}
+.abs{position:absolute}
+.hidden{display:none}
+
+.fl-r{float:right}
+.fl-l{float:left}
+html .block{display:block}
+.table{display:table}
+.table-cell{display:table-cell}
+body .table-center{float:none;display:table;margin-left:auto;margin-right:auto}
+
+html .fs80\%{font-size:80%}
+html .fs150\%{font-size:150%}
+html .fs120\%{font-size:120%}
+
+.txt-upper{text-transform:uppercase}
+
+html .fix-padding{
+
+}
+
+.no-select{-moz-user-select:none;-webkit-user-drag:none;user-drag:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+
+.readers{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;white-space:nowrap;clip:rect(0 0 0 0)}
+
+::-moz-focus-inner{padding:0;border-style:none}:-moz-focusring{outline:1px dotted ButtonText}:-moz-ui-invalid{box-shadow:none}
+a,area,button,input,label,select,summary,textarea,[tabindex]{-ms-touch-action:manipulation;touch-action:manipulation}
+body:not(.user-tabbing) button:focus,body:not(.user-tabbing) .btn:focus,body:not(.user-tabbing) input:focus,body:not(.user-tabbing) select:focus,body:not(.user-tabbing) textarea:focus,body:not(.user-tabbing) select:focus,body:not(.user-tabbing) option:focus{outline:none}input:disabled,input[disabled],textarea:disabled,textarea[disabled],select:disabled,select[disabled],.btn.disabled,button:disabled,button[disabled],.btn:disabled,.btn[disabled],[role="button"]:disabled,[role="button"][disabled],html .disabled{opacity:.75;border:inherit;background-color:inherit;color:#444;cursor:not-allowed}
+
+a{color:#333}
+.\:hover:hover{text-decoration:underline}
+/*! Underline effect for links (2 rules - 446 Bytes) */
+a.over{padding:0 .16em .1em;word-break:break-word;word-wrap:break-word;text-decoration:none;border-bottom:2px solid #42a5f5;border-bottom-color:hsla(0,0%,100%,0);box-shadow:inset 0 -4px 0 rgba(66,165,245,.3);-webkit-transition:box-shadow .3s;-ms-transition:box-shadow .3s;transition:box-shadow .3s}a.over:hover{border-color:transparent;background-color:#c6e4fc;background-color:hsla(0,0%,100%,0);box-shadow:inset 0 -2em 0 rgba(66,165,245,.3)}
+
+/* Base buttons styles: required (8 rules - 1174 bytes) */
+.btn,button,label,input,select,textarea{font:normal 400 normal 100%/100% BlinkMacSystemFont,'-apple-system','Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif}.btn,button,input{border:none;background-color:transparent;-moz-appearance:none;-webkit-appearance:none;appearance:none;border:none;background-color:transparent;-moz-appearance:none;-webkit-appearance:none;appearance:none}.btn{display:inline-table;display:inline-block;position:relative;z-index:2;margin-right:8px;padding:0 1em;min-width:0;height:2.6em;border-style:none;vertical-align:baseline;text-align:center;text-decoration:none;line-height:2.6em;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);-ms-touch-action:manipulation;touch-action:manipulation}a.btn,label.btn{display:inline-table;display:inline-block;*vertical-align:bottom}.btn span{padding:0;line-height:2.3em}button span{display:inline-block;padding:0 1em;line-height:2.6em}input.btn{display:inline-table;display:inline-block}.btn:active{border-color:#3273dc;box-shadow:0 0 0 .125em rgba(255,255,255,.2);text-shadow:-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5),-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5)}
+
+/* Icon's button styles (4 rules - 403 bytes) */
+.btn i{position:relative;z-index:-1;display:inline-table;display:inline-block;line-height:0;font-style:normal;vertical-align:baseline \0}.btn svg{overflow:hidden;height:1em;vertical-align:middle;line-height:0;transition:transform .25s ease-in-out;will-change:transform}.icon{font-style:normal;font-size:100%}.btn:active:not(.outline) i.icon,.btn:active:not(.outline-outer) i.icon{filter:brightness(100%)!important}
+
+.btn.radius{border-radius:.2em}
+body .border{border:.2em solid}
+body .btn.border{height:2.225em;line-height:2.225em}
+html .rounded{min-width:1.1em;padding-right:.865em;padding-left:.865em;border-radius:50%}
+html .no-shadow{box-shadow:none}
+
+/* Outline buttons styles (3 rules - 208 Bytes) */
+.outline{height:2.65em;border:.062pc solid #dbdbdb;background-color:transparent;color:inherit}.outline:hover{border-color:#3ff}.outline:active{border-color:#3f9;filter:drop-shadow(2px 2px 5px rgba(0,0,0,.1))}
+
+/* Button effect for background colors (2 rules - 425 Bytes) */
+.effect:active{border-color:#3273dc;box-shadow:0 0 0 .125em rgba(255,255,255,.2);text-shadow:-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5),-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5)}.effect:active:not(.outline),.effect:active:not(.outline-outer){filter:brightness(180%);text-shadow:-.0001px 0 hsla(0,0%,0%,.2),0 -.0001px hsla(0,0%,0%,.2),-.0001px 0 hsla(0,0%,0%,.2),0 -.0001px hsla(0,0%,0%,.2)}
+
+/* Transparent aspect (3 rules - 296 Bytes) */
+.trans,[data-theme="light"] .trans{height:2.55em;border:.0622px solid #e4e4e4;color:inherit;box-shadow:0 -6px 10px white,0 4px 10px rgba(0,0,0,0.15)}.btn.trans:hover,[data-theme="light"] .btn.trans:hover{border-color:#cbcbcb;border-color:hsla(0,0%,100%,0)}.trans:active{border-color:#ddd;background-color:#fff}
+html body button.trans{line-height:0/*2.45em*/}
+
+/*! Neumorphism aspect (3 rules - 540 bytes) */
+.neumorph,[data-theme="light"] .neumorph{/*height:2.425em;*/border-color:hsla(0,0%,98%,1);box-shadow:inset 0 0 15px rgba(55,84,170,0),inset 0 0 20px rgba(255,255,255,0),10px 10px 10px rgba(55,84,170,.15),-10px -10px 22px white,inset 0 0 -4px rgba(255,255,255,.2)}.neumorph:hover,[data-theme="light"] .neumorph:hover{box-shadow:inset 0 -2px 5px #fff,inset 0 2px 5px rgba(0,0,0,.15),inset 0 -2px 5px #fff,inset 2px 2px 3px rgba(0,0,0,.15)}.neumorph:active,[data-theme="light"] .neumorph:active{box-shadow:inset 0 -2px 5px #fff,inset 0 2px 5px rgba(0,0,0,.15)}
+
+/* Growing effect (4 rules - 409 bytes) */
+.grow,.grow i{-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out}.grow:focus,.grow:hover{-webkit-transform:scale(1.1);transform:scale(1.1)}.grow:hover i{-webkit-transform:scale(1.3);transform:scale(1.3)}.grow:active{-webkit-transform:scale(.9);transform:scale(.9)}
+
+/* Ripple effect (2 rules - 442 Bytes) */
+@supports (display:flex){.ripple::after{content:'';overflow:hidden;opacity:.7;position:absolute;z-index:-1;top:1.5em;left:50%;transform:translate(-50%,-50%);width:6em;height:6em;border:none;outline:1px thin #fff;background:#fff;border-radius:100%;clip-path:circle(0%)}.ripple:active::after{opacity:0;z-index:3;clip-path:circle(100%);transition:clip-path .3s cubic-bezier(.55,.085,.68,.53),opacity .2s ease-in-out;transition-delay:-.07s,.05s}}
+
+
+
+
+body:not(.user-tabbing) button:focus,
+body:not(.user-tabbing) .btn:focus,
+body:not(.user-tabbing) input:focus,
+body:not(.user-tabbing) select:focus,
+body:not(.user-tabbing) textarea:focus,
+body:not(.user-tabbing) select:focus,
+body:not(.user-tabbing) option:focus{outline:none}
+
+
+.txt-normal{text-transform:none;font-style:normal}
+.txt-upper{text-transform:uppercase}
+.bold{font-weight:bold}
+
+/* Colors */
+.\#fff-bg{background-color:#fff;color:#333}
+.\#33e-bg{background-color:#33e;color:#fafafa}
+.\#a00-bg{background-color:#a00;color:#fff}
+.\#064-bg{background-color:#064;color:#fff}
+.\#ff0-bg{background-color:#ff0;color:#111}
+.\#ccc-bg{background-color:#ccc;color:#111}
+.\#f2f5f7-bg{background-color:#f2f5f7;color:#444}
+.#f9f-bg{background-color:#fafafa;color:#333}
+.grad-\#33e-\#a00-bg{background:#33e;background-image:linear-gradient(90deg,#33e 0,#a00);color:#fff}
+.grad-\#33e-\#064-bg{background:#33e;background-image:linear-gradient(90deg,#33e 0,#064);color:#fff}
+.grad-\#a00-\#33e-bg{background:#33e;background-image:linear-gradient(90deg,#a00 0,#33e);color:#fff}
+.grad-\#064-\#33e-bg{background:#33e;background-image:linear-gradient(90deg,#064 0,#33e);color:#fff}
+body .\#33e-brd{border-color:#33e}
+body .\#c00-brd{border-color:#c00}
+body .\#064-brd{border-color:#064}
+body .\#ff0-brd{border-color:#ff0}
+
+/* Line into effect */
+.line-into{display:inline-block;font-size:80%;box-shadow:inset 0 -.5em 0 rgba(66,165,245,.3)}
+
+.box-shadow{
+border:1px solid #edf2f7;
+box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+}
+.radius{border-radius:.25rem}
+
+html .fs150\%{font-size:150%}
+html .fs120\%{font-size:120%}
+html .fs685\%{font-size:685%;font-size:8vw}
+
+
+/*! Checkbox & Radio buttons Styles (1119 Bytes) */
+input[type="checkbox"]:focus{outline:0}.checkbox,.radio{display:table;position:relative;padding-left:2.1em;margin-bottom:.7em;line-height:1.45;font-size:100%;cursor:pointer}.checkbox input[type="checkbox"],.radio input[type="radio"]{opacity:0;position:absolute;z-index:1;top:.187em;left:.187em;width:1.5em;height:1.5em;cursor:pointer}.check{position:absolute;top:0;left:0;height:1.563em;width:1.563em;background-color:hsl(0,0%,93.3%)}.check::after{display:none;content:'\02715';position:absolute}.checkbox .check::after{left:0;top:0;width:100%;height:inherit;text-align:center;color:#fff}.radio input[type="radio"],.radio .check,.radio .check:after{border-radius:100%}
+.radio .check:after{display:none;content:'';position:absolute;top:50%;left:50%;width:.625em;height:.625em;margin:-.3125em auto 0 -.3125em;background:#fff;box-shadow:0 0 5px rgba(0,0,0,.5)}.radio input:checked ~ .check:after{display:block}label:hover input ~ .check{background-color:hsl(0,0%,80%)}label input[type="checkbox"]:checked ~ .check,label input[type="radio"]:checked ~ .check{background-color:#333;background-color:var(--bg-action,#333)}.checkbox input:checked ~ .check::after{display:block}
+/*! Select Styles (1195 Bytes) */
+select{display:block;max-height:calc(1.3em + 1.4em);height:calc(1.3em + 1.4em);margin:0;padding:.6em 1em .5em .8em;border:1px solid #bbb;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E") no-repeat right center;background-position:right .7em top 50%,0 0;background-size:1.5em auto,100%;background-position:right .7em top 50%,0 0;background-size:1.5em auto,100%;text-overflow:ellipsis;white-space:nowrap;color:#444;font-weight:700;cursor:pointer;-moz-appearance:none;-webkit-appearance:none;appearance:none}select::-ms-expand{display:none}:root select{padding:.6em 42px .7em .8em}select::-ms-expand{display:none}select:hover{border-color:#888}select:focus{border-color:#aaa;box-shadow:0 0 1px 3px rgba(59,153,252,.7);box-shadow:0 0 0 3px -moz-mac-focusring;color:#222;outline:none}select option{font-weight:400}select option:nth-child(even){background-color:#eee}@media all and (min-width:0\0) and (min-resolution:.001dpcm){select{padding:.6em 1em .5em .8em !important;background-image:none}}
+/* Optional: effects */
+/*
+select:not(:checked){background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E")}
+*/
+select.arrow-up{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M18 15l-6-6-6 6'%3E%3C/path%3E%3C/svg%3E")}
+html select:focus,html select:active,html select:hover *{outline:1px thin;box-shadow:none}
+
+fieldset{width:20%;min-width:16em;margin:0;padding:0;border:none}
+fieldset select{width:100%}
+
+/* Target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0){select{background-image:none\9;padding: 5px\9}}
+
+/* Slider buttons styles (9 rules - 1207 Bytes)
+html label{line-height:1.5;cursor:pointer}.slider{display:inline-table;display:inline-block;position:relative;top:0;left:.2em;width:2.875em;height:1.625em;vertical-align:baseline;line-height:1.625em}.slider input[type="checkbox"]{opacity:0;position:relative;z-index:5;width:2.08em;height:1.5em;cursor:pointer}.outer-slider{display:block;position:absolute;top:.3em;left:0;width:2.08em;height:1.2em}.outer-slider::before{content:'';position:absolute;z-index:2;top:-.1em;bottom:.2em;left:0;height:1.3em;width:1.3em;background-color:#fff;-o-border-radius:50%;border-radius:50%;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s;border: 1px solid #c00}.inner-slider{position:absolute;top:0;left:0;right:0;bottom:0;background-color:hsla(0,100%,40%,1);border-radius:3.4em;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s}.slider input:checked ~ .outer-slider::before{right:0;-webkit-transform:translateX(.8em);-moz-transform:translateX(.8em);-o-transform:translateX(.8em);-ms-transform:translateX(.8em);transform:translateX(.8em)}.slider input:checked+span .inner-slider{background:#058943}.slider input:checked+span:before{border-color:#058943}
+*/
+/*html label{line-height:1.5;cursor:pointer}.slider{display:inline-table;display:inline-block;position:relative;top:0;left:.2em;width:2.875em;height:1.625em;vertical-align:baseline;line-height:1.625em}.slider input[type="checkbox"]{opacity:0;position:relative;z-index:5;width:2.08em;height:1.5em;cursor:pointer}.outer-slider{display:block;position:absolute;top:.3em;left:0;width:2.08em;height:1.2em}.outer-slider::before{content:'';position:absolute;z-index:2;top:-.1em;bottom:.2em;left:0;height:1.3em;width:1.3em;background-color:#fff;-o-border-radius:50%;border-radius:50%;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s;border: 1px solid #c00}.inner-slider{position:absolute;top:0;left:0;right:0;bottom:0;background-color:hsla(0,100%,40%,1);border-radius:3.4em;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s}.slider input:checked ~ .outer-slider::before{right:0;background-color:#064;-webkit-transform:translateX(.8em);-moz-transform:translateX(.8em);-o-transform:translateX(.8em);-ms-transform:translateX(.8em);transform:translateX(.8em)}.slider input:checked+span .inner-slider{border:1px solid #aaa;background:#fff}.slider input:checked+span:before{border-color:#058943}*/
+/* Slider buttons styles (9 rules - 1200 Bytes) */
+html label{line-height:1.5;cursor:pointer}.slider{display:inline-table;display:inline-block;position:relative;top:0;left:.2em;width:2.875em;height:1.625em;vertical-align:baseline;line-height:1.625em}.slider input[type="checkbox"]{opacity:0;position:relative;z-index:5;width:2.08em;height:1.5em;cursor:pointer}.outer-slider{display:block;position:absolute;top:.3em;left:0;width:2.08em;height:1.2em}.outer-slider::before{content:'';position:absolute;z-index:2;top:-1px;left:0;height:1.3em;width:1.3em;background-color:#a00;-o-border-radius:50%;border-radius:50%;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s}.inner-slider{position:absolute;top:0;left:0;right:0;bottom:0;border:1px solid hsl(0,0%,73.3%);border-radius:3.4em;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s}.slider input:checked ~ .outer-slider::before{right:0;background-color:#064;-webkit-transform:translateX(.8em);-moz-transform:translateX(.8em);-o-transform:translateX(.8em);-ms-transform:translateX(.8em);transform:translateX(.8em)}.slider input:checked+span .inner-slider{border:1px solid hsl(0,0%,73.3%);background:#fff}.slider input:checked+span:before{border-color:#064}
+
+/* Tooltips (8 rules - 1653 bytes) */
+[data-tooltip],.tooltip{position:relative;cursor:pointer}[data-tooltip]:before,[data-tooltip]:after,.tooltip:before,.tooltip:after{visibility:hidden;opacity:0;position:absolute;transition:opacity .2s ease-in-out,visibility .2s ease-in-out,transform .2s cubic-bezier(.71,1.7,.77,1.24);transform:translate3d(0,0,0);pointer-events:none}[data-tooltip]:hover:before,[data-tooltip]:hover:after,[data-tooltip]:focus:before,[data-tooltip]:focus:after,.tooltip:hover:before,.tooltip:hover:after,.tooltip:focus:before,.tooltip:focus:after{visibility:visible;opacity:1}.tooltip:before,[data-tooltip]:before{content:'';z-index:1001;border:12px solid transparent;background:transparent}.tooltip:after,[data-tooltip]:after{content:attr(data-tooltip);z-index:1000;left:0;max-width:inherit;padding:.5em .5em .8em;background-color:#000;color:#fff;line-height:1;font-size:medium;width:inherit;text-align:left}[data-tooltip]:before,[data-tooltip]:after,.tooltip:before,.tooltip:after,.tooltip-top:before,.tooltip-top:after{bottom:100%;font-weight:400;box-shadow:none;text-shadow:none}[data-tooltip]:before,.tooltip:before,.tooltip-top:before{margin-left:0;margin-bottom:-22px;border-top-color:#333;text-decoration:none!important;text-shadow:none}[data-tooltip]:hover:before,[data-tooltip]:hover:after,[data-tooltip]:focus:before,[data-tooltip]:focus:after,.tooltip:hover:before,.tooltip:hover:after,.tooltip:focus:before,.tooltip:focus:after,.tooltip-top:hover:before,.tooltip-top:hover:after,.tooltip-top:focus:before,.tooltip-top:focus:after{-webkit-transform:translateY(-11px);-moz-transform:translateY(-11px);-o-transform:translateY(-11px);transform:translateY(-11px)}
+
+.full,.row,[class^="_"]{position:relative;float:left;vertical-align:top;*display:inline}
+
+._1\/2 {
+width:49.9999%;
+margin:0
+}
+
+.card h2 a:after {
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%
+}
+
+
+.outer{
+float:left;
+clear:both;
+width:98%;
+margin:0 1% 1em;
+padding:16px 0
+}
+
+footer{
+
+}
+
+footer .icon{
+margin:0 .5em;
+vertical-align:middle;
+cursor:help
+}
+
+@media (prefers-color-scheme:dark) {
+
+	body{background:#484d5d}
+	[data-theme="dark"] body,[data-theme="dark"] a{color:#fafafa}
+	[data-theme="dark"] body .\#f9f-bg{color:#fafafa}
+	[data-theme="dark"] .trans{border-width:1px;color:#fafafa}
+   	[data-theme="dark"] .trans:active,html .\#f2f5f7-bg,[data-theme="dark"] body .\#f2f5f7-bg,html .\#fff-bg,[data-theme="dark"] .\#fff-bg{color:#333}
+	[data-theme="dark"] .trans{box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 -2px 4px -1px rgba(0,0,0,.06)}
+	.neumorph,[data-theme="dark"] .neumorph{border-color:#333;box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
+	.neumorph:hover,[data-theme="dark"] .neumorph:hover{box-shadow:0 -2px 5px rgba(0,0,0,.3),0 2px 5px rgba(0,0,0,0.15);}
+	.neumorph:active,[data-theme="dark"] .neumorph:active{box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
+	.btn[disabled],.btn.disabled{color:#fafafa}
+	.tooltip:after,[data-tooltip]:after,[data-theme="dark"] .tooltip:after,[data-theme="dark"] [data-tooltip]:after{background-color:#fafafa;color:#333}
+	[data-tooltip]:before,.tooltip:before,.tooltip-top:before,[data-theme="dark"] [data-tooltip]:before,[data-theme="dark"] .tooltip:before,[data-theme="dark"] .tooltip-top:before{border-top-color:#fafafa}
+	.theme-switch path{fill:#fff}
+
+}
+
+
+[data-theme="light"] body{background:#f8f8ff}
+[data-theme="light"] body,a{color:#333}
+[data-theme="light"] .btn[disabled],[data-theme="light"] .btn.disabled{color:#333}
+[data-theme="dark"] body{background:#484d5d}
+[data-theme="dark"] body,[data-theme="dark"] a,[data-theme="dark"] .btn[disabled],[data-theme="dark"] .btn.disabled{color:#fafafa}{color:#fafafa}
+[data-theme="dark"] .trans{box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 -2px 4px -1px rgba(0,0,0,.06)}
+[data-theme="dark"] body .\#f9f-bg{color:#fafafa}
+[data-theme="dark"] body .\#fff-bg,[data-theme="dark"] body .\#f2f5f7-bg{color:#333}
+[data-theme="dark"] .neumorph{border-color:#333;box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
+[data-theme="dark"] .neumorph:hover{box-shadow:0 -2px 5px rgba(0,0,0,.3),0 2px 5px rgba(0,0,0,0.15);}
+[data-theme="dark"] .neumorph:active{box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
+/*
+.trans:active{color:#333}
+.trans{box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 -2px 4px -1px rgba(0,0,0,.06)}
+.neumorph{border-color:#333;box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
+.neumorph:hover{box-shadow:0 -2px 5px rgba(0,0,0,.3),0 2px 5px rgba(0,0,0,0.15)}
+
+[data-theme="light"] .neumorph:active{box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
+[data-theme="light"] .btn[disabled],[data-theme="light"] .btn.disabled{color:#bbb}
+*/
+[data-theme="light"] .tooltip:after,[data-tooltip]:after{background-color:#333;color:#fafafa}
+[data-theme="light"] [data-tooltip]:before,.tooltip:before,.tooltip-top:before{border-top-color:#333}
+
+/*! Theme switcher */
+.theme-switch input{visibility:hidden}
+@supports ((--a: 0)){
+
+	.theme-switcher{position:relative}
+	.theme-switch,.theme-switch input{visibility:visible;display:inline-block;z-index:0;top:0;width:24px;height:24px;border:none;border-width:0;border-color:transparent;outline:none;cursor:pointer;-moz-appearance:none;-webkit-appearance:none;-ms-appearance:none;appearance:none}
+	.theme-switch input{position:absolute;visibility:hidden;z-index:-1;top:0;left:0;width:1.2em;height:1.2em;border:none;background-color:transparent;color:transparent;left: 0;top: 0;}
+	.theme-switch svg{z-index:2;top:2px;left:0}
+	[data-theme="dark"] .theme-switch path{fill:#fff}
+	[data-theme="light"] .theme-switch path{fill:currentColor}
+
+}
+
+
+.btn{margin-bottom:1em}
+
+p{
+font:normal 300 normal 1em/1 '-apple-system',system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif
+}
+
+.fl-l{float:left}
+.fl-r{float:right}
+code,pre{font-family:monospace,monospace;font-size:1em}
+b,strong{font-weight:bold}
+
+.lettrin{margin:1.4em 0 0 0;line-height:1.5em}
+
+/*html p.lettrin .drop span{float:left;margin:0 .1em -.09em .01em;padding:0;text-indent:0;line-height:1em;font-family:inherit;font-size:7.2em;font-weight:500}
+html p.lettrin .drop span:before,html p.lettrin .drop span:after{content:'';display:block}
+html p.lettrin .drop span:before{margin-top:-.12em}
+html p.lettrin .drop span:after{margin-bottom:.0em}
+
+.visually-hidden, .hidden {
+	position: absolute;
+	top: auto;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
+}
+
+<span aria-hidden="true" class="drop"><span>A</span>nimal</span>
+	<span class="visually-hidden">Animal</span>
+*/
+
+html p.lettrin:first-letter{overflow:hidden;float:left;margin:-.12em .1em -.09em .01em;padding:0;text-indent:0;line-height:1em;font-family:inherit;font-size:7.2em;font-weight:500}
+
+.marquee{overflow:hidden;margin:.3em 0}
+.marquee span{display:inline-block;width:100%;width:40vw;margin-left:-3vw;text-align:center;white-space:nowrap;color:currentColor;
+/* Number of repeating word into the viewport width */
+text-shadow:40vw 0 currentColor,80vw 0 currentColor,120vw 0 currentColor,160vw 0 currentColor;will-change:transform;animation:marquee 2.5s linear infinite;animation-play-state:paused}
+.marquee-auto span {animation-play-state:running}
+.marquee:hover span{animation-play-state:running}
+.marquee-auto:hover span{animation-play-state:paused}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+/* IE9 hack */
+@media all and (min-width:0\0) and (min-resolution:.001dpcm){.marquee span{width:100%}}
+
+/* Search element (11 rules - 1360 Bytes) */
+input[type="search"]{-webkit-appearance:textfield}.search-block{position:relative;width:100%;margin:-.1em auto 2em 0}.search-box{width:100%;vertical-align:middle;white-space:nowrap}.search-inner{width:100%}.search-box form{position:relative;width:100%;height:100%}.search-box label{display:block}.search-box .search-field{width:97%;width:calc(100% - 3em);height:3em;border:none;border:.062pc solid #ddd;border-radius:2px 0 0 2px;border-right:none;padding-left:.5em;-webkit-appearance:textfield;outline-offset:-2px}.search-box button[type="submit"]:before{content:"⚲";display:block;position:relative;top:0;left:0;text-align:center;line-height:1em;color:currentColor;font-size:2.5em;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}.search-box button[type="submit"],.search-box input[type="submit"]{overflow:hidden;position:absolute;top:0;right:0;bottom:0;width:3em;height:100%;padding:0;border:.062pc solid #ddd;border-left:none;border-radius:0 2px 2px 0;cursor:pointer;*position:relative;*height:2.9em;*margin:28px 0 0 -3.3em;*padding:15px 15px 12px;*font-size:100%}.search-box input[type="submit"]{width:auto;padding:0 .4em}.search-submit .readers{*display:block;*position:relative!important;*top:-1.1em;*left:-1em;*min-width:3em;*height:2.9em;*background:#333;*color:#fff;*line-height:3em}
+
+
+.form-container{width:99.9%}
+.form-container form{width:96%;margin:2em 0;padding:0 0 0 1.3%}
+.form-container .full input.full{width:96%;margin-left:2%}
+.form-container label.full span{margin-left:2%}
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus{background-color:#eee}
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], input[type="url"]{
+height:2.722em;
+margin:0 0 1em;
+padding:0 .3em;
+border:none;
+border:.062pc solid #bbb;
+line-height:2.722
+}
+
+input:required{box-shadow:-4px 0 0 #064}
+
+html .big .form-region{width:100%}
+
+@media screen and (max-width:620px){html .form-region{width:100%}}
+
+
+/*! Starting Grid (to be completed) */
+
+.row:before,
+.row:after,
+.outer:before,
+.outer:after {
+content:' ';
+display:table;
+clear:both;
+height:1px
+}
+.row {
+clear:both;
+width:98%;
+margin:0 1%
+}
+.full {
+width:100%;
+margin-right:0;
+margin-left:0;
+*width:99.8%
+}
+.full,
+.row,
+[class^="_"] {
+position:relative;
+float:left;
+vertical-align:top;
+*display:inline
+}
+.row ._inner {
+width:96.8%;
+margin-right:1.6%;
+margin-left:1.6%
+}
+.full ._inner {
+width:97%;
+margin-right:1.5%;
+margin-left:1.5%
+}
+[class^="_"].empty:before {
+content:'\200C';
+display:block;
+height:1.125pt;
+line-height:.5pt;
+font-size:.05pt
+}
+._1\/1,.full {
+width:100%;
+clear:both;
+*width:99.89%
+}
+._1\/2 {
+ width:49.9999%;
+ margin:0
+}
+._1\/2 ._inner {
+display:block;
+width:93%;
+margin-right:3%;
+margin-left:3%
+}
+._1\/3,
+._outer_1\/3 ._col {
+width:33.3%;
+*width:33.29%
+}
+._1\/4 {width:24.9%}
+._1\/4 ._inner {
+display:block;
+width:94%;
+margin-right:3%;
+margin-left:3%
+}
+
+
+
+/* Languages selector (15 rules - 2430 Bytes) */
+.langs-outer{right:1%;bottom:0;float:right;width:2.781em;height:2.781em;margin:1em 0;color:#333;*right:4%}.langs{top:-.77em;width:2.7815em;padding:0;background:#fff;background:var(--langs-bg,#fff);color:var(--langs-color,#304659);font:1em/2.5 Heebo,Arial,sans-serif;outline:none;cursor:pointer}.langs .selector{height:2.781em;list-style:none;text-align:center;box-shadow:0 0 20px -1px rgba(0,0,0,.05)}.langs svg{position:relative;top:.5em;width:1.7em;height:1.7em}.langs .icon{display:block;position:absolute;top:.9em;left:50%;right:0;width:44px;height:44px;margin-left:-22px;padding:0;vertical-align:middle;text-align:center;font:1.5em/0 Arial,sans-serif}#choices{width:100%;margin:0;padding:0;background:#fff;background:var(--langs-bg,#fff)}.langs li ul{display:none;overflow:hidden;position:absolute;z-index:1000;top:auto;right:0;bottom:2.7815em;bottom:calc(100% - .05em);left:0;width:2.7815em;margin:0;padding:0;background:inherit;animation:dropup .22s 1 ease-in-out;-ms-animation:none}.selector label{display:inline-table;width:100%;height:100%;cursor:pointer}.langs li:hover,.langs li a:hover,.langs li a:focus{background-color:#eee;background-color:var(--langs-border,#eee);outline:none}.langs a{display:block;vertical-align:middle;border-color:#eee;border-color:var(--langs-border,#eee);text-decoration:none;color:#222;line-height:2.6;font-weight:700}.langs li b{display:block;margin:0;padding:0;border-top-color:transparent;text-align:center}.langs ul li.active,.langs ul li.active a{background-color:#d3d3d3;background-color:var(--langs-bg-active,#d3d3d3)}.langs li:first-child:hover ul{display:block}@media screen and (max-width:635px){.langs-outer{margin:0 3%}.langs .selector{height:2.7em}.langs li ul{width:calc(100% - 1px)}.langs label{position:absolute;z-index:2;top:0;left:0;width:100%}.langs label svg{left:.6em;display:block;width:1.7em;height:1.7em}#check{display:none;top:0;left:0;width:3em;height:3em;border:0;background:transparent;backface-visibility:hidden;cursor:pointer;pointer-events:auto;animation:dropup .22s 1 ease-in-out;-ms-animation:none}#check:not(:checked) ~ label:before,#check:checked ~ label:before{content:'??'}#check:not(:checked) ~ #choices{display:none}#check:checked ~ #choices{display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}html .mobile-hide{display:none}html .mobiles,html .desktop-hide{display:block}}.langs:not(:root) li ul{bottom:calc(100% - .5px);width:calc(100% + 0px)}
+
+</style>
+<noscript>
+<style>
+select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M18 15l-6-6-6 6'%3E%3C/path%3E%3C/svg%3E")}
+</style>
+</noscript>
+
+</head>
+
+<body id="body">
+
+	<!--[if lt IE 7]>
+		<p style="padding: 1em 0;border:1px solid;text-align:center;color:#c00">Despite all our efforts, your browser seems to be too old in order to view correctly this page. Please upgrade. We apologize for this inconvenient.</p>
+	<![endif]-->
+
+<header class="full" style="clear:both">
+	<h1 style="display:inline-table;margin:0 0 0 1%;font:300 320%/1 sans-serif"><span class="line-into" style="">Woo CSS</span><br> Framework</h1>
+	<span class="fl-r txt-r" style="padding-top:1em"><a href="javascript:void(0)" class="btn trans #f9f-bg" onclick="document.getElementById('body').style.fontSize='160%';document.getElementById('body').classList.add('big');return true;">Change font size</a> <a href="javascript:void(0)" class="btn trans #fff-bg" onclick="document.location.reload(true);">Reload</a></span>
+	<span class="fl-r txt-r theme-switcher" style="clear:both;margin:0 1% 0 0"><label class="theme-switch rel" for="checkbox"><svg width="24" height="24" aria-label="Light/Dark Mode" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="abs"><title class="reader">Light/Dark Mode</title><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-2V6a6 6 0 1 1 0 12z"></path></svg><input class="rel" id="checkbox" type="checkbox"></label></span>
+</header>
+
+<main>
+
+	<div class="outer">
+		<p>Note: The global <code>.btn</code> class is available for all kind of HTML elements (support for custom document's font size) with some complementary styles (all elements are A11Y friendly - WCAG: AAA level).</p>
+	</div>
+
+	<div class="outer">
+		<p>
+		<a href="#!" class="btn #33e-bg :hover"><span>Link Primary</span></a>
+		<button class="btn #33e-bg effect :hover">Button Primary</button>
+		<button class="btn outline effect #fff-bg">Button Outline</button>
+		<button class="btn outline effect #fff-bg"><span>button outline</span></button>
+		<a href="#!" class="btn grad-#064-#33e-bg">Link Primary</a>
+		<button class="btn grad-#33e-#a00-bg fs120%"><span>button large</span></button>
+		<button class="btn #33e-bg fs80%"><span>button small</span></button>
+		<input type="submit" value="Submit input" class="btn #33e-bg" />
+		<label class="btn #33e-bg">Label</label>
+		<label class="btn #33e-bg">Label</label>
+		<label class="btn ripple #33e-bg">Ripple Label</label>
+		<a href="#!" class="btn trans">Transparent</a>
+		<button type="submit"  class="btn trans">Transparent</button>
+		<a href="#!" aria-label="External"  class="btn trans neumorph"><svg aria-hidden="true" focusable="false" role="img" aria-label="External" width="20" height="20" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><text class="hidden">External</text><switch><g><path d="M5.982 1.042h2.232L3.898 5.358l.745.744 4.316-4.316v2.233h1.04V.52A.508.508 0 0 0 9.48 0H5.982v1.042zM9 9H1V1h2.978V0H.51A.51.51 0 0 0 0 .51v8.98c0 .282.228.51.51.51h8.98a.51.51 0 0 0 .51-.51V6.026H9V9z" fill="currentColor" fill-rule="evenodd"></path></g><foreignObject width="24" height="0"><i class="icon">➚</i></foreignObject></switch></svg></a>
+		<a href="#!" class="btn #f2f5f7-bg">Light Grey</a>
+		<a href="#!" class="btn trans #f2f5f7-bg">Light Grey (<code>.trans</code> class)</a>
+		<a href="#!" class="btn trans neumorph">Neumorphism (<code>.trans .neumorph</code> classes)</a>
+		</p>
+	</div>
+
+	<div class="outer">
+		<p>
+		<a href="#!" class="btn ripple #33e-bg">Link Ripple</a><button class="btn ripple #33e-bg">button ripple</button> <button class="btn grad-#33e-#a00-bg ripple fs120%"><span>button large gradient ripple</span></button></p>
+	</div>
+
+	<p>A decorative button with growing effect into it: <a href="#!" class="btn trans #fff-bg grow"><i class="icon">👍</i> Upvote</a> or a simple one: <a href="#!" class="btn trans #fff-bg grow">☕ Ko-Fi</a></p>
+
+	<div class="outer">
+		<p>
+			<button data-tooltip="Here is a Tooltip, too." class="btn radius #33e-bg fs150% effect">Button big</button>
+			<button class="btn #33e-bg">Button Primary</button>
+			<button class="btn outline radius">Button Outline</button>
+			<input type="submit" value="Submit input" class="btn outline radius" />
+			<a href="#!" class="btn #33e-bg">link primary</a>
+			<a href="#!" class="btn no-select effect border #fff-bg #33e-brd">Link with border</a><br />
+			<label class="btn #33e-bg effect"><span class="#33e-bg">Label (<code>.#33e-bg</code> Ratio: 7.37)</span></label>
+			<button class="btn #a00-bg effect"><span class="#a00-bg">Button (<code>.#a00-bg</code> Ratio: 5.89)</span></button>
+			<a href="#!" class="btn #064-bg effect">Link (<code>.#064-bg</code> Ratio: 7.04)</a>
+			<button type="submit" class="btn #ff0-bg effect"><span>Submit button (<code>.#ff0-bg</code> Ratio: 17.58)</span></button>
+		Primary base line (a <a href="#!">simple link</a>)</p>
+	</div>
+
+	<div class="outer">
+		<nav aria-label="Page navigation">
+			<a href="#!" aria-label="Go to previous page" class="btn underline #fff-bg">Prev</a> <a href="#!" aria-label="Go to page 1" class="btn trans #f9f-bg">1</a> <a href="#!" aria-label="Go to page 2" class="btn trans #f9f-bg">2</a> <a href="#!" aria-label="Go to page 3" class="btn trans #f9f-bg">3</a> <span aria-label="More pages" class="btn trans disabled">...</span><a href="#!" class="btn trans rounded">30</a> <a href="#!" aria-label="Go to page 31" class="btn trans rounded">31</a> <a href="#!" aria-label="Go to page 32" class="btn trans rounded">32</a> <span data-tooltip="Some more pages" class="btn trans rounded no-shadow disabled">...</span> <a href="#!" aria-label="Go to next page" class="btn #f9f-bg">Next <svg role="img" aria-label="Discover" aria-hidden="true" focusable="false" width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><switch><g><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></g><foreignObject width="0" height="0" overflow="hidden"><i class="icon">→</i></foreignObject></switch></svg></a>
+		</nav>
+	</div>
+
+	<div class="outer">
+		<p>Tooltip for <a href="javascript:void(0)" data-tooltip="Copy (data) from one computer system to another over the Internet.">links</a></p>
+	</div>
+
+	<div class="outer" style="margin-bottom:2em">
+		<p>Here is a <a href="#!" class="over">Link with effect</a></p>
+	</div>
+
+	<div class="outer" style="margin-bottom:3em">
+		<p class="lettrin margin-correct">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		<p style="line-height:1.5em">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	</div>
+
+	<div class="outer">
+		<div class="marquee fs685%">
+			<span>Marquee!</span>
+		</div>
+	</div>
+
+	<div class="outer" style="margin:2em 0 4em 1em">
+		<label for="slider" class="fl-l no-select">Choose (activate [tick/switch to right] or disable [switch to left or keep blank]):</label>
+		<span class="slider fl-l">
+			<input aria-invalid="false" type="checkbox" name="ac-376" value="1" id="slider">
+			<span class="outer-slider">
+				<span class="inner-slider"></span>
+			</span>
+		</span>
+	</div>
+
+	<div class="outer">
+		<label class="checkbox no-select">One
+				<input type="checkbox" checked="checked">
+				<span class="check"></span>
+		</label>
+		<label class="checkbox no-select">Two
+		    <input type="checkbox">
+		    <span class="check"></span>
+		</label>
+		<label class="checkbox no-select">Three
+		    <input type="checkbox">
+		    <span class="check"></span>
+		</label>
+		<label class="radio no-select">Radio 1
+		    <input type="radio" checked="checked" name="radio">
+		    <span class="check"></span>
+		</label>
+		<label class="radio no-select">Radio 2
+		    <input type="radio" name="radio">
+		    <span class="check"></span>
+		</label>
+	</div>
+
+
+	<!--
+	<div class="outer">
+		<input value="true" class="css-p19g2b" name="dark-mode" type="radio" />
+		<svg class="plain" aria-hidden="true" fill="currentcolor" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+		<svg class="empty" aria-hidden="true" fill="currentcolor" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+	</div>
+	-->
+
+	<div class="outer">
+		<fieldset>
+			<label for="country">Select:</label>
+			<select class="select" name="country" id="country" onclick="document.getElementsByClassName('select')[0].classList.toggle('arrow-up');">
+					<option aria-label="Choose below:" class="option" value="default">Choose&hellip;</option>
+					<option aria-label="Andorra">Andorra</option>
+					<option aria-label="France">France</option>
+					<option aria-label="Deutschland">Deutschland</option>
+					<option aria-label="UK">UK</option>
+			</select>
+		</fieldset>
+	</div>
+
+	<div class="outer">
+
+		<div aria-describedby="language-choice" class="langs-outer rel">
+			<span class="readers" id="language-choice">Languages switcher:</span>
+			<ul aria-label="Langues" aria-haspopup="true" tabindex="-1" class="langs rel no-list table">
+				<li aria-label="Switch selection" class="selector">
+					<label for="check" title="Choose your language" hidden=""><svg width="24" height="24" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><switch><g><path d="M13 21h5v2H6v-2h5v-1.05a10.002 10.002 0 0 1-7.684-4.988l1.737-.992A8 8 0 1 0 15.97 3.053l.992-1.737A9.996 9.996 0 0 1 22 10c0 5.185-3.947 9.449-9 9.95V21zm-1-4a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"></path></g><foreignObject width="24" height="0"><b class="icon">🌍</b></foreignObject></switch></svg></label>
+					<input type="checkbox" class="abs hidden" id="check" hidden="">
+						<ul class="abs no-list" id="choices">
+							<li class="rel"><a lang="de" aria-label="DE (Deutsch)" href="#!">DE</a></li>
+							<li class="rel #ccc-bg"><a lang="en" aria-label="EN (English)" href="#!">EN</a></li>
+							<li class="rel"><a lang="fr" aria-label="FR (Français)" href="#!">FR</a></li>
+						</ul>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="outer">
+
+		<div class="_1/2 table-center form-region">
+			<div class="form-container fl-l radius #fff-bg box-shadow">
+				<form method="post" action="#" class="full mt1em mb2em">
+					<div class="full">
+						<label for="email" class="full txt-upper bold no-select"><span class="_inner">Your email address: <em class="txt-normal #064-color">(required)</em></span></label>
+					</div>
+					<div class="full mb1em">
+						<input type="email" name="email" value="" required="" class="full" id="email">
+					</div>
+					<div class="full">
+						<label for="first-name" class="_1/2 txt-upper bold no-select"><span class="_inner">Your First Name:</span></label>
+						<label for="last-name" class="_1/2 txt-upper bold no-select"><span class="_inner">Your Last Name: <em class="txt-normal #064-color">(required)</em></span></label>
+					</div>
+					<div class="full mb1em">
+						<div class="_1/2">
+							<input type="text" name="first_name" value="" class="_inner" id="first-name">
+						</div>
+						<div class="_1/2">
+							<input type="text" name="last_name" value="" required="" class="_inner" id="last-name">
+						</div>
+					</div>
+					<div class="full">
+						<label for="pass-word" class="_1/2 txt-upper bold no-select"><span class="_inner">Your Password: <em class="txt-normal #666-color">(required)</em></span></label>
+						<label for="compagny" class="_1/2 txt-upper bold no-select"><span class="_inner">Your Compagny:</span></label>
+					</div>
+					<div class="full mb1em">
+						<div class="_1/2">
+							<input type="password" name="password" value="" required="" class="_inner" id="pass-word">
+						</div>
+						<div class="_1/2">
+							<input type="text" name="compagny" value="" class="_inner" id="compagny">
+						</div>
+					</div>
+					<div class="full">
+						<span class="fl-l block _inner"><em class="txt-normal #666-color">required:</em></span>
+						<div class="_2/3" style="margin-bottom:1em">
+							<label for="gprd" data-tooltip="Slide right or tick to approve 😎" class="fl-l bold no-select" style="width:10em;margin:.6em .4em 0 1em">GDPR consent:
+								<span class="slider fl-r">
+									<input aria-invalid="false" type="checkbox" name="ac-376" value="1" required id="gprd">
+									<span class="outer-slider">
+											<span class="inner-slider"></span>
+									</span>
+								</span>
+							</label>
+							<span style="margin:.6em 0 0 0;display:inline-table"><a href="#!" data-tooltip="Our privacy policy">More about GDPR</a></span>
+						</div>
+						<div class="">
+							<button type="submit" disabled class="fl-r btn trans #f9f-bg">Create Account</button>
+							<button type="reset" class="fl-r btn trans #fff-bg">Reset</button>
+						</div>
+					</div>
+				</form>
+			</div>
+	</div>
+
+	</div>
+
+	<div class="outer">
+
+		<div class="search-box fl-l">
+		<div class="search-inner fl-l rel">
+			<form role="search" method="get" class="full fl-l #fff-bg" action="">
+				<label for="search">
+					<h4 class="readers">Search:</h4>
+				</label>
+				<input name="q" type="search" aria-label="Write then press [Enter]" title="Write then press [Enter]" class="search-field" id="search" placeholder="Write your search here…">
+				<button type="submit" aria-label="Find" title="Find" class="search-submit"><span class="readers">Find</span></button>
+			</form>
+		</div>
+	</div>
+
+	</div>
+
+<!--
+<svg class="css-6ibwe0" fill="currentcolor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"></path></svg>
+-->
+
+</main>
+
+<footer class="outer" style="margin:3em 0">
+	<small>Woo CSS&nbsp;Framework by cara-tm. Tested successfully within:
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" class="icon"><title>Internet Explorer 8</title><switch><g><path d="M22.8 7.381c1.125-2.7 1.2-4.95-.15-6.3-1.5-1.499-5.1-1.05-8.924.75h-.45c-2.7 0-5.324.976-7.274 2.7-1.65 1.5-2.85 3.45-3.375 5.625.375-.45 2.475-2.925 4.875-4.275.075 0 .675-.375.675-.375-.075 0-1.2 1.125-1.425 1.35-5.25 5.4-8.324 13.574-5.924 15.973 1.574 1.575 4.424 1.2 7.724-.6 1.425.675 3 .975 4.724.975 2.25 0 4.35-.6 6.15-1.8 1.874-1.2 3.224-3.074 4.05-5.249h-5.85c-.75 1.425-2.475 2.4-4.275 2.4-2.55 0-4.65-2.1-4.724-4.5V13.83h15.298v-.225c0-.375.075-.825.075-1.124 0-1.8-.45-3.525-1.2-5.1zM2.477 22.38c-1.2-1.2-.824-3.524.6-6.299.675 1.875 1.8 3.525 3.225 4.725.45.375.975.75 1.5 1.05-2.4 1.274-4.35 1.5-5.325.524zm15.374-11.398H8.702v-.075c.15-2.325 2.324-4.35 4.874-4.35 2.4 0 4.35 1.875 4.5 4.35v.075zm4.574-4.2c-.45-.75-1.05-1.5-1.725-2.1a11.213 11.213 0 0 0-3.6-2.25c2.4-1.124 4.425-1.274 5.475-.224.825.975.75 2.624-.15 4.574 0 .075 0 .075 0 0 0 .075 0 .075 0 0z" fill="#0076d6"></path></g><foreignObject width="0" height="0"><span>Internet Explorer 8</span></foreignObject></switch></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" class="icon"><title>Opera 11</title><switch><g><path d="M8.051 5.238c-1.328 1.566-2.186 3.883-2.246 6.48v.564c.061 2.598.918 4.912 2.246 6.479 1.721 2.236 4.279 3.654 7.139 3.654 1.756 0 3.4-.537 4.807-1.471C17.879 22.846 15.074 24 12 24c-.192 0-.383-.004-.57-.014C5.064 23.689 0 18.436 0 12 0 5.371 5.373 0 12 0h.045c3.055.012 5.84 1.166 7.953 3.055-1.408-.93-3.051-1.471-4.81-1.471-2.858 0-5.417 1.42-7.14 3.654h.003zM24 12c0 3.556-1.545 6.748-4.002 8.945-3.078 1.5-5.946.451-6.896-.205 3.023-.664 5.307-4.32 5.307-8.74 0-4.422-2.283-8.075-5.307-8.74.949-.654 3.818-1.703 6.896-.205C22.455 5.25 24 8.445 24 12z" fill="#ff1b2d"></path></g><foreignObject width="0" height="0"><span>Opera</span></foreignObject></switch></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="27" height="27" viewBox="0 0 24 24" class="icon"><title>Microsoft Edge</title><switch><g><path d="M20.644,8.586c-0.17-0.711-0.441-1.448-0.774-2.021c-0.771-1.329-1.464-2.237-3.177-3.32S13.076,2,12.17,2 C9.755,2,7.959,2.86,6.645,3.887C3.344,6.47,3,11,3,11s1.221-2.045,3.54-3.526C7.943,6.579,9.941,6,11.568,6C15.885,6,16,10,16,10H9 c0-2,1-3,1-3s-5,2-5,7.044c0,0.487-0.003,1.372,0.248,2.283c0.232,0.843,0.7,1.705,1.132,2.353c1.221,1.832,3.045,2.614,3.916,2.904 C11.292,21.916,12.325,22,13.306,22c2.72,0,4.877-0.886,5.694-1.275v-4.172C18.242,17.007,16.321,18,14,18c-5,0-5-4-5-4h12v-2.49 C21,11.51,20.961,9.917,20.644,8.586z" fill="#0078d7"></path></g><foreignObject width="0" height="0"><span>Microsoft Edge</span></foreignObject></switch></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" class="icon"><title>New Microsoft Edge</title><switch><g><path d="M21.86 17.86q.14 0 .25.12.1.13.1.25t-.11.33l-.32.46-.43.53-.44.5q-.21.25-.38.42l-.22.23q-.58.53-1.34 1.04-.76.51-1.6.91-.86.4-1.74.64t-1.67.24q-.9 0-1.69-.28-.8-.28-1.48-.78-.68-.5-1.22-1.17-.53-.66-.92-1.44-.38-.77-.58-1.6-.2-.83-.2-1.67 0-1 .32-1.96.33-.97.87-1.8.14.95.55 1.77.41.82 1.02 1.5.6.68 1.38 1.21.78.54 1.64.9.86.36 1.77.56.92.2 1.8.2 1.12 0 2.18-.24 1.06-.23 2.06-.72l.2-.1.2-.05zm-15.5-1.27q0 1.1.27 2.15.27 1.06.78 2.03.51.96 1.24 1.77.74.82 1.66 1.4-1.47-.2-2.8-.74-1.33-.55-2.48-1.37-1.15-.83-2.08-1.9-.92-1.07-1.58-2.33T.36 14.94Q0 13.54 0 12.06q0-.81.32-1.49.31-.68.83-1.23.53-.55 1.2-.96.66-.4 1.35-.66.74-.27 1.5-.39.78-.12 1.55-.12.7 0 1.42.1.72.12 1.4.35.68.23 1.32.57.63.35 1.16.83-.35 0-.7.07-.33.07-.65.23v-.02q-.63.28-1.2.74-.57.46-1.05 1.04-.48.58-.87 1.26-.38.67-.65 1.39-.27.71-.42 1.44-.15.72-.15 1.38zM11.96.06q1.7 0 3.33.39 1.63.38 3.07 1.15 1.43.77 2.62 1.93 1.18 1.16 1.98 2.7.49.94.76 1.96.28 1 .28 2.08 0 .89-.23 1.7-.24.8-.69 1.48-.45.68-1.1 1.22-.64.53-1.45.88-.54.24-1.11.36-.58.13-1.16.13-.42 0-.97-.03-.54-.03-1.1-.12-.55-.1-1.05-.28-.5-.19-.84-.5-.12-.09-.23-.24-.1-.16-.1-.33 0-.15.16-.35.16-.2.35-.5.2-.28.36-.68.16-.4.16-.95 0-1.06-.4-1.96-.4-.91-1.06-1.64-.66-.74-1.52-1.28-.86-.55-1.79-.89-.84-.3-1.72-.44-.87-.14-1.76-.14-1.55 0-3.06.45T.94 7.55q.71-1.74 1.81-3.13 1.1-1.38 2.52-2.35Q6.68 1.1 8.37.58q1.7-.52 3.58-.52Z" fill="#0078d7"></path></g><foreignObject width="0" height="0"><span>New Microsoft Edge</span></foreignObject></switch></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" class="icon"><title>Mozilla Firefox 4</title><switch><g><path d="M8.855 7.333c.008 0 .004 0 0 0zM6.082 5.947c.007 0 .004 0 0 0zm16.59 2.14c-.5-1.203-1.514-2.503-2.31-2.914.648 1.27 1.023 2.544 1.166 3.495l.002.02c-1.302-3.246-3.51-4.555-5.314-7.404-.09-.145-.182-.289-.27-.441a3.51 3.51 0 01-.128-.238 2.097 2.097 0 01-.171-.456.03.03 0 00-.027-.03.038.038 0 00-.021 0l-.006.002a.037.037 0 00-.009.005.038.038 0 01.005-.007c-2.56 1.5-3.622 4.126-3.894 5.797a6.136 6.136 0 00-2.282.582.294.294 0 00-.146.366.29.29 0 00.392.169 5.567 5.567 0 011.988-.519l.067-.005A5.636 5.636 0 0112 6.5a5.79 5.79 0 011.652.229l.094.03a5.757 5.757 0 01.265.088 5.839 5.839 0 01.191.075c.052.02.103.041.154.063a5.676 5.676 0 01.235.111l.106.054a5.776 5.776 0 01.224.123 5.165 5.165 0 01.141.086 5.895 5.895 0 012.014 2.083c-.615-.432-1.716-.859-2.776-.674 4.142 2.07 3.03 9.201-2.71 8.932a5.113 5.113 0 01-1.498-.29 6.347 6.347 0 01-.339-.137 4.37 4.37 0 01-.194-.093c-1.406-.727-2.567-2.1-2.712-3.768 0 0 .531-1.981 3.806-1.981.354 0 1.366-.988 1.385-1.274-.005-.094-2.009-.891-2.79-1.66-.418-.412-.616-.61-.791-.76a3.436 3.436 0 00-.299-.225 5.335 5.335 0 01-.032-2.814c-1.183.539-2.103 1.39-2.772 2.142h-.006c-.456-.578-.424-2.486-.398-2.884-.006-.025-.34.174-.385.204a8.395 8.395 0 00-1.125.964 10.086 10.086 0 00-1.075 1.29v0A9.72 9.72 0 00.819 9.9c-.003.013-.11.482-.188 1.062a12.736 12.736 0 00-.037.27 7.724 7.724 0 00-.068.66l-.002.034a28.326 28.326 0 00-.023.383l-.001.06c0 6.358 5.156 11.513 11.516 11.513 5.695 0 10.424-4.135 11.35-9.566.02-.147.035-.295.052-.444.23-1.974-.025-4.05-.746-5.786zm-7.862 3.455z" fill="#ff7139"></path></g><foreignObject width="0" height="0"><span>Firefox 4</span></foreignObject></switch></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" class="icon"><title>Google Chrome 15</title><switch><g><path d="M16.214 8.69l6.715-1.679A12.027 12.027 0 0 1 24 11.972C24 18.57 18.569 24 11.968 24c-.302 0-.605-.011-.907-.034l4.905-8.347c.356-.376.655-.803.881-1.271a5.451 5.451 0 0 0-.043-4.748 5.156 5.156 0 0 0-.59-.91zm-3.24 8.575l-2.121 6.682C4.738 23.345 0 18.14 0 11.977 0 9.592.709 7.26 2.038 5.279l4.834 8.377c.18.539 1.119 2.581 3.067 3.327.998.382 2.041.481 3.035.282zM11.973 7.62c-2.006.019-3.878 1.544-4.281 3.512a4.478 4.478 0 0 0 1.237 4.032c1.214 1.186 3.14 1.578 4.734.927 1.408-.576 2.47-1.927 2.691-3.431.272-1.856-.788-3.832-2.495-4.629a4.413 4.413 0 0 0-1.886-.411zM7.046 9.962L2.259 4.963A12.043 12.043 0 0 1 11.997 0c4.56 0 8.744 2.592 10.774 6.675H12.558c-1.811-.125-3.288.52-4.265 1.453a5.345 5.345 0 0 0-1.247 1.834z" fill="#4285f4"></path></g><foreignObject width="0" height="0"><span>Google Chromium</span></foreignObject></switch></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" class="icon"><title>Vivaldi</title><switch><g><path d="M12 0C6.75 0 3.817 0 1.912 1.904.007 3.81 0 6.75 0 12s0 8.175 1.912 10.08C3.825 23.985 6.75 24 12 24c5.25 0 8.183 0 10.088-1.904C23.993 20.19 24 17.25 24 12s0-8.175-1.912-10.08C20.175.015 17.25 0 12 0zm-.168 3a9 9 0 016.49 2.648 9 9 0 010 12.704A9 9 0 1111.832 3zM7.568 7.496a1.433 1.433 0 00-.142.004A1.5 1.5 0 006.21 9.75l1.701 3c.93 1.582 1.839 3.202 2.791 4.822a1.417 1.417 0 001.41.75 1.5 1.5 0 001.223-.81l4.447-7.762A1.56 1.56 0 0018 8.768a1.5 1.5 0 10-2.828.914 2.513 2.513 0 01.256 1.119v.246a2.393 2.393 0 01-2.52 2.13 2.348 2.348 0 01-1.965-1.214c-.307-.51-.6-1.035-.9-1.553-.42-.72-.826-1.41-1.246-2.16a1.433 1.433 0 00-1.229-.754Z" fill="#ef3939"></path></g><foreignObject width="0" height="0"><span>Vivaldi</span></foreignObject></switch></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" class="icon"><title>Safari 5</title><switch><g><path d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm0-.75c6.213 0 11.25-5.037 11.25-11.25S18.213.75 12 .75.75 5.787.75 12 5.787 23.25 12 23.25zM12 2a.25.25 0 0 1 .25.25v1a.25.25 0 1 1-.5 0v-1A.25.25 0 0 1 12 2zm0 18.5a.25.25 0 0 1 .25.25v1a.25.25 0 1 1-.5 0v-1a.25.25 0 0 1 .25-.25zm7.071-15.571a.25.25 0 0 1 0 .353l-.707.708a.25.25 0 0 1-.354-.354l.708-.707a.25.25 0 0 1 .353 0zM5.99 18.01a.25.25 0 0 1 0 .354l-.708.707a.25.25 0 1 1-.353-.353l.707-.708a.25.25 0 0 1 .354 0zM4.929 4.93a.25.25 0 0 1 .353 0l.708.707a.25.25 0 0 1-.354.354l-.707-.708a.25.25 0 0 1 0-.353zM18.01 18.01a.25.25 0 0 1 .354 0l.707.708a.25.25 0 1 1-.353.353l-.708-.707a.25.25 0 0 1 0-.354zM2 12a.25.25 0 0 1 .25-.25h1a.25.25 0 1 1 0 .5h-1A.25.25 0 0 1 2 12zm18.5 0a.25.25 0 0 1 .25-.25h1a.25.25 0 1 1 0 .5h-1a.25.25 0 0 1-.25-.25zm-4.593-9.205a.25.25 0 0 1 .133.328l-.391.92a.25.25 0 1 1-.46-.195l.39-.92a.25.25 0 0 1 .328-.133zM8.68 19.825a.25.25 0 0 1 .132.327l-.39.92a.25.25 0 0 1-.46-.195l.39-.92a.25.25 0 0 1 .328-.133zM21.272 8.253a.25.25 0 0 1-.138.325l-.927.375a.25.25 0 1 1-.188-.464l.927-.374a.25.25 0 0 1 .326.138zm-17.153 6.93a.25.25 0 0 1-.138.326l-.927.374a.25.25 0 1 1-.188-.463l.927-.375a.25.25 0 0 1 .326.138zM8.254 2.728a.25.25 0 0 1 .325.138l.375.927a.25.25 0 0 1-.464.188l-.374-.927a.25.25 0 0 1 .138-.326zm6.93 17.153a.25.25 0 0 1 .326.138l.374.927a.25.25 0 1 1-.463.188l-.375-.927a.25.25 0 0 1 .138-.326zM2.795 8.093a.25.25 0 0 1 .328-.133l.92.391a.25.25 0 0 1-.195.46l-.92-.39a.25.25 0 0 1-.133-.328zm17.03 7.228a.25.25 0 0 1 .327-.132l.92.39a.25.25 0 1 1-.195.46l-.92-.39a.25.25 0 0 1-.133-.328zM12.879 12.879L11.12 11.12l-4.141 5.9 5.899-4.142zm6.192-7.95l-5.834 8.308-8.308 5.834 5.834-8.308 8.308-5.834z"></path></g><foreignObject width="0" height="0"><span>Safari 5</span></foreignObject></switch></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="-3 -3 28 28" class="icon"><title>Windows</title><switch><g><path d="M24 11.5v-11.5l-13.4 1.9v9.6h13.4zm-14.3-9.4l-9.7 1.4v8h9.7v-9.4zm-9.7 10.3v8.1l9.7 1.4v-9.5h-9.7zm10.6 9.7l13.4 1.9v-11.6h-13.4v9.7z" fill="#0078d6"></path></g><foreignObject width="0" height="0"><span>Windows</span></foreignObject></switch></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" class="icon"><title>Apple</title><switch><g><path d="M12.5,6h.1A5.51,5.51,0,0,0,17,.5a.5.5,0,0,0-.19-.39A.49.49,0,0,0,16.4,0,5.51,5.51,0,0,0,12,5.51a.5.5,0,0,0,.5.5Z" style="fill:#303c42"></path><path d="M21.67,16.53a4.3,4.3,0,0,1-2.67-4,4.46,4.46,0,0,1,2.21-3.85.5.5,0,0,0,.12-.77A6,6,0,0,0,17,6a6.12,6.12,0,0,0-2.34.52A5.58,5.58,0,0,1,12.5,7a5.58,5.58,0,0,1-2.16-.48A6.12,6.12,0,0,0,8,6c-.61,0-6,.2-6,7,0,5.56,3.8,11,6,11a6.63,6.63,0,0,0,2.81-.59A4.1,4.1,0,0,1,12.5,23a4.1,4.1,0,0,1,1.69.41A6.63,6.63,0,0,0,17,24c1.79,0,3.9-3.53,5-6.84A.5.5,0,0,0,21.67,16.53Z" style="fill:#303c42"></path></g><foreignObject width="0" height="0"><span>Mac</span></foreignObject></switch></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" class="icon"><title>Android</title><switch><g><path d="M24 19H0a13.6 13.6 0 0 1 2.21-6.07A11.2 11.2 0 0 1 5.87 9.4l.41-.23-2.02-3.41a.51.51 0 0 1 .17-.7.5.5 0 0 1 .69.18l2.08 3.5a12.62 12.62 0 0 1 4.84-.9 12.2 12.2 0 0 1 4.75.9l2.07-3.5a.5.5 0 0 1 .7-.17.51.51 0 0 1 .16.7L17.7 9.19l.5.28a11.38 11.38 0 0 1 3.63 3.62A14.48 14.48 0 0 1 24 19zm-7.5-4.48a1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1 1 1 0 0 0-1 1zm-11 0a1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1 1 1 0 0 0-1 1z" fill="#3ddc84"></path></g><foreignObject width="0" height="0"><span>Android</span></foreignObject></switch></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" class="icon"><title>iOS</title><switch><g><path d="M1.1 6.05C.486 6.05 0 6.53 0 7.13A1.08 1.08 0 0 0 1.1 8.21C1.72 8.21 2.21 7.73 2.21 7.13C2.21 6.53 1.72 6.05 1.1 6.05M8.71 6.07C5.35 6.07 3.25 8.36 3.25 12C3.25 15.67 5.35 17.95 8.71 17.95C12.05 17.95 14.16 15.67 14.16 12C14.16 8.36 12.05 6.07 8.71 6.07M19.55 6.07C17.05 6.07 15.27 7.45 15.27 9.5C15.27 11.13 16.28 12.15 18.4 12.64L19.89 13C21.34 13.33 21.93 13.81 21.93 14.64C21.93 15.6 20.96 16.28 19.58 16.28C18.17 16.28 17.11 15.59 17 14.53H15C15.08 16.65 16.82 17.95 19.46 17.95C22.25 17.95 24 16.58 24 14.4C24 12.69 23 11.72 20.68 11.19L19.35 10.89C17.94 10.55 17.36 10.1 17.36 9.34C17.36 8.38 18.24 7.74 19.54 7.74C20.85 7.74 21.75 8.39 21.85 9.46H23.81C23.76 7.44 22.09 6.07 19.55 6.07M8.71 7.82C10.75 7.82 12.06 9.45 12.06 12C12.06 14.57 10.75 16.2 8.71 16.2C6.65 16.2 5.35 14.57 5.35 12C5.35 9.45 6.65 7.82 8.71 7.82M.111 9.31V17.76H2.1V9.31H.11Z"></path></g><foreignObject width="0" height="0"><span>iOS</span></foreignObject></switch></svg>
+	</small>
+</footer>
+
+<script>
+// Source: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2
+function handleFirstTab(e){if(e.keyCode===9){document.body.classList.add('user-tabbing');window.removeEventListener('keydown',handleFirstTab);window.addEventListener('mousedown',handleMouseDownOnce);}}function handleMouseDownOnce(){document.body.classList.remove('user-tabbing');window.removeEventListener('mousedown',handleMouseDownOnce);window.addEventListener('keydown',handleFirstTab);}
+window.addEventListener('keydown',handleFirstTab);
+/*
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+	const newColorScheme = e.matches ? "dark" : "light";
+});
+*/
+/*! Simple 'Dark Mode' switcher */
+if(null==localStorage.getItem("theme")){
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){localStorage.setItem("theme","dark");}else{localStorage.setItem("theme","light");}}
+/*! Simple 'Dark Mode' switcher */
+if((document['querySelector']&&document['querySelectorAll']&&document['addEventListener'])!=null){var toggleSwitch=document.querySelector('.theme-switch input[type="checkbox"]');function switchTheme(e){if(e.target.checked){document.documentElement.setAttribute("data-theme","dark");localStorage.setItem("theme","dark");}else{document.documentElement.setAttribute("data-theme","light");localStorage.setItem("theme","light");}}toggleSwitch.addEventListener("change",switchTheme,false);
+/*! Dark theme switcher */
+if(typeof(Storage)!=="undefined"){var currentTheme=localStorage.getItem("theme")?localStorage.getItem("theme"):null;if(currentTheme){document.documentElement.setAttribute("data-theme",currentTheme);if(currentTheme==="dark"){toggleSwitch.checked=true;}}}}
+</script>
+
+</body></html>
