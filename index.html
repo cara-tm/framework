@@ -335,7 +335,7 @@ font:normal 300 normal 1em/1 '-apple-system',system-ui,BlinkMacSystemFont,'Segoe
 code,pre{font-family:monospace,monospace;font-size:1em}
 b,strong{font-weight:bold}
 
-.lettrin{margin:1.4em 0 0 0;line-height:1.5em}
+.lettrin{margin:1.4em 0 0 0;line-height:1.5em;hyphens:auto}
 
 /*html p.lettrin .drop span{float:left;margin:0 .1em -.09em .01em;padding:0;text-indent:0;line-height:1em;font-family:inherit;font-size:7.2em;font-weight:500}
 html p.lettrin .drop span:before,html p.lettrin .drop span:after{content:'';display:block}
@@ -358,6 +358,28 @@ html p.lettrin .drop span:after{margin-bottom:.0em}
 
 html p.lettrin:first-letter{overflow:hidden;float:left;margin:-.12em .1em -.09em .01em;padding:0;text-indent:0;line-height:1em;font-family:inherit;font-size:7.2em;font-weight:500}
 
+html body .bdg{
+display:inline-table;
+height:1.257em;
+text-decoration:none!important
+}
+.bdg:after{
+content:attr(data-items);
+display:table-cell;
+position:absolute;
+top:-1em;
+right:-50%;
+min-width:.4em;
+margin:0 auto;
+padding:2px 6px;
+vertical-align:middle;
+background:#a00;
+text-align:center;
+text-decoration:none!important;
+color:#fff;
+font:normal 600 1em/1.1 Arial,sans-serif;
+border-radius:50%
+}
 .marquee{overflow:hidden;margin:.3em 0}
 .marquee span{display:inline-block;width:100%;width:40vw;margin-left:-3vw;text-align:center;white-space:nowrap;color:currentColor;
 /* Number of repeating word into the viewport width */
@@ -372,7 +394,7 @@ text-shadow:40vw 0 currentColor,80vw 0 currentColor,120vw 0 currentColor,160vw 0
 /* Search element (11 rules - 1360 Bytes) */
 
 
-input[type="search"]{-webkit-appearance:textfield}.search-block{position:relative;width:100%;margin:-.1em auto 2em 0}.search-box{width:100%;vertical-align:middle;white-space:nowrap}.search-inner{width:100%}.search-box form{position:relative;display:flex;width:100%;height:3em;border:.062pc solid #ddd;border-radius:2px 0 0 2px;border-left:none}.search-box label{display:block;top:0;left:0;width:3em;height:3em}.search-box .search-field{float:right;width:95.3%;width:calc(100% - .5em);height:100%;padding-left:calc(3.5em);border:none;-webkit-appearance:textfield;outline-offset:-2px}.search-box button[type="submit"]:before,.search-icon:before{content:"⚲";display:block;position:relative;top:0;left:0;height:100%;padding:.15em 0 0 .05em;border:none;text-align:center;line-height:1em;color:currentColor;font-size:2.5em;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}.search-box button[type="submit"],.search-box input[type="submit"]{overflow:hidden;position:absolute;top:0;left:0;bottom:0;width:3em;height:3em;padding:0;border-left:.062pc solid #ddd;border-radius:0 2px 2px 0;cursor:pointer;*position:relative;*height:2.9em;*margin:28px 0 0 -3.3em;*padding:15px 15px 12px;*font-size:100%}.search-box input[type="submit"]{width:auto;padding:0 .4em}.search-submit .readers{*display:block;*position:relative!important;*top:-1.1em;*left:-1em;*min-width:3em;*height:2.9em;*background:#333;*color:#fff;*line-height:3em}
+input[type="search"]{-webkit-appearance:textfield}.search-block{position:relative;width:100%;margin:-.1em auto 2em 0}.search-box{width:100%;vertical-align:middle;white-space:nowrap}.search-inner{width:100%}.search-box form{position:relative;display:flex;width:100%;height:3em;border:.062pc solid #ddd;border-radius:2px 0 0 2px;border-left:none}.search-box label{display:block;top:0;left:0;width:3em;height:3em}.search-box .search-field{float:right;width:95.3%;width:calc(100% - .5em);height:100%;padding-left:calc(3.5em);border:none;-webkit-appearance:textfield;outline-offset:-2px}.search-box button[type="submit"]:before,.search-icon span:before{content:"⚲";display:block;position:relative;top:0;left:0;height:100%;padding:.15em 0 0 .05em;border:none;text-align:center;line-height:1em;color:currentColor;font-size:2.5em;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}.search-box button[type="submit"],.search-box input[type="submit"]{overflow:hidden;position:absolute;top:0;left:0;bottom:0;width:3em;height:3em;padding:0;border-left:.062pc solid #ddd;border-radius:0 2px 2px 0;cursor:pointer;*position:relative;*height:2.9em;*margin:28px 0 0 -3.3em;*padding:15px 15px 12px;*font-size:100%}.search-box input[type="submit"]{width:auto;padding:0 .4em}.search-submit .readers{*display:block;*position:relative!important;*top:-1.1em;*left:-1em;*min-width:3em;*height:2.9em;*background:#333;*color:#fff;*line-height:3em}
 .search-box .search::-webkit-input-placeholder{color:#65737e}.search-box .search::-moz-placeholder{color:#65737e}.search-box .search:-ms-input-placeholder{color:#65737e}.search-box .search:hover,.search-box .search:focus,.search-box .search:active{outline:none;background:none;border-color:transparent}
 
 /*! Search submit button on the right */
@@ -476,31 +498,13 @@ margin-right:3%;
 margin-left:3%
 }
 
-.reveal-inner{
-visibility:hidden;
-position:absolute;
-z-index:-1;
-top:50%;
-left:50%;
--webkit-transform:translate(-50%,5px) scale(.95);
-transform:translate(-50%,5px) scale(.95);
--o-transition:.7s cubic-bezier(.19,1,.22,1);
--webkit-transition:.7s cubic-bezier(.19,1,.22,1);
-transition:.7s cubic-bezier(.19,1,.22,1)
-}
+.reveal-inner{visibility:hidden;position:absolute;z-index:-1;top:50%;left:50%;-webkit-transform:translate(-50%,5px) scale(.95);transform:translate(-50%,5px) scale(.95);-o-transition:.7s cubic-bezier(.19,1,.22,1);-webkit-transition:.7s cubic-bezier(.19,1,.22,1);transition:.7s cubic-bezier(.19,1,.22,1)}.reveal a:focus ~ .reveal-inner,.reveal a:hover ~ .reveal-inner{z-index:1;visibility:visible;opacity:1;-webkit-transform:translate(-50%,-7px);transform:translate(-50%,-7px)}
 
 /*! Hacks for Opera11/ie7/8 support respectively: can be removed safely if not needed */
 .reveal-inner .btn{margin-left:-50%;*margin-left:0%;*left:-50%;margin-left:calc(0ch)}
 
-
-.reveal a:focus ~ .reveal-inner,
-.reveal a:hover ~ .reveal-inner{
-z-index:1;
-visibility:visible;
-opacity:1;
--webkit-transform:translate(-50%,-7px);
-transform:translate(-50%,-7px)
-}
+/* Toasters styling (5 rules - 608 Bytes) */
+.info{position:relative;z-index:0;left:1em;display:inline-table;margin:2em 2.5em 0 0;padding:.2em .2em .2em 2.1em;font:1em/1 "bold Arial"}.info a{position:absolute;top:-1em;right:-.8em;text-decoration:none;color:#aaa}.info:after{content:'';overflow:hidden;position:absolute;z-index:1;top:-1em;left:-1em;width:3em;height:3em;background:#30e;background:linear-gradient(135deg,#83e4e2 0%,#30e 100%);border-radius:1rem 1rem 0 1rem}.info.alert:after{background:red;background:linear-gradient(135deg,#ff0 0%,#f00 100%)}.info.done:after{background:#a2ed56;background:linear-gradient(135deg,#83e4e2 0%,#a2ed56 100%)}
 
 /* Languages selector (15 rules - 2430 Bytes) */
 .langs-outer{right:1%;bottom:0;float:right;width:2.781em;height:2.781em;margin:1em 0;color:#333;*right:4%}.langs{top:-.77em;width:2.7815em;padding:0;background:#fff;background:var(--langs-bg,#fff);color:var(--langs-color,#304659);font:1em/2.5 Heebo,Arial,sans-serif;outline:none;cursor:pointer}.langs .selector{height:2.781em;list-style:none;text-align:center;box-shadow:0 0 20px -1px rgba(0,0,0,.05)}.langs svg{position:relative;top:.5em;width:1.7em;height:1.7em}.langs .icon{display:block;position:absolute;top:.9em;left:50%;right:0;width:44px;height:44px;margin-left:-22px;padding:0;vertical-align:middle;text-align:center;font:1.5em/0 Arial,sans-serif}#choices{width:100%;margin:0;padding:0;background:#fff;background:var(--langs-bg,#fff)}.langs li ul{display:none;overflow:hidden;position:absolute;z-index:1000;top:auto;right:0;bottom:2.7815em;bottom:calc(100% - .05em);left:0;width:2.7815em;margin:0;padding:0;background:inherit;animation:dropup .22s 1 ease-in-out;-ms-animation:none}.selector label{display:inline-table;width:100%;height:100%;cursor:pointer}.langs li:hover,.langs li a:hover,.langs li a:focus{background-color:#eee;background-color:var(--langs-border,#eee);outline:none}.langs a{display:block;vertical-align:middle;border-color:#eee;border-color:var(--langs-border,#eee);text-decoration:none;color:#222;line-height:2.6;font-weight:700}.langs li b{display:block;margin:0;padding:0;border-top-color:transparent;text-align:center}.langs ul li.active,.langs ul li.active a{background-color:#d3d3d3;background-color:var(--langs-bg-active,#d3d3d3)}.langs li:first-child:hover ul{display:block}@media screen and (max-width:635px){.langs-outer{margin:0 3%}.langs .selector{height:2.7em}.langs li ul{width:calc(100% - 1px)}.langs label{position:absolute;z-index:2;top:0;left:0;width:100%}.langs label svg{left:.6em;display:block;width:1.7em;height:1.7em}#check{display:none;top:0;left:0;width:3em;height:3em;border:0;background:transparent;backface-visibility:hidden;cursor:pointer;pointer-events:auto;animation:dropup .22s 1 ease-in-out;-ms-animation:none}#check:not(:checked) ~ label:before,#check:checked ~ label:before{content:'??'}#check:not(:checked) ~ #choices{display:none}#check:checked ~ #choices{display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}html .mobile-hide{display:none}html .mobiles,html .desktop-hide{display:block}}.langs:not(:root) li ul{bottom:calc(100% - .5px);width:calc(100% + 0px)}
@@ -562,7 +566,7 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 		<a href="#!" class="btn ripple #33e-bg">Link Ripple</a><button class="btn ripple #33e-bg">button ripple</button> <button class="btn grad-#33e-#a00-bg ripple fs120%"><span>button large gradient ripple</span></button></p>
 	</div>
 
-	<p>A decorative buttons collection with growing effect into it: </p>
+	<p>A decorative buttons collection with growing effect on hover event: </p>
 	<p><a href="#!" class="btn trans #fff-bg grow"><i class="icon">👍</i> Upvote</a> <a href="#!" class="btn trans #fff-bg grow"><i class="icon">😝</i> Funny</a> <a href="#!" class="btn trans #fff-bg grow"><i class="icon">😍</i> Love</a> <a href="#!" class="btn trans #fff-bg grow"><i class="icon">😮</i> Surprised</a> <a href="#!" class="btn trans #fff-bg grow"><i class="icon">😤</i> Angry</a> <a href="#!" class="btn trans #fff-bg grow"><i class="icon">😥</i> Sad</a></p>
 	<p>or a simple one: <a href="#!" class="btn trans #fff-bg grow">☕ Ko-Fi</a></p>
 
@@ -588,11 +592,16 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 	</div>
 
 	<div class="outer">
-		<p>Tooltip for <a href="javascript:void(0)" data-tooltip="Copy (data) from one computer system to another over the Internet.">links</a></p>
+		<p>Toaster & Badge components styling:</p>
+		<span class="info">Message <a href="#!"><i>×</i></a></span> <span class="info alert">Alert <a href="#!"><i>×</i></a></span> <span class="info done">Done <a href="#!"><i>×</i></a></span> <span class="rel bdg" data-items="3">Badge</span>
 	</div>
 
 	<div class="outer" style="margin-bottom:2em">
 		<p>Here is a <a href="#!" class="over">Link with effect</a></p>
+	</div>
+
+	<div class="outer">
+		<p>Tooltip for <a href="javascript:void(0)" data-tooltip="Copy (data) from one computer system to another over the Internet.">links</a></p>
 	</div>
 
 	<div class="outer" style="margin-bottom:3em">
@@ -614,11 +623,12 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 		</figure>
 		</a>
 		<div class="reveal-inner">
-			<a href="#!" class="btn fs150% #33e-bg effect"><span>Link Primary</span></a>
+			<span class="btn fs150% #33e-bg effect"><span>Link Primary</span></span>
 		</div>
 	</div>
 
 	<div class="outer" style="margin:2em 0 4em 1em">
+		<p>Sliders are styling as close as the original checkboxes aspect by default: a very light red for disabled choices; a dark green with a grey background for enabled choices in order to get blank or full elements and better accessibility.</p>
 		<label for="slider" class="fl-l no-select">Choose (activate [tick/switch to right] or disable [switch to left or keep blank]):</label>
 		<span class="slider fl-l">
 			<input aria-invalid="false" type="checkbox" name="ac-376" value="1" id="slider">
@@ -752,7 +762,7 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 	</div>
 
 	<div class="outer">
-		<a href="#!" class="btn rounded shadow grow #a00-bg search-icon"><span class="readers">Search</span></a>
+		<a href="#!" aria-label="Search" data-tooltip="Search" class="btn rounded shadow grow #a00-bg search-icon"><span></span></a>
 	</div>
 
 	<div class="outer">
