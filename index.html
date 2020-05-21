@@ -8,6 +8,9 @@
 
 <meta name="supported-color-schemes" content="light dark">
 
+<script>"use strict";document.documentElement.className="js "+(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect?"nosvg":"svg");var arr=['article','aside','footer','figcaption','figure','footer','header','nav','main','picture','section','small','template'];for(var i=13;i--;){document.createElement(arr[i]);};
+//function inject(){var e=this.responseText,h=document.getElementsByTagName("head")[0],a=document.getElementsByTagName("meta")[0],s=document.createElement("style");s.media='screen';s.textContent=e;if("undefined"!==typeof s){h.insertBefore(h.appendChild(s),a)}}function loadFonts(U,t,w){if(w<(window.innerWidth||document.documentElement.clientWidth||document.getElementBbyTagName("body").clientWidth)){if(typeof console!="undefined"){console.time("Process");};var args=Array.prototype.slice.call(arguments,3),xhr=new XMLHttpRequest();xhr.ontimeout=function(){if(window.console){console.error("❌ The request for "+U+" timed out.");}};xhr.onload=function(){if(xhr.readyState===4){if(xhr.status===200){inject.apply(xhr,args);document.querySelector("html").classList.add("wf-active");if(window.console){console.log("✔ Fonts Loaded! class `.wf-active` added,");}if(window.console){console.timeEnd("Process");}}else{console.error(xhr.statusText);}}};xhr.open("GET",U,true);xhr.timeout=t;xhr.send(null);}}
+//loadFonts('css/fonts.css', 2500, 680);</script>
 <style>
 
 /*!
@@ -29,7 +32,8 @@
 
 :root{
 
-	--bg-action:#33e
+	--bg-action:#33e;
+	--lettrin:#a00
 }
 
 html{
@@ -62,6 +66,10 @@ text-rendering:optimizelegibility;
 text-rendering:optimizeSpeed
 }
 
+@media (max-width:50em){
+html{font-size:calc(112.5% + 0.5vw)}
+}
+
 /*! General rules */
 article,aside,figure,figcaption,footer,header,main,nav,section{display:block}
 
@@ -71,6 +79,8 @@ background-color:#f8f8ff;
 text-rendering:optimizeLegibility;
 text-rendering:geometricPrecision
 }
+
+main{width:98%;margin:0 1%}
 
 .rel{position:relative}
 .abs{position:absolute}
@@ -82,6 +92,9 @@ html .block{display:block}
 .table{display:table}
 .table-cell{display:table-cell}
 body .table-center{float:none;display:table;margin-left:auto;margin-right:auto}
+html .mxa{margin-right:auto;margin-left:auto}
+html .mr0{margin-right:0}
+html .pl0{padding-left:0}
 
 html .fs80\%{font-size:80%}
 html .fs150\%{font-size:150%}
@@ -117,7 +130,8 @@ height:inherit;
 background:rgba(255,255,255,0);
 }
 
-::-moz-focus-inner{padding:0;border-style:none}:-moz-focusring{outline:1px dotted ButtonText}:-moz-ui-invalid{box-shadow:none}
+.btn::-moz-focus-inner,.btn[type="button"]::-moz-focus-inner,.btn[type="reset"]::-moz-focus-inner,.btn[type="submit"]::-moz-focus-inner{padding:0;border-style:none}
+::-moz-focus-inner{padding:0;border-style:none}:-moz-focusring{outline:1px dotted ButtonText}:-moz-ui-invalid{box-shadow:none}input:invalid{outline:thin currentColor;box-shadow:none}
 a,area,button,input,label,select,summary,textarea,[tabindex]{-ms-touch-action:manipulation;touch-action:manipulation}
 body:not(.user-tabbing) button:focus,body:not(.user-tabbing) .btn:focus,body:not(.user-tabbing) input:focus,body:not(.user-tabbing) select:focus,body:not(.user-tabbing) textarea:focus,body:not(.user-tabbing) select:focus,body:not(.user-tabbing) option:focus{outline:none}input:disabled,input[disabled],textarea:disabled,textarea[disabled],select:disabled,select[disabled],.btn.disabled,button:disabled,button[disabled],.btn:disabled,.btn[disabled],[role="button"]:disabled,[role="button"][disabled],html .disabled{opacity:.75;border:inherit;background-color:inherit;color:#444;cursor:not-allowed}
 
@@ -127,12 +141,12 @@ a{color:#333}
 a.over{padding:0 .16em .1em;word-break:break-word;word-wrap:break-word;text-decoration:none;border-bottom:2px solid #42a5f5;border-bottom-color:hsla(0,0%,100%,0);box-shadow:inset 0 -4px 0 rgba(66,165,245,.3);-webkit-transition:box-shadow .3s;-ms-transition:box-shadow .3s;transition:box-shadow .3s}a.over:hover{border-color:transparent;background-color:#c6e4fc;background-color:hsla(0,0%,100%,0);box-shadow:inset 0 -2em 0 rgba(66,165,245,.3)}
 
 /* Base buttons styles: required (8 rules - 1174 bytes) */
-.btn,button,label,input,select,textarea{font:normal 400 normal 100%/100% BlinkMacSystemFont,'-apple-system','Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif}.btn,button,input{border:none;background-color:transparent;-moz-appearance:none;-webkit-appearance:none;appearance:none;border:none;background-color:transparent;-moz-appearance:none;-webkit-appearance:none;appearance:none}.btn{display:inline-table;display:inline-block;position:relative;z-index:2;margin-right:8px;padding:0 1em;min-width:0;height:2.6em;border-style:none;vertical-align:baseline;text-align:center;text-decoration:none;line-height:2.6em;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);-ms-touch-action:manipulation;touch-action:manipulation}a.btn,label.btn{display:inline-table;display:inline-block;*vertical-align:bottom}.btn span{padding:0;line-height:2.3em}button span{display:inline-block;padding:0 1em;line-height:2.6em}input.btn{display:inline-table;display:inline-block}.btn:active{border-color:#3273dc;box-shadow:0 0 0 .125em rgba(255,255,255,.2);text-shadow:-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5),-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5)}
+.btn,button,label,input,select,textarea{font:normal 400 normal 100%/100% BlinkMacSystemFont,'-apple-system','Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif}.btn,button,input{border:none;background-color:transparent;-moz-appearance:none;-webkit-appearance:none;appearance:none;border:none;background-color:transparent;-moz-appearance:none;-webkit-appearance:none;appearance:none}.btn{display:inline-table;display:inline-block;position:relative;z-index:2;min-width:5.4em;min-width:2ch;height:2.6em;margin-right:8px;padding:0 1em;border-style:none;vertical-align:baseline;text-align:center;text-decoration:none;line-height:2.6;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);-ms-touch-action:manipulation;touch-action:manipulation}@supports (display:flex){.btn{display:inline-flex;justify-content:center;-webkit-box-align:center;align-items:center}}a.btn,label.btn{display:inline-table;display:inline-block;*vertical-align:bottom}.btn span{min-width:2em;padding:0;line-height:2.3}button span{display:inline-block;padding:0 1em;line-height:2.6em}input.btn{display:inline-table;display:inline-block}.btn:active{border-color:#3273dc;box-shadow:0 0 0 .125em rgba(255,255,255,.2);text-shadow:-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5),-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5)}
 
-/* Icon's button styles (4 rules - 403 bytes) */
-.btn i{position:relative;z-index:-1;display:inline-table;display:inline-block;line-height:0;font-style:normal;vertical-align:baseline \0}.btn svg{overflow:hidden;height:1em;vertical-align:middle;line-height:0;transition:transform .25s ease-in-out;will-change:transform}.icon{font-style:normal;font-size:100%}.btn:active:not(.outline) i.icon,.btn:active:not(.outline-outer) i.icon{filter:brightness(100%)!important}
+/* Icon's button styles (4 rules - 436 bytes) */
+.btn i{position:relative;z-index:-1;display:inline-table;display:inline-block;line-height:0;font-style:normal;vertical-align:baseline \0}.btn svg{overflow:hidden;width:1em;height:1em;vertical-align:middle;line-height:0;transition:transform .25s ease-in-out;will-change:transform}.icon{vertical-align:middle;font-style:normal;font-size:100%}.btn:active:not(.outline) i.icon,.btn:active:not(.outline-outer) i.icon{filter:brightness(100%)!important}
 
-.btn.radius{border-radius:.2em}
+.btn.radius{border-radius:.25em}
 body .border{border:.2em solid}
 body .btn.border{height:2.225em;line-height:2.225em}
 html .rounded{min-width:1.1em;padding-right:.865em;padding-left:.865em;border-radius:50%}
@@ -145,11 +159,10 @@ html .no-shadow{box-shadow:none}
 .effect:active{border-color:#3273dc;box-shadow:0 0 0 .125em rgba(255,255,255,.2);text-shadow:-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5),-.0001px 0 hsla(0,0%,100%,.5),0 -.0001px hsla(0,0%,100%,.5)}.effect:active:not(.outline),.effect:active:not(.outline-outer){filter:brightness(180%);text-shadow:-.0001px 0 hsla(0,0%,0%,.2),0 -.0001px hsla(0,0%,0%,.2),-.0001px 0 hsla(0,0%,0%,.2),0 -.0001px hsla(0,0%,0%,.2)}
 
 /* Transparent aspect (3 rules - 296 Bytes) */
-.trans,[data-theme="light"] .trans{height:2.55em;border:.0622px solid #e4e4e4;color:inherit;box-shadow:0 -6px 10px white,0 4px 10px rgba(0,0,0,0.15)}.btn.trans:hover,[data-theme="light"] .btn.trans:hover{border-color:#cbcbcb;border-color:hsla(0,0%,100%,0)}.trans:active{border-color:#ddd;background-color:#fff}
-html body button.trans{line-height:0/*2.45em*/}
+.trans,[data-theme="light"] .trans{border:.0622px solid #e4e4e4;color:inherit;box-shadow:0 -6px 10px white,0 4px 10px rgba(0,0,0,0.15)}.btn.trans:hover,[data-theme="light"] .btn.trans:hover{border-color:#cbcbcb;border-color:hsla(0,0%,100%,0)}.trans:active{border-color:#ddd;background-color:#fff}
 
 /*! Neumorphism aspect (3 rules - 540 bytes) */
-.neumorph,[data-theme="light"] .neumorph{/*height:2.425em;*/border-color:hsla(0,0%,98%,1);box-shadow:inset 0 0 15px rgba(55,84,170,0),inset 0 0 20px rgba(255,255,255,0),10px 10px 10px rgba(55,84,170,.15),-10px -10px 22px white,inset 0 0 -4px rgba(255,255,255,.2)}.neumorph:hover,[data-theme="light"] .neumorph:hover{box-shadow:inset 0 -2px 5px #fff,inset 0 2px 5px rgba(0,0,0,.15),inset 0 -2px 5px #fff,inset 2px 2px 3px rgba(0,0,0,.15)}.neumorph:active,[data-theme="light"] .neumorph:active{box-shadow:inset 0 -2px 5px #fff,inset 0 2px 5px rgba(0,0,0,.15)}
+.neumorph,[data-theme="light"] .neumorph{/*height:2.425em;*/border-color:hsla(0,0%,98%,1);box-shadow:inset 0 0 15px rgba(55,84,170,0),inset 0 0 20px rgba(255,255,255,0),10px 10px 10px rgba(55,84,170,.15),-10px -10px 22px white,inset 0 0 -4px rgba(255,255,255,.2)}.neumorph:hover,[data-theme="light"] .neumorph:hover{box-shadow:inset 0 -2px 5px #fff,inset 0 2px 5px rgba(0,0,0,.15),inset 0 -2px 5px #fff,inset 2px 2px 3px rgba(0,0,0,.15),inset -2px 2px 3px rgba(0,0,0,.1)}.neumorph:active,[data-theme="light"] .neumorph:active{box-shadow:inset 0 -2px 5px #fff,inset 0 2px 5px rgba(0,0,0,.15)}
 
 /* Growing effect (4 rules - 409 bytes) */
 .grow,.grow i{-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out}.grow:focus,.grow:hover{-webkit-transform:scale(1.1);transform:scale(1.1)}.grow:hover i{-webkit-transform:scale(1.3);transform:scale(1.3)}.grow:active{-webkit-transform:scale(.9);transform:scale(.9)}
@@ -174,6 +187,8 @@ body:not(.user-tabbing) option:focus{outline:none}
 .bold{font-weight:bold}
 
 /* Colors */
+.proto-dark-bg{background-color:#4b5668;color:#fff}
+.proto-medium-bg{background-color:#647591;color:#fff}
 .\#fff-bg{background-color:#fff;color:#333}
 .\#33e-bg{background-color:#33e;color:#fafafa}
 .\#a00-bg{background-color:#a00;color:#fff}
@@ -181,6 +196,8 @@ body:not(.user-tabbing) option:focus{outline:none}
 .\#ff0-bg{background-color:#ff0;color:#111}
 .\#ccc-bg{background-color:#ccc;color:#111}
 .\#f2f5f7-bg{background-color:#f2f5f7;color:#444}
+.\#f9c-bg{background-color:#f9c;color:#333}
+
 .#f9f-bg{background-color:#fafafa;color:#333}
 .grad-\#33e-\#a00-bg{background:#33e;background-image:linear-gradient(90deg,#33e 0,#a00);color:#fff}
 .grad-\#33e-\#064-bg{background:#33e;background-image:linear-gradient(90deg,#33e 0,#064);color:#fff}
@@ -198,11 +215,11 @@ body .\#ff0-brd{border-color:#ff0}
 border:1px solid #edf2f7;
 box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
 }
-.radius{border-radius:.25rem}
 
+html .fs685\%{font-size:685%;font-size:8vw}
 html .fs150\%{font-size:150%}
 html .fs120\%{font-size:120%}
-html .fs685\%{font-size:685%;font-size:8vw}
+html .fs50\%{font-size:50%}
 
 
 /*! Checkbox & Radio buttons Styles (1119 Bytes) */
@@ -228,25 +245,24 @@ html label{line-height:1.5;cursor:pointer}.slider{display:inline-table;display:i
 */
 /*html label{line-height:1.5;cursor:pointer}.slider{display:inline-table;display:inline-block;position:relative;top:0;left:.2em;width:2.875em;height:1.625em;vertical-align:baseline;line-height:1.625em}.slider input[type="checkbox"]{opacity:0;position:relative;z-index:5;width:2.08em;height:1.5em;cursor:pointer}.outer-slider{display:block;position:absolute;top:.3em;left:0;width:2.08em;height:1.2em}.outer-slider::before{content:'';position:absolute;z-index:2;top:-.1em;bottom:.2em;left:0;height:1.3em;width:1.3em;background-color:#fff;-o-border-radius:50%;border-radius:50%;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s;border: 1px solid #c00}.inner-slider{position:absolute;top:0;left:0;right:0;bottom:0;background-color:hsla(0,100%,40%,1);border-radius:3.4em;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s}.slider input:checked ~ .outer-slider::before{right:0;background-color:#064;-webkit-transform:translateX(.8em);-moz-transform:translateX(.8em);-o-transform:translateX(.8em);-ms-transform:translateX(.8em);transform:translateX(.8em)}.slider input:checked+span .inner-slider{border:1px solid #aaa;background:#fff}.slider input:checked+span:before{border-color:#058943}*/
 /* Slider buttons styles (9 rules - 1200 Bytes) */
-html label{line-height:1.5;cursor:pointer}.slider{display:inline-table;display:inline-block;position:relative;top:0;left:.2em;width:2.875em;height:1.625em;vertical-align:baseline;line-height:1.625em}.slider input[type="checkbox"]{opacity:0;position:relative;z-index:5;width:2.08em;height:1.5em;cursor:pointer}.outer-slider{display:block;position:absolute;top:.3em;left:0;width:2.08em;height:1.2em}.outer-slider::before{content:'';position:absolute;z-index:2;top:-1px;left:0;height:1.3em;width:1.3em;background:#f77;-o-border-radius:50%;border-radius:50%;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s}.inner-slider{position:absolute;top:0;left:0;right:0;bottom:0;border:1px solid hsl(0,0%,73.3%);border-radius:3.4em;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s}.slider input:checked ~ .outer-slider::before{right:0;background:#064;-webkit-transform:translateX(.8em);-moz-transform:translateX(.8em);-o-transform:translateX(.8em);-ms-transform:translateX(.8em);transform:translateX(.8em)}.slider input:checked+span .inner-slider{border:1px solid hsl(0,0%,73.3%);background:#bbb}.slider input:checked+span:before{border-color:#064}
+html label{line-height:1.5;cursor:pointer}.slider{display:inline-table;display:inline-block;position:relative;top:0;left:.2em;width:2.875em;height:1.625em;vertical-align:baseline;line-height:1.625em}.slider input[type="checkbox"]{opacity:0;position:relative;z-index:5;width:2.08em;height:1.5em;cursor:pointer}.outer-slider{display:block;position:absolute;top:.3em;left:0;width:2.08em;height:1.2em}.outer-slider::before{content:'';position:absolute;z-index:2;top:-1px;left:0;height:1.3em;width:1.3em;background:#f77;-o-border-radius:50%;border-radius:50%;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s}.inner-slider{position:absolute;top:0;left:0;right:0;bottom:0;border:1px solid hsl(0,0%,73.3%);border-radius:3.4em;-webkit-transition:.4s;-o-transition:.4s;-moz-transition:.4s;transition:.4s}.slider input:checked ~ .outer-slider::before{right:0;background:#33e;-webkit-transform:translateX(.8em);-moz-transform:translateX(.8em);-o-transform:translateX(.8em);-ms-transform:translateX(.8em);transform:translateX(.8em)}.slider input:checked+span .inner-slider{border:1px solid hsl(0,0%,73.3%);background:#aaa}.slider input:checked+span:before{border-color:#33e}
 
-/* Tooltips (8 rules - 1670 bytes) */
-[data-tooltip],.tooltip{position:relative;cursor:pointer}[data-tooltip]:before,[data-tooltip]:after,.tooltip:before,.tooltip:after{visibility:hidden;opacity:0;position:absolute;transition:opacity .2s ease-in-out,visibility .2s ease-in-out,transform .2s cubic-bezier(.71,1.7,.77,1.24);transform:translate3d(0,0,0);pointer-events:none}[data-tooltip]:hover:before,[data-tooltip]:hover:after,[data-tooltip]:focus:before,[data-tooltip]:focus:after,.tooltip:hover:before,.tooltip:hover:after,.tooltip:focus:before,.tooltip:focus:after{visibility:visible;opacity:1}.tooltip:before,[data-tooltip]:before{content:'';z-index:1001;border:12px solid transparent;background:transparent}.tooltip:after,[data-tooltip]:after{content:attr(data-tooltip);z-index:1000;left:0;max-width:inherit;padding:.5em .5em .8em;background-color:#000;color:#fff;line-height:1;font-size:medium;width:inherit;text-align:left}[data-tooltip]:before,[data-tooltip]:after,.tooltip:before,.tooltip:after,.tooltip-top:before,.tooltip-top:after{overflow:visible;bottom:100%;font-weight:400;box-shadow:none;text-shadow:none}[data-tooltip]:before,.tooltip:before,.tooltip-top:before{margin-left:0;margin-bottom:-22px;border-top-color:#333;text-decoration:none!important;text-shadow:none}[data-tooltip]:hover:before,[data-tooltip]:hover:after,[data-tooltip]:focus:before,[data-tooltip]:focus:after,.tooltip:hover:before,.tooltip:hover:after,.tooltip:focus:before,.tooltip:focus:after,.tooltip-top:hover:before,.tooltip-top:hover:after,.tooltip-top:focus:before,.tooltip-top:focus:after{-webkit-transform:translateY(-11px);-moz-transform:translateY(-11px);-o-transform:translateY(-11px);transform:translateY(-11px)}
+/* Additional Tooltips bottom styles (2 rules - 324 Bytes) */
+[data-tooltip].tooltip-bottom:before,[data-tooltip].tooltip-bottom:after,.tooltip-bottom:after,.tooltip-bottom:before,.tooltip-bottom:after{top:100%;bottom:auto;margin-top:22px}[data-tooltip]::before,[data-tooltip].tooltip-bottom:before,.tooltip-bottom:before{margin-top:10.5px;border-top:none;border-bottom:12px solid #000;border-bottom-color:#000}
+/* Tooltips, bottom position only (8 rules - 1708 bytes) */
+[data-tooltip],.tooltip{position:relative;cursor:pointer}[data-tooltip]:before,[data-tooltip]:after,.tooltip:before,.tooltip:after{visibility:hidden;opacity:0;position:absolute;transition:opacity .2s ease-in-out,visibility .2s ease-in-out,transform .2s cubic-bezier(.71,1.7,.77,1.24);transform:translate3d(0,0,0);pointer-events:none;will-change:transition,translateY}[data-tooltip]:hover,[data-tooltip]:hover:before,[data-tooltip]:hover:after,[data-tooltip]:focus:before,[data-tooltip]:focus:after,.tooltip:hover:before,.tooltip:hover:after,.tooltip:focus:before,.tooltip:focus:after{z-index:1001;opacity:.85;visibility:visible;text-decoration:none}.tooltip:before,[data-tooltip]:before{content:'';border:12px solid transparent;background:transparent}.tooltip:after,[data-tooltip]:after{content:attr(data-tooltip);z-index:1001;left:0;width:inherit;min-width:100%;max-width:inherit;padding:.5em .5em .9em;background-color:#000;text-transform:none;text-align:left;color:#fff;line-height:1;font-size:small;text-shadow:none}[data-tooltip]:before,[data-tooltip]:after,.tooltip:before,.tooltip:after,.tooltip-top:before,.tooltip-top:after{overflow:visible;bottom:100%;font-weight:400;box-shadow:none;text-shadow:none}[data-tooltip]:before,.tooltip:before,.tooltip-top:before{margin-left:2px;margin-bottom:-22.9px;border-top-color:#000;text-decoration:none!important}[data-tooltip]:hover:before,[data-tooltip]:hover:after,[data-tooltip]:focus:before,[data-tooltip]:focus:after,.tooltip:hover:before,.tooltip:hover:after,.tooltip:focus:before,.tooltip:focus:after,.tooltip-top:hover:before,.tooltip-top:hover:after,.tooltip-top:focus:before,.tooltip-top:focus:after{-webkit-transform:translateY(-11px);-moz-transform:translateY(-11px);-o-transform:translateY(-11px);transform:translateY(-11px)}
+
+/*
+@media screen and (max-width:720px){
+[data-tooltip]{margin-right:26px}[data-tooltip]:before,[data-tooltip].tooltip-bottom::before,.tooltip-bottom::before{content:'?';visibility:visible;opacity:1;display:table;top:0;bottom:0;right:-26px;width:1.5em;margin:0;border:none;background:#333;color:#fff;text-align:center;font-size:1em;border-radius:50%}
+}
+*/
 
 .full,.row,[class^="_"]{position:relative;float:left;vertical-align:top;*display:inline}
 
-._1\/2 {
+._1\/2{
 width:49.9999%;
 margin:0
-}
-
-.card h2 a:after {
-content:'';
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%
 }
 
 
@@ -268,7 +284,7 @@ vertical-align:middle;
 cursor:help
 }
 
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme:dark){
 
 	body{background:#484d5d}
 	[data-theme="dark"] body,[data-theme="dark"] a{color:#fafafa}
@@ -276,13 +292,12 @@ cursor:help
 	[data-theme="dark"] .trans{border-width:1px;color:#fafafa}
    	[data-theme="dark"] .trans:active,html .\#f2f5f7-bg,[data-theme="dark"] body .\#f2f5f7-bg,html .\#fff-bg,[data-theme="dark"] .\#fff-bg{color:#333}
 	[data-theme="dark"] .trans{box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 -2px 4px -1px rgba(0,0,0,.06)}
-	.neumorph,[data-theme="dark"] .neumorph{border-color:#333;box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
+	.neumorph,[data-theme="dark"] .neumorph{border-color:#333;box-shadow:inset 0 -2px 5px rgba(0,0,0,.1),inset 0 2px 5px rgba(0,0,0,0.15) /*box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)*/}
 	.neumorph:hover,[data-theme="dark"] .neumorph:hover{box-shadow:0 -2px 5px rgba(0,0,0,.3),0 2px 5px rgba(0,0,0,0.15);}
 	.neumorph:active,[data-theme="dark"] .neumorph:active{box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
 	.btn[disabled],.btn.disabled{color:#fafafa}
 	.tooltip:after,[data-tooltip]:after,[data-theme="dark"] .tooltip:after,[data-theme="dark"] [data-tooltip]:after{background-color:#fafafa;color:#333}
-	[data-tooltip]:before,.tooltip:before,.tooltip-top:before,[data-theme="dark"] [data-tooltip]:before,[data-theme="dark"] .tooltip:before,[data-theme="dark"] .tooltip-top:before{border-top-color:#fafafa}
-	.theme-switch path{fill:#fff}
+	[data-tooltip]:before,.tooltip:before,.tooltip-top:before,[data-theme="dark"] [data-tooltip]:before,[data-theme="dark"] .tooltip:before,[data-theme="dark"] .tooltip-top:before{border-top-color:#fafafa}[data-theme="dark"] .tooltip-bottom:before{border-bottom-color:#fafafa}
 
 }
 
@@ -298,28 +313,19 @@ cursor:help
 [data-theme="dark"] .neumorph{border-color:#333;box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
 [data-theme="dark"] .neumorph:hover{box-shadow:0 -2px 5px rgba(0,0,0,.3),0 2px 5px rgba(0,0,0,0.15);}
 [data-theme="dark"] .neumorph:active{box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
-/*
-.trans:active{color:#333}
-.trans{box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 -2px 4px -1px rgba(0,0,0,.06)}
-.neumorph{border-color:#333;box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
-.neumorph:hover{box-shadow:0 -2px 5px rgba(0,0,0,.3),0 2px 5px rgba(0,0,0,0.15)}
 
-[data-theme="light"] .neumorph:active{box-shadow:inset 0 -2px 5px rgba(0,0,0,.3),inset 0 2px 5px rgba(0,0,0,0.15)}
-[data-theme="light"] .btn[disabled],[data-theme="light"] .btn.disabled{color:#bbb}
-*/
-[data-theme="light"] .tooltip:after,[data-tooltip]:after{background-color:#333;color:#fafafa}
-[data-theme="light"] [data-tooltip]:before,.tooltip:before,.tooltip-top:before{border-top-color:#333}
+[data-theme="light"] .tooltip:after,[data-tooltip]:after{background-color:#000;color:#fafafa}
+[data-theme="light"] [data-tooltip]:before,.tooltip:before,.tooltip-top:before{border-top-color:#000}
 
 /*! Theme switcher */
 .theme-switch input{visibility:hidden}
-@supports ((--a: 0)){
+/* All other IE8 and below */
+@supports ((--a:0)){
 
 	.theme-switcher{position:relative}
 	.theme-switch,.theme-switch input{visibility:visible;display:inline-block;z-index:0;top:0;width:24px;height:24px;border:none;border-width:0;border-color:transparent;outline:none;cursor:pointer;-moz-appearance:none;-webkit-appearance:none;-ms-appearance:none;appearance:none}
 	.theme-switch input{position:absolute;visibility:hidden;z-index:-1;top:0;left:0;width:1.2em;height:1.2em;border:none;background-color:transparent;color:transparent;left: 0;top: 0;}
 	.theme-switch svg{z-index:2;top:2px;left:0}
-	[data-theme="dark"] .theme-switch path{fill:#fff}
-	[data-theme="light"] .theme-switch path{fill:currentColor}
 
 }
 
@@ -327,7 +333,7 @@ cursor:help
 .btn{margin-bottom:1em}
 
 p{
-font:normal 300 normal 1em/1 '-apple-system',system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif
+font:normal 300 normal 1em/1.5 '-apple-system',system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif
 }
 
 .fl-l{float:left}
@@ -335,51 +341,11 @@ font:normal 300 normal 1em/1 '-apple-system',system-ui,BlinkMacSystemFont,'Segoe
 code,pre{font-family:monospace,monospace;font-size:1em}
 b,strong{font-weight:bold}
 
-.lettrin{margin:1.4em 0 0 0;line-height:1.5em;hyphens:auto}
+.lettrin{margin:1.4em 0 0 0;line-height:1.65em;hyphens:auto}
 
-/*html p.lettrin .drop span{float:left;margin:0 .1em -.09em .01em;padding:0;text-indent:0;line-height:1em;font-family:inherit;font-size:7.2em;font-weight:500}
-html p.lettrin .drop span:before,html p.lettrin .drop span:after{content:'';display:block}
-html p.lettrin .drop span:before{margin-top:-.12em}
-html p.lettrin .drop span:after{margin-bottom:.0em}
 
-.visually-hidden, .hidden {
-	position: absolute;
-	top: auto;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-	width: 1px;
-	height: 1px;
-	white-space: nowrap;
-}
+html p.lettrin:first-letter{overflow:hidden;display:block;float:left;margin:-.12em .1em -.09em .01em;padding:0;text-indent:0;color:currentColor;color:var(--lettrin,currentColor);line-height:100%;font-family:inherit;font-size:7.9em;font-weight:600}
 
-<span aria-hidden="true" class="drop"><span>A</span>nimal</span>
-	<span class="visually-hidden">Animal</span>
-*/
-
-html p.lettrin:first-letter{overflow:hidden;float:left;margin:-.12em .1em -.09em .01em;padding:0;text-indent:0;line-height:1em;font-family:inherit;font-size:7.2em;font-weight:500}
-
-html body .bdg{
-display:inline-table;
-height:1.257em;
-text-decoration:none!important
-}
-.bdg:after{
-content:attr(data-items);
-display:table-cell;
-position:absolute;
-top:-1em;
-right:-50%;
-min-width:.4em;
-margin:0 auto;
-padding:2px 6px;
-vertical-align:middle;
-background:#a00;
-text-align:center;
-text-decoration:none!important;
-color:#fff;
-font:normal 600 1em/1.1 Arial,sans-serif;
-border-radius:50%
-}
 .marquee{overflow:hidden;margin:.3em 0}
 .marquee span{display:inline-block;width:100%;width:40vw;margin-left:-3vw;text-align:center;white-space:nowrap;color:currentColor;
 /* Number of repeating word into the viewport width */
@@ -395,7 +361,11 @@ text-shadow:40vw 0 currentColor,80vw 0 currentColor,120vw 0 currentColor,160vw 0
 
 
 input[type="search"]{-webkit-appearance:textfield}.search-block{position:relative;width:100%;margin:-.1em auto 2em 0}.search-box{width:100%;vertical-align:middle;white-space:nowrap}.search-inner{width:100%}.search-box form{position:relative;display:flex;width:100%;height:3em;border:.062pc solid #ddd;border-radius:2px 0 0 2px;border-left:none}.search-box label{display:block;top:0;left:0;width:3em;height:3em}.search-box .search-field{float:right;width:95.3%;width:calc(100% - .5em);height:100%;padding-left:calc(3.5em);border:none;-webkit-appearance:textfield;outline-offset:-2px}.search-box button[type="submit"]:before,.search-icon span:before{content:"⚲";display:block;position:relative;top:0;left:0;height:100%;padding:.15em 0 0 .05em;border:none;text-align:center;line-height:1em;color:currentColor;font-size:2.5em;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}.search-box button[type="submit"],.search-box input[type="submit"]{overflow:hidden;position:absolute;top:0;left:0;bottom:0;width:3em;height:3em;padding:0;border-left:.062pc solid #ddd;border-radius:0 2px 2px 0;cursor:pointer;*position:relative;*height:2.9em;*margin:28px 0 0 -3.3em;*padding:15px 15px 12px;*font-size:100%}.search-box input[type="submit"]{width:auto;padding:0 .4em}.search-submit .readers{*display:block;*position:relative!important;*top:-1.1em;*left:-1em;*min-width:3em;*height:2.9em;*background:#333;*color:#fff;*line-height:3em}
-.search-box .search::-webkit-input-placeholder{color:#65737e}.search-box .search::-moz-placeholder{color:#65737e}.search-box .search:-ms-input-placeholder{color:#65737e}.search-box .search:hover,.search-box .search:focus,.search-box .search:active{outline:none;background:none;border-color:transparent}
+.search-box .search::-webkit-input-placeholder{color:#65737e}.search-box .search::-moz-placeholder{color:#65737e}.search-box .search:-ms-input-placeholder{color:#65737e}
+/*.search-box .search:hover,.search-box .search:focus,.search-box .search:active{outline:none;background:none;border-color:transparent}*/
+.search-field:focus{
+width:95.5%
+}
 
 /*! Search submit button on the right */
 html .search-box.right .search{margin-left:0;margin-right:45px;padding-right:.5em;padding-left:.5em}.search-box.right .search-field{float:left;padding-left:.5em}html .search-box.right .icon{left:auto;right:.13em}.search-icon{height:3.229em}
@@ -408,7 +378,7 @@ html .search-box.right label,.search-box.right button[type="submit"],.search-box
 .form-container label.full span{margin-left:2%}
 input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus{background-color:#eee}
 input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], input[type="url"]{
-height:2.722em;
+height:2.475em;
 margin:0 0 1em;
 padding:0 .3em;
 border:none;
@@ -420,7 +390,7 @@ input:required{box-shadow:-4px 0 0 #064}
 
 html .big .form-region{width:100%}
 
-@media screen and (max-width:620px){html .form-region{width:100%}}
+@media screen and (max-width:40em){html .form-region{width:100%}}
 
 
 /*! Starting Grid (to be completed) */
@@ -485,32 +455,196 @@ width:93%;
 margin-right:3%;
 margin-left:3%
 }
-._1\/3,
-._outer_1\/3 ._col {
-width:33.3%;
-*width:33.29%
+._2\/3 {width:66.52%}
+._2\/3 ._inner{
+width:96%;
+margin-right:2%;
+margin-left:2%
 }
-._1\/4 {width:24.9%}
-._1\/4 ._inner {
-display:block;
-width:94%;
-margin-right:3%;
-margin-left:3%
+._1\/3{
+width:33.026%;
+/*
+*width:33.29%
+*/
+margin-right:2px;
+margin-left:2px
+}
+._1\/3 ._inner{
+width:92%;
+margin-right:4%;
+margin-left:4%
 }
 
-.reveal-inner{visibility:hidden;position:absolute;z-index:-1;top:50%;left:50%;-webkit-transform:translate(-50%,5px) scale(.95);transform:translate(-50%,5px) scale(.95);-o-transition:.7s cubic-bezier(.19,1,.22,1);-webkit-transition:.7s cubic-bezier(.19,1,.22,1);transition:.7s cubic-bezier(.19,1,.22,1)}.reveal a:focus ~ .reveal-inner,.reveal a:hover ~ .reveal-inner{z-index:1;visibility:visible;opacity:1;-webkit-transform:translate(-50%,-7px);transform:translate(-50%,-7px)}
+._1\/4 {width:25%}
+._1\/4 ._inner {
+display:block;
+width: 89%;
+margin-right: 5.5%;
+margin-left: 5.5%
+}
+
+.reveal .grid-100 img{display:table-cell;width:7em;margin:0 1em;vertical-align:middle}
+.reveal{min-height:5em}.reveal-inner{visibility:hidden;position:absolute;z-index:-1;top:50%;left:50%;-webkit-transform:translate(-50%,5px) scale(.95);transform:translate(-50%,5px) scale(.95);-o-transition:.7s cubic-bezier(.19,1,.22,1);-webkit-transition:.7s cubic-bezier(.19,1,.22,1);transition:.7s cubic-bezier(.19,1,.22,1)}.reveal a:focus ~ .reveal-inner,.reveal a:hover ~ .reveal-inner{z-index:1;visibility:visible;opacity:1;-webkit-transform:translate(-50%,-7px);transform:translate(-50%,-7px)}
 
 /*! Hacks for Opera11/ie7/8 support respectively: can be removed safely if not needed */
 .reveal-inner .btn{margin-left:-50%;*margin-left:0%;*left:-50%;margin-left:calc(0ch)}
 
-/* Toasters styling (5 rules - 608 Bytes) */
-.info{position:relative;z-index:0;left:1em;display:inline-table;margin:2em 2.5em 0 0;padding:.2em .2em .2em 2.1em;font:1em/1 "bold Arial"}.info a{position:absolute;top:-1em;right:-.8em;text-decoration:none;color:#aaa}.info:after{content:'';overflow:hidden;position:absolute;z-index:1;top:-1em;left:-1em;width:3em;height:3em;background:#30e;background:linear-gradient(135deg,#83e4e2 0%,#30e 100%);border-radius:1rem 1rem 0 1rem}.info.alert:after{background:red;background:linear-gradient(135deg,#ff0 0%,#f00 100%)}.info.done:after{background:#a2ed56;background:linear-gradient(135deg,#83e4e2 0%,#a2ed56 100%)}
+/* Toasters styling (5 rules - 619 Bytes) */
+.info{position:relative;z-index:0;left:1em;display:inline-table;margin:2em 2.5em 0 0;padding:.2em .2em .2em 2.1em;font:bold 1em/1 Arial,sans-serif}.info a{position:absolute;top:-1em;right:-.8em;text-decoration:none;color:#aaa}.info:after{content:' ';overflow:hidden;position:absolute;z-index:1;top:-1em;left:-1em;width:3em;height:3em;background:#30e;background:linear-gradient(135deg,#83e4e2 0%,#30e 100%);border-radius:1rem 1rem 0 1rem}.info.alert:after{background:red;background:linear-gradient(135deg,#ff0 0%,#f00 100%)}.info.done:after{background:#a2ed56;background:linear-gradient(135deg,#83e4e2 0%,#a2ed56 100%)}
+
+/* Badges styling (2 rules - 373 Bytes) */
+html body .bdg{display:inline-table;height:1.257em;text-decoration:none!important}.bdg:after{content:attr(data-items);display:table-cell;position:absolute;top:-.8em;right:-50%;min-width:.4em;margin:0 auto;padding:2px 6px;vertical-align:middle;background:#a00;text-align:center;text-decoration:none!important;color:#fff;font:600 1em/1.1 Arial,sans-serif;border-radius:50%}
 
 /* Languages selector (15 rules - 2430 Bytes) */
-.langs-outer{right:1%;bottom:0;float:right;width:2.781em;height:2.781em;margin:1em 0;color:#333;*right:4%}.langs{top:-.77em;width:2.7815em;padding:0;background:#fff;background:var(--langs-bg,#fff);color:var(--langs-color,#304659);font:1em/2.5 Heebo,Arial,sans-serif;outline:none;cursor:pointer}.langs .selector{height:2.781em;list-style:none;text-align:center;box-shadow:0 0 20px -1px rgba(0,0,0,.05)}.langs svg{position:relative;top:.5em;width:1.7em;height:1.7em}.langs .icon{display:block;position:absolute;top:.9em;left:50%;right:0;width:44px;height:44px;margin-left:-22px;padding:0;vertical-align:middle;text-align:center;font:1.5em/0 Arial,sans-serif}#choices{width:100%;margin:0;padding:0;background:#fff;background:var(--langs-bg,#fff)}.langs li ul{display:none;overflow:hidden;position:absolute;z-index:1000;top:auto;right:0;bottom:2.7815em;bottom:calc(100% - .05em);left:0;width:2.7815em;margin:0;padding:0;background:inherit;animation:dropup .22s 1 ease-in-out;-ms-animation:none}.selector label{display:inline-table;width:100%;height:100%;cursor:pointer}.langs li:hover,.langs li a:hover,.langs li a:focus{background-color:#eee;background-color:var(--langs-border,#eee);outline:none}.langs a{display:block;vertical-align:middle;border-color:#eee;border-color:var(--langs-border,#eee);text-decoration:none;color:#222;line-height:2.6;font-weight:700}.langs li b{display:block;margin:0;padding:0;border-top-color:transparent;text-align:center}.langs ul li.active,.langs ul li.active a{background-color:#d3d3d3;background-color:var(--langs-bg-active,#d3d3d3)}.langs li:first-child:hover ul{display:block}@media screen and (max-width:635px){.langs-outer{margin:0 3%}.langs .selector{height:2.7em}.langs li ul{width:calc(100% - 1px)}.langs label{position:absolute;z-index:2;top:0;left:0;width:100%}.langs label svg{left:.6em;display:block;width:1.7em;height:1.7em}#check{display:none;top:0;left:0;width:3em;height:3em;border:0;background:transparent;backface-visibility:hidden;cursor:pointer;pointer-events:auto;animation:dropup .22s 1 ease-in-out;-ms-animation:none}#check:not(:checked) ~ label:before,#check:checked ~ label:before{content:'??'}#check:not(:checked) ~ #choices{display:none}#check:checked ~ #choices{display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}html .mobile-hide{display:none}html .mobiles,html .desktop-hide{display:block}}.langs:not(:root) li ul{bottom:calc(100% - .5px);width:calc(100% + 0px)}
+.langs-outer{right:1%;bottom:0;float:right;width:2.781em;height:2.781em;margin:1em 0;color:#333;*right:4%}.langs{top:-.77em;width:2.7815em;padding:0;background:#fff;background:var(--langs-bg,#fff);color:var(--langs-color,#304659);font:1em/2.5 Heebo,Arial,sans-serif;outline:none;cursor:pointer}.langs .selector{height:2.781em;list-style:none;text-align:center;box-shadow:0 0 20px -1px rgba(0,0,0,.05)}.langs svg{position:relative;top:.5em;width:1.7em;height:1.7em}.langs .icon{display:inline-table;width:100%;height:100%;padding:0;vertical-align:middle;text-align:center;font:1.5em/0 Arial,sans-serif}#choices{width:100%;margin:0;padding:0;list-style:none;background:#fff;background:var(--langs-bg,#fff)}.langs li ul{display:none;overflow:hidden;position:absolute;z-index:1000;top:auto;right:0;bottom:2.7815em;bottom:calc(100% - .05em);left:0;width:2.7815em;margin:0;padding:0;background:inherit;animation:dropup .22s 1 ease-in-out;-ms-animation:none}.selector label{display:inline-table;width:100%;height:100%;cursor:pointer}.langs li:hover,.langs li a:hover,.langs li a:focus{background-color:#eee;background-color:var(--langs-border,#eee);outline:none}.langs a{display:block;vertical-align:middle;border-color:#eee;border-color:var(--langs-border,#eee);text-decoration:none;color:#222;line-height:2.6;font-weight:700}.langs li b{display:block;margin:0;padding:0;border-top-color:transparent;text-align:center}.langs ul li.active,.langs ul li.active a{background-color:#d3d3d3;background-color:var(--langs-bg-active,#d3d3d3)}.langs li:first-child:hover ul{display:block}@media screen and (max-width:41em){.langs-outer{margin:0 3%}.langs .selector{height:2.7em}.langs li ul{width:calc(100% - 1px)}.langs label{position:absolute;z-index:2;top:0;left:0;width:100%}.langs label svg{left:.6em;display:block;width:1.7em;height:1.7em}#check{display:none;top:0;left:0;width:3em;height:3em;border:0;background:transparent;backface-visibility:hidden;cursor:pointer;pointer-events:auto;animation:dropup .22s 1 ease-in-out;-ms-animation:none}#check:not(:checked) ~ label:before,#check:checked ~ label:before{content:'??'}#check:not(:checked) ~ #choices{display:none}#check:checked ~ #choices{display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}html .mobile-hide{display:none}html .mobiles,html .desktop-hide{display:block}}.langs:not(:root) li ul{bottom:calc(100% - .5px);width:calc(100% + 0px)}
 
 /* Gotop link (2 rules - 838 Bytes) */
 #gotop{visibility:hidden;position:fixed;position:sticky;right:.7em;bottom:2em;float:right;text-decoration:none;font:normal 300 normal 3em/1 Arial,sans-serif;opacity: 0;-webkit-transform:translate(0,0) scale(.8);-ms-transform:translate(0,0) scale(.8);transform:translate(0,0) scale(.5);-webkit-transition-property:opacity,transform;-o-transition-property:opacity,transform;transition-property:opacity,transform;-webkit-transition-duration:.5s;-o-transition-duration:.5s;transition-duration:.5s}html #gotop.visible{visibility:visible;z-index:8;display:table-cell;display:block;display:inline-block;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);filter:alpha(opacity=100);-moz-opacity:1;opacity:1;-webkit-transform:translate(0,0) scale(1);-ms-transform:translate(0,0) scale(1);transform:translate(0,0) scale(1);will-change:translate,scale}
+
+/*! Progressive lazy loader */
+.progressive{position:relative;display:block;overflow:hidden;outline:none}.progressive img{display:block;width:100%;max-width:none;height:auto;border:0}.progressive img.preview{filter:blur(2vw);transform:scale(1.05)}.progressive img.reveal{position:absolute;left:0;top:0;will-change:transform,opacity;animation:progressiveReveal 1s ease-out}@keyframes progressiveReveal{0%{transform:scale(1.05);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* Progress loading barr () */
+.progress{position:relative;float:left;margin:0 0 1em}.progress,.progress span{overflow:hidden;width:100%;height:.2em}.progress,.progress span{will-change:left,right}.progress span{position:absolute;top:0;right:-100%;width:6em;background-color:#9e9e9e;border-color:#9e9e9e;-webkit-animation:linear-right 1.5s linear infinite;animation:linear-right 1.5s linear infinite}@keyframes linear-left{from{right:-6em}to{left:unset;right:100%}}@keyframes linear-right{from{left:-6em}to{right:unset;left:100%}}
+
+
+.overlay{
+position:fixed;
+z-index:10001;
+left:0;
+top:-100%;
+width:100%;
+height:100%;
+background-color:rgb(0,0,0);
+background-color:rgba(0,0,0, 0.9);
+transition:0.5s
+}
+
+/* Position the content inside the overlay */
+.overlay-content{
+position:relative;
+top:10%;
+width:100%;
+margin-top:30px;
+text-align:center
+}
+
+/* The navigation links inside the overlay */
+.overlay a{
+display:block;
+padding:8px;
+text-decoration:none;
+color:#818181;
+font-size:36px;
+transition:0.3s
+}
+
+.overlay a:hover, .overlay a:focus {color:#f1f1f1}
+
+
+.overlay .closebtn{
+position:absolute;
+top:20px;
+right:45px;
+line-height: 60px;
+font-size:60px
+}
+
+.overlay ul{
+overflow-y:auto;
+width:50%;
+height:400px;
+height:calc(70vh);
+margin:0 auto 10%;
+margin-top:10vh;
+padding:0;
+scrollbar-color:#ccc #eee;
+scrollbar-width:thin
+}
+
+.overlay .search-box{width:50%;margin:6em 25%}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height:28em){
+
+	.overlay{overflow:hidden}
+	.overlay a {font-size:20px}
+	.overlay .closebtn{
+		top:15px;
+		right:35px;
+		font-size:40px
+	}
+
+}
+
+@media screen and (max-width:38em){
+
+	.overlay ul{width:100%;margin:0 auto 10em}
+
+}
+
+
+.card{position:relative;width:50%;height:22em;margin:0 0 1em 2em;border:1px solid #ddd;border-color:hsl(0,0%,93.32%);box-shadow:0 1px 0 rgba(17,17,26,.05),0 0 8px rgba(17,17,26,.1)}
+@media screen and (max-width:51em){.card{width:98%;margin:0 0 5em 1%}}
+.card .full{position:absolute;width:100%;height:100%;}
+.right-card .img-card{right:0;left:50%}
+.left-card .img-card{right:50%;left:0}
+.card-inner{position:absolute;width:46%;height:100%;padding:0 2%}
+.left-card .card-inner{left:50%}
+.card figure{position:absolute;z-index:1;top:0;right:0;left:50%;width:auto;height:100%}
+.img-card{overflow:hidden;position:relative;float:left;width:25em;height:25em}
+.img-card:before{content:'Loading...';position:absolute;z-index:1;top:45%;left:0;display:block;width:100%;height:2.5em;background:linear-gradient(transparent,transparent),transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' display='block' preserveAspectRatio='xMidYMid' viewBox='0 0 100 100' style='margin:auto;background:transparent'%3E%3Ccircle cx='50' cy='23' r='13' fill='hsla(355.96,69.06%25,61.95%25,1)'%3E%3Canimate attributeName='cy' calcMode='spline' dur='1s' keySplines='0.45 0 0.9 0.55;0 0.45 0.55 0.9' keyTimes='0;0.5;1' repeatCount='indefinite' values='23;77;23'/%3E%3C/circle%3E%3C/svg%3E") center 30% no-repeat;text-align:center}
+.card img{position:relative;z-index:2;width:100%;height:auto;text-align:center;will-change:transform}
+.v-img-card{overflow:hidden;width:auto;height:100%}
+.v-img-card img{
+/* Needed for old browsers */
+left:-20%;width:auto;height:100%}
+.h-img-card{width:25em;height:17em}
+.h-img-card img{height:auto;width:100%}
+
+@supports (transform:translate(1%,1%)){
+
+	.card img{
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%) translateZ(0) scale3d(1,1,1)
+	}
+
+}
+
+
+
+[class^="col"] > div{
+outline:1px solid #ddd
+}
+.col{
+display:flex
+}
+
+
+.s-form{
+width:50%;
+margin:0 auto
+}
+
+.s-form fieldset{
+position:relative;
+width:100%
+}
+
+.s-form input[type="text"]{
+width:98%;
+margin:0;
+padding:0
+}
+
+.s-form input[type="submit"]{
+margin-top:1.5em
+}
+
+.inner-left-form{
+width: 70%
+}
 
 </style>
 <noscript>
@@ -528,12 +662,84 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 	<![endif]-->
 
 <header class="full" style="clear:both">
-	<h1 style="display:inline-table;margin:0 0 0 1%;font:300 320%/1 sans-serif"><span class="line-into" style="">Woo CSS</span><br> Framework</h1>
+	<h1 style="display:inline-table;margin:0 0 0 1%;font:300 320%/1 sans-serif"><span class="line-into" style="">Woo CSS</span> <i class="icon fs50%">🤷</i><br> Framework</h1>
 	<span class="fl-r txt-r" style="padding-top:1em"><a href="javascript:void(0)" class="btn trans #f9f-bg" onclick="document.getElementById('body').style.fontSize='160%';document.getElementById('body').classList.add('big');return true;">Change font size</a> <a href="javascript:void(0)" class="btn trans #fff-bg" onclick="document.location.reload(true);">Reload</a></span>
-	<span class="fl-r txt-r theme-switcher" style="clear:both;margin:0 1% 0 0"><label class="theme-switch rel" for="checkbox"><svg width="24" height="24" aria-label="Light/Dark Mode" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="abs"><title class="reader">Light/Dark Mode</title><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-2V6a6 6 0 1 1 0 12z"></path></svg><input class="rel" id="checkbox" type="checkbox"></label></span>
+	<span class="fl-r txt-r theme-switcher" style="clear:both;margin:0 1% 0 0"><label class="theme-switch rel" for="checkbox"><svg width="24" height="24" aria-label="Dark/Light Mode" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="abs"><style>@media (prefers-color-scheme:dark){path{fill:#333}}[data-theme="light"] path{fill:#333}@media (prefers-color-scheme:dark){path{fill:#fff}}[data-theme="dark"] path{fill:#fff}</style><title class="reader">Dark/light Mode</title><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-2V6a6 6 0 1 1 0 12z"></path></svg><input class="rel" id="checkbox" type="checkbox"></label></span>
 </header>
 
 <main>
+
+	<div class="col outer">
+		<div class="_1/2">
+			<div class="_inner">
+				<p>Column</p>
+			</div>
+		</div>
+		<div class="_1/2">
+			<div class="_inner">
+				<p>Column</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="progress">
+		<span></span>
+	</div>
+
+	<div class="col outer">
+		<div class="_1/3">
+			<div class="_inner">
+				<p>Column</p>
+			</div>
+		</div>
+		<div class="_1/3">
+			<div class="_inner">
+				<p>Column</p>
+			</div>
+		</div>
+		<div class="_1/3">
+			<div class="_inner">
+				<p>Column</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col outer">
+		<div class="_2/3">
+			<div class="_inner">
+				<p>Column</p>
+			</div>
+		</div>
+		<div class="_1/3">
+			<div class="_inner">
+				<p>Column</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col outer">
+		<div class="_1/4">
+			<div class="_inner">
+				<p>Column</p>
+			</div>
+		</div>
+		<div class="_1/4">
+			<div class="_inner">
+				<p>Column</p>
+			</div>
+		</div>
+		<div class="_1/4">
+			<div class="_inner">
+				<p>Column</p>
+			</div>
+		</div>
+		<div class="_1/4">
+			<div class="_inner">
+				<p>Column</p>
+			</div>
+		</div>
+	</div>
+
 
 	<div class="outer">
 		<p>Note: The global <code>.btn</code> class is available for all kind of HTML elements (support for custom document's font size) with some complementary styles (all elements are A11Y friendly - WCAG: AAA level).</p>
@@ -544,10 +750,10 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 		<a href="#!" class="btn #33e-bg :hover"><span>Link Primary</span></a>
 		<button class="btn #33e-bg effect :hover">Button Primary</button>
 		<button class="btn outline effect #fff-bg">Button Outline</button>
-		<button class="btn outline effect #fff-bg"><span>button outline</span></button>
+		<button class="btn outline effect #fff-bg"><span tabindex="0">button outline</span></button>
 		<a href="#!" class="btn grad-#064-#33e-bg">Link Primary</a>
-		<button class="btn grad-#33e-#a00-bg fs120%"><span>button large</span></button>
-		<button class="btn #33e-bg fs80%"><span>button small</span></button>
+		<button class="btn grad-#33e-#a00-bg fs120%"><span tabindex="0">button large</span></button>
+		<button class="btn #33e-bg fs80%"><span tabindex="0">button small</span></button>
 		<input type="submit" value="Submit input" class="btn #33e-bg" />
 		<label class="btn #33e-bg">Label</label>
 		<label class="btn #33e-bg">Label</label>
@@ -563,7 +769,7 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 
 	<div class="outer">
 		<p>
-		<a href="#!" class="btn ripple #33e-bg">Link Ripple</a><button class="btn ripple #33e-bg">button ripple</button> <button class="btn grad-#33e-#a00-bg ripple fs120%"><span>button large gradient ripple</span></button></p>
+		<a href="#!" class="btn ripple #33e-bg">Link Ripple</a><button class="btn ripple #33e-bg">button ripple</button> <button class="btn grad-#33e-#a00-bg ripple fs120%"><span>button large gradient ripple</span></button> <a href="#!" class="btn radius #33e-bg :hover"><span>Link radius</span></a></p>
 	</div>
 
 	<p>A decorative buttons collection with growing effect on hover event: </p>
@@ -578,11 +784,11 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 			<input type="submit" value="Submit input" class="btn outline radius" />
 			<a href="#!" class="btn #33e-bg">link primary</a>
 			<a href="#!" class="btn no-select effect border #fff-bg #33e-brd">Link with border</a><br />
-			<label class="btn #33e-bg effect"><span class="#33e-bg">Label (<code>.#33e-bg</code> Ratio: 7.37)</span></label>
-			<button class="btn #a00-bg effect"><span class="#a00-bg">Button (<code>.#a00-bg</code> Ratio: 5.89)</span></button>
+			<label class="btn #33e-bg effect"><span tabindex="0" class="#33e-bg">Label (<code>.#33e-bg</code> Ratio: 7.37)</span></label>
+			<button class="btn #a00-bg effect"><span tabindex="0" class="#a00-bg">Button (<code>.#a00-bg</code> Ratio: 5.89)</span></button>
 			<a href="#!" class="btn #064-bg effect">Link (<code>.#064-bg</code> Ratio: 7.04)</a>
-			<button type="submit" class="btn #ff0-bg effect"><span>Submit button (<code>.#ff0-bg</code> Ratio: 17.58)</span></button>
-		Primary base line (a <a href="#!">simple link</a>)</p>
+			<button type="submit" class="btn #ff0-bg effect"><span tabindex="0">Submit button (<code>.#ff0-bg</code> Ratio: 17.58)</span></button>
+		Primary base line (a <a href="#!" data-tooltip="So we keep the baseline">simple link</a>)</p>
 	</div>
 
 	<div class="outer">
@@ -590,6 +796,17 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 			<a href="#!" aria-label="Go to previous page" class="btn underline #fff-bg">Prev</a> <a href="#!" aria-label="Go to page 1" class="btn trans #f9f-bg">1</a> <a href="#!" aria-label="Go to page 2" class="btn trans #f9f-bg">2</a> <a href="#!" aria-label="Go to page 3" class="btn trans #f9f-bg">3</a> <span aria-label="More pages" class="btn trans disabled">...</span><a href="#!" class="btn trans rounded">30</a> <a href="#!" aria-label="Go to page 31" class="btn trans rounded">31</a> <a href="#!" aria-label="Go to page 32" class="btn trans rounded">32</a> <span data-tooltip="Some more pages" class="btn trans rounded no-shadow disabled">...</span> <a href="#!" aria-label="Go to next page" class="btn #f9f-bg">Next <svg role="img" aria-label="Discover" aria-hidden="true" focusable="false" width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><switch><g><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></g><foreignObject width="0" height="0" overflow="hidden"><i class="icon">→</i></foreignObject></switch></svg></a>
 		</nav>
 	</div>
+
+	<div class="outer">
+			<div class="">
+				<button class="btn fl-l mr0 proto-dark-bg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><switch><g><path d="M15 3h6v18h-6M10 17l5-5-5-5M13.8 12H3"></path></g><foreignObject width="0" height="0" overflow="hidden"><i class="icon">→</i></foreignObject></switch></svg></i>&nbsp;<span>Login</span></button>
+				<button class="btn pl0 proto-dark-bg">
+					<span class="fl-l">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"></path></svg>&nbsp;
+							<span class="proto-medium-bg"> 1 </span> <span class="">$2.00</span>
+					</span>
+				</button></div>
+		</div>
 
 	<div class="outer">
 		<p>Toaster & Badge components styling:</p>
@@ -601,13 +818,45 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 	</div>
 
 	<div class="outer">
-		<p>Tooltip for <a href="javascript:void(0)" data-tooltip="Copy (data) from one computer system to another over the Internet.">links</a></p>
+		<p>Tooltip for <a href="javascript:void(0)" data-tooltip="Copy (data) from one computer system to another over the Internet.">links</a> and <a href="javascript:void(0)" data-tooltip="Look at here: I'm below! 🤪" class="tooltip-bottom">a bottom tooltip</a> too.</p>
+	</div>
+
+	<div class="outer">
+
+		<div class="fl-l card right-card">
+			<article class="full fl-l">
+				<div class="card-inner #f9c-bg">
+					<h2>Card Title</h2>
+					<p>Card Text... Card Text... Card Text... Card Text... Card Text...</p>
+				</div>
+			</article>
+			<figure class="_1/2 img-card">
+				<div class="v-img-card">
+		 			<img src="http://lorempixel.com/600/400/" loading="lazy" alt="placeholder" class="" />
+				</div>
+			</figure>
+		</div>
+
+		<div class="fl-l card left-card">
+			<article class="full fl-l">
+				<div class="card-inner #f9c-bg">
+					<h2>Card Title</h2>
+					<p>Card Text... Card Text... Card Text... Card Text... Card Text...</p>
+				</div>
+			</article>
+			<figure class="_1/2 img-card">
+				<div class="v-img-card">
+		 			<img src="http://lorempixel.com/600/400/" loading="lazy" alt="placeholder" class="" />
+				</div>
+			</figure>
+		</div>
+
 	</div>
 
 	<div class="outer" style="margin-bottom:3em">
 		<p class="lettrin margin-correct">
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-		<p style="line-height:1.5em">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		<p style="line-height:1.65em">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 	</div>
 
 	<div class="outer">
@@ -617,18 +866,29 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 	</div>
 
 	<div class="outer rel reveal">
-		<a href="#!" class="block">
+		<a href="https://cara-tm.com" class="block">
 		<figure class="rel protect">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/hero.jpg" alt="hero" />
+			<img loading="lazy" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/hero.jpg" alt="hero" />
 		</figure>
 		</a>
 		<div class="reveal-inner">
-			<span class="btn fs150% #33e-bg effect"><span>Link Primary</span></span>
+			<span class="btn fs150% #33e-bg ripple"><span>Link Primary</span></span>
+		</div>
+	</div>
+
+	<div class="outer rel reveal">
+		<a href="https://cara-tm.com" class="block">
+			<div class="table mxa w-layout-grid grid-100">
+				<img src="https://uploads-ssl.webflow.com/5be9f6c142de30aab1814572/5d000c2c137522828b1b0d7e_flywheel_logo_horz_black.png" id="w-node-d825696a8dae-1268396d" alt="" class="image-36"><img src="https://uploads-ssl.webflow.com/5be9f6c142de30aab1814572/5cddb474ee894c65a9b07800_logo_1-min.png" id="w-node-e51b0ca5eda4-1268396d" alt="" class="image-37"><img src="https://uploads-ssl.webflow.com/5be9f6c142de30aab1814572/5d000c2cb3cb0e93964066eb_MT_Logo_600_Black.png" id="w-node-6a16a516144a-1268396d" alt="" class="image-39"><img src="https://uploads-ssl.webflow.com/5be9f6c142de30aab1814572/5cddb473e09fa5496e77792a_download-min.png" id="w-node-31b7e3f55354-1268396d" alt="" class="image-38"><img src="https://uploads-ssl.webflow.com/5be9f6c142de30aab1814572/5cddb473f797882d105a5508_Black%20Clipped-min.png" id="w-node-fd75e6b33077-1268396d" alt="" class="image-40">
+			</div>
+		</a>
+		<div class="reveal-inner">
+			<span class="btn fs150% #33e-bg ripple"><span>Link Primary</span></span>
 		</div>
 	</div>
 
 	<div class="outer" style="margin:2em 0 4em 1em">
-		<p>Sliders are styling as close as the original checkboxes aspect by default: a very light red for disabled choices; a dark green with a grey background for enabled choices in order to get blank or full elements and better accessibility.</p>
+		<p>Sliders are styling as close as the original checkboxes aspect by default: a very light red for disabled choices (the original design is a blank square); a dark green with a grey background for enabled choices in order to get blank or full elements and better accessibility.</p>
 		<label for="slider" class="fl-l no-select">Choose (activate [tick/switch to right] or disable [switch to left or keep blank]):</label>
 		<span class="slider fl-l">
 			<input aria-invalid="false" type="checkbox" name="ac-376" value="1" id="slider">
@@ -739,7 +999,7 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 					</div>
 					<div class="full">
 						<span class="fl-l block _inner"><em class="txt-normal #666-color">required:</em></span>
-						<div class="_2/3" style="margin-bottom:1em">
+						<div class="full" style="margin-bottom:1em">
 							<label for="gprd" data-tooltip="Slide right or tick to approve 😎" class="fl-l bold no-select" style="width:10em;margin:.6em .4em 0 1em">GDPR consent:
 								<span class="slider fl-r">
 									<input aria-invalid="false" type="checkbox" name="ac-376" value="1" required id="gprd">
@@ -761,8 +1021,48 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 
 	</div>
 
+	<div id="overlay" class="overlay">
+
+	<!-- Button to close the overlay navigation -->
+	<a href="javascript:void(0)" aria-label="Close" data-tooltip="Close" class="closebtn tooltip-bottom" onclick='document.getElementById("overlay").style.top="-100%";'>&times;</a>
+
+	<!-- Overlay content -->
+	<div class="overlay-content">
+		<div class="search-box fl-l">
+			<div class="search-inner fl-l rel">
+				<form role="search" method="get" class="full fl-l #fff-bg" action="">
+					<label for="search-pop" class="abs">
+						<h4 class="readers">Search:</h4>
+					</label>
+					<input name="q" type="search" aria-label="Write then press [Enter]" title="Write then press [Enter]" class="search-field" id="search-pop" placeholder="Write your search here…">
+					<button type="submit" aria-label="Find" title="Find" class="search-submit"><span class="readers">Find</span></button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>
+
 	<div class="outer">
-		<a href="#!" aria-label="Search" data-tooltip="Search" class="btn rounded shadow grow #a00-bg search-icon"><span></span></a>
+		<a href="#!" aria-label="Search" data-tooltip="Search" class="btn rounded shadow grow #a00-bg search-icon" onclick='document.getElementById("overlay").style.top="0%";'><span></span></a>
+	</div>
+
+
+	<div class="outer">
+
+		<form class="table mxa s-form">
+			<fieldset class="cf no-border">
+				<legend class="">Sign up for our newsletter</legend>
+				<div class="inner-left-form fl-l cf">
+					<label class="block clip" for="email-address">Email Address</label>
+					<input class="fl-l" placeholder="Your Email Address" type="text" name="email-address" value="" id="email-address" />
+				</div>
+				<div class="inner-right-form fl-l cf">
+					<input class="fl-l btn trans #fff-bg" type="submit" value="Subscribe" />
+				</div>
+			</fieldset>
+		</form>
+
 	</div>
 
 	<div class="outer">
@@ -826,7 +1126,10 @@ if((document['querySelector']&&document['querySelectorAll']&&document['addEventL
 if(typeof(Storage)!=="undefined"){var currentTheme=localStorage.getItem("theme")?localStorage.getItem("theme"):null;if(currentTheme){document.documentElement.setAttribute("data-theme",currentTheme);if(currentTheme==="dark"){toggleSwitch.checked=true;}}}}
 /*! Simple animated 'Go to Top' scroll */
 var gotop=document.getElementById("gotop");window.onload=gotop.classList.remove("visible");window.onscroll=function(){if(document.body.scrollTop>120||document.documentElement.scrollTop>120){gotop.classList.add("visible");}else{gotop.classList.remove("visible");}};gotop.onclick=function(e){e.preventDefault();document.body.scrollTop=0;document.documentElement.scrollTop=0;behavior:"smooth";}
-
+/*! Progressiv lazy loader */
+window.addEventListener&&window.requestAnimationFrame&&document.getElementsByClassName&&window.addEventListener('load',function(){'use strict';var e,t,n=document.getElementsByClassName('progressive replace');function i(){t=t||setTimeout(function(){t=null,r()},300)}function r(){n.length&&requestAnimationFrame(function(){for(var t,i,r=window.innerHeight,a=0;a<n.length;)0<(i=(t=n[a].getBoundingClientRect()).top)+t.height&&r>i?(s(n[a]),n[a].classList.remove('replace')):a++;e=n.length})}function s(e,t){var n=e&&(e.getAttribute('data-href')||e.href);if(n){var i=new Image,r=e.dataset;r&&(r.srcset&&(i.srcset=r.srcset),r.sizes&&(i.sizes=r.sizes)),i.onload=function(){requestAnimationFrame(function(){n===e.href&&(e.style.cursor='default',e.addEventListener('click',function(e){e.preventDefault()},!1));var t=e.querySelector&&e.querySelector('img.preview');e.insertBefore(i,t&&t.nextSibling).addEventListener('animationend',function(){t&&(t.alt&&(i.alt=t.alt),e.removeChild(t)),i.classList.remove('reveal')})})},(t=1+(t||0))<3&&(i.onerror=function(){setTimeout(function(){s(e,t)},3e3*t)}),i.className='reveal',i.src=n}}window.addEventListener('scroll',i,!1),window.addEventListener('resize',i,!1),MutationObserver&&new MutationObserver(function(){n.length!==e&&r()}).observe(document.body,{subtree:!0,childList:!0,attributes:!0,characterData:!0}),r()},!1);
+/*! Progressiv lazy loader */
+window.addEventListener&&window.requestAnimationFrame&&document.getElementsByClassName&&window.addEventListener('load',function(){'use strict';var e,t,n=document.getElementsByClassName('progressive replace');function i(){t=t||setTimeout(function(){t=null,r()},300)}function r(){n.length&&requestAnimationFrame(function(){for(var t,i,r=window.innerHeight,a=0;a<n.length;)0<(i=(t=n[a].getBoundingClientRect()).top)+t.height&&r>i?(s(n[a]),n[a].classList.remove('replace')):a++;e=n.length})}function s(e,t){var n=e&&(e.getAttribute('data-href')||e.href);if(n){var i=new Image,r=e.dataset;r&&(r.srcset&&(i.srcset=r.srcset),r.sizes&&(i.sizes=r.sizes)),i.onload=function(){requestAnimationFrame(function(){n===e.href&&(e.addEventListener('click',function(e){e.preventDefault()},!1));var t=e.querySelector&&e.querySelector('img.preview');e.insertBefore(i,t&&t.nextSibling).addEventListener('animationend',function(){t&&(t.alt&&(i.alt=t.alt),e.removeChild(t)),i.classList.remove('reveal')})})},(t=1+(t||0))<3&&(i.onerror=function(){setTimeout(function(){s(e,t)},3e3*t)}),i.className='reveal',i.src=n}}window.addEventListener('scroll',i,!1),window.addEventListener('resize',i,!1),MutationObserver&&new MutationObserver(function(){n.length!==e&&r()}).observe(document.body,{subtree:!0,childList:!0,attributes:!0,characterData:!0}),r()},!1);
 </script>
 
 </body></html>
