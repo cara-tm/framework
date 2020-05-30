@@ -88,7 +88,8 @@ main{width:98%;margin:0 1%}
 
 .rel{position:relative}
 .abs{position:absolute}
-.hidden{display:none}
+.hide{display:none}
+.hide-text{overflow:hidden;text-indent:100%;white-space:nowrap}
 
 .fl-r{float:right}
 .fl-l{float:left}
@@ -153,7 +154,7 @@ a.over{padding:0 .16em .1em;word-break:break-word;word-wrap:break-word;text-deco
 .btn.radius{border-radius:.25em}
 .btn.large-radius{border-radius:2em}
 body .border{border:.2em solid}
-body .btn.border{height:2.225em;line-height:2.225em}
+body .btn.border{height:2.225em;line-height:2.225}
 html .rounded{min-width:1.1em;padding-right:.865em;padding-left:.865em;border-radius:50%}
 html .no-shadow{box-shadow:none}
 
@@ -216,10 +217,7 @@ body .\#ff0-brd{border-color:#ff0}
 /* Line into effect */
 .line-into{display:inline-block;font-size:80%;box-shadow:inset 0 -.5em 0 rgba(66,165,245,.3)}
 
-.box-shadow{
-border:1px solid #edf2f7;
-box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-}
+.box-shadow{border:1px solid #edf2f7;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05)}
 
 html .fs685\%{font-size:685%;font-size:8vw}
 html .fs150\%{font-size:150%}
@@ -257,11 +255,6 @@ html label{line-height:1.5;cursor:pointer}.slider{display:inline-table;display:i
 /* Additional tooltips, bottom styles (3 rules - 423 Bytes) */
 .tooltip-bottom:after,.tooltip-bottom:before{top:100%;bottom:auto;margin-top:10px}.tooltip-bottom:before{margin-top:0;border-top:none;border-bottom:12px solid #000;border-bottom-color:#000}.tooltip-bottom:hover:before,.tooltip-bottom:hover:after,.tooltip-bottom:focus:before,.tooltip-bottom:focus:after{-webkit-transform:translateY(6px);-moz-transform:translateY(6px);-o-transform:translateY(6px);transform:translateY(6px)}
 
-/*
-@media screen and (max-width:720px){
-[data-tooltip]{margin-right:26px}[data-tooltip]:before,[data-tooltip].tooltip-bottom::before,.tooltip-bottom::before{content:'?';visibility:visible;opacity:1;display:table;top:0;bottom:0;right:-26px;width:1.5em;margin:0;border:none;background:#333;color:#fff;text-align:center;font-size:1em;border-radius:50%}
-}
-*/
 
 .full,.row,[class^="_"]{position:relative;float:left;vertical-align:top;*display:inline}
 
@@ -338,7 +331,7 @@ cursor:help
 .btn{margin-bottom:1em}
 
 p{
-font:normal 300 normal 1em/1.5 '-apple-system',system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+font:normal 300 normal 1.2em/1.8 '-apple-system',system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
 line-height:calc(2px + 2ex + 2px);
 line-height:calc(2ex + 5px)
 }
@@ -352,6 +345,7 @@ b,strong{font-weight:bold}
 
 
 html p.lettrin:first-letter{overflow:hidden;display:block;float:left;margin:-.12em .1em -.09em .01em;padding:0;text-indent:0;color:currentColor;color:var(--lettrin,currentColor);line-height:100%;font-family:inherit;font-size:7.9em;font-weight:600}
+.lettrin:first-letter:after{content:"";display:table;clear:both}
 
 .marquee{overflow:hidden;margin:.3em 0}
 .marquee span{display:inline-block;width:100%;width:40vw;margin-left:-3vw;text-align:center;white-space:nowrap;color:currentColor;
@@ -364,9 +358,7 @@ text-shadow:40vw 0 currentColor,80vw 0 currentColor,120vw 0 currentColor,160vw 0
 /* IE9 hack */
 @media all and (min-width:0\0) and (min-resolution:.001dpcm){.marquee span{width:100%}}
 
-/* Search element (11 rules - 1360 Bytes) */
-
-
+/* TODO: Search element (11 rules - 1360 Bytes) */
 input[type="search"]{-webkit-appearance:textfield}.search-block{position:relative;width:100%;margin:-.1em auto 2em 0}.search-box{width:100%;vertical-align:middle;white-space:nowrap}.search-inner{width:100%}.search-box form{position:relative;display:flex;width:100%;height:3em;border:.062pc solid #ddd;border-radius:2px 0 0 2px;border-left:none}.search-box label{display:block;top:0;left:0;width:3em;height:3em}.search-box .search-field{float:right;width:95.3%;width:calc(100% - .5em);height:100%;padding-left:calc(3.5em);border:none;-webkit-appearance:textfield;outline-offset:-2px}.search-box button[type="submit"]:before,.search-icon span:before{content:"⚲";display:block;position:relative;top:0;left:0;height:100%;padding:.15em 0 0 .05em;border:none;text-align:center;line-height:1em;color:currentColor;font-size:2.5em;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}.search-box button[type="submit"],.search-box input[type="submit"]{overflow:hidden;position:absolute;top:0;left:0;bottom:0;width:3em;height:3em;padding:0;border-left:.062pc solid #ddd;border-radius:0 2px 2px 0;cursor:pointer;*position:relative;*height:2.9em;*margin:28px 0 0 -3.3em;*padding:15px 15px 12px;*font-size:100%}.search-box input[type="submit"]{width:auto;padding:0 .4em}.search-submit .readers{*display:block;*position:relative!important;*top:-1.1em;*left:-1em;*min-width:3em;*height:2.9em;*background:#333;*color:#fff;*line-height:3em}
 .search-box .search::-webkit-input-placeholder{color:#65737e}.search-box .search::-moz-placeholder{color:#65737e}.search-box .search:-ms-input-placeholder{color:#65737e}
 /*.search-box .search:hover,.search-box .search:focus,.search-box .search:active{outline:none;background:none;border-color:transparent}*/
@@ -462,9 +454,6 @@ margin-left:2%
 }
 ._1\/3{
 width:33.026%;
-/*
-*width:33.29%
-*/
 margin-right:2px;
 margin-left:2px
 }
@@ -510,100 +499,50 @@ html body .bdg{display:inline-table;height:1.257em;text-decoration:none!importan
 .progress{position:relative;float:left;margin:0 0 1em}.progress,.progress span{overflow:hidden;width:100%;height:.2em;will-change:left,right}[class*="progress-"] span{position:absolute;top:0;right:-100%;width:8em;border-color:#ddfeef;background-image:linear-gradient(90deg,rgb(91,248,178) 10%,rgb(230,254,15) 50%,rgb(91,248,178) 90%)}.progress-right span{-webkit-animation:linear-right 1.5s linear infinite;animation:linear-right 1.5s linear infinite}.progress-left span{-webkit-animation:linear-left 1.5s linear infinite;animation:linear-left 1.5s linear infinite}@keyframes linear-left{from{right:-6em}to{left:unset;right:100%}}@keyframes linear-right{from{left:-6em}to{right:unset;left:100%}}
 
 
-.overlay{
-position:fixed;
-z-index:10001;
-left:0;
-top:-100%;
-width:100%;
-height:100%;
-background-color:rgb(0,0,0);
-background-color:rgba(0,0,0, 0.9);
-transition:0.5s
-}
-
-/* Position the content inside the overlay */
-.overlay-content{
-position:relative;
-top:10%;
-width:100%;
-margin-top:30px;
-text-align:center
-}
-
-/* The navigation links inside the overlay */
-.overlay a{
-display:block;
-padding:8px;
-text-decoration:none;
-color:#818181;
-font-size:36px;
-transition:0.3s
-}
-
+.overlay{position:fixed;z-index:10001;left:0;top:-100%;width:100%;height:100%;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.9);transition:0.5s}
+.overlay-content{position:relative;top:10%;width:100%;margin-top:30px;text-align:center}
+.overlay a{display:block;padding:8px;text-decoration:none;color:#818181;font-size:36px;transition:0.3s}
 .overlay a:hover, .overlay a:focus {color:#f1f1f1}
-
-
-.overlay .btn-close{
-position:absolute;
-top:20px;
-right:45px;
-line-height: 60px;
-font-size:60px
-}
-
-.overlay ul{
-overflow-y:auto;
-width:50%;
-height:400px;
-height:calc(70vh);
-margin:0 auto 10%;
-margin-top:10vh;
-padding:0;
-scrollbar-color:#ccc #eee;
-scrollbar-width:thin
-}
-
+.overlay .btn-close{position:absolute;top:20px;right:45px;line-height:60px;font-size:60px}
+.overlay ul{overflow-y:auto;width:50%;height:400px;height:calc(70vh);margin:0 auto 10%;margin-top:10vh;padding:0;scrollbar-color:#ccc #eee;scrollbar-width:thin}
 .overlay .search-box{width:50%;margin:6em 25%}
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height:28em){
-
 	.overlay{overflow:hidden}
-	.overlay a {font-size:20px}
-	.overlay .closebtn{
-		top:15px;
-		right:35px;
-		font-size:40px
-	}
-
+	.overlay a{font-size:20px}
+	.overlay .closebtn{top:15px;right:35px;font-size:40px}
 }
 
-@media screen and (max-width:38em){
+@media screen and (max-width:38em){.overlay ul{width:100%;margin:0 auto 10em}}
 
-	.overlay ul{width:100%;margin:0 auto 10em}
 
-}
 
-/* Cards with pic model */
-.h-card{
+.h-card,.v-card{
 overflow:hidden;
 border:1px solid #ddd;
 border-color:hsl(0,0%,93.32%);
 box-shadow:0 1px 0 rgba(17,17,26,.05),0 0 8px rgba(17,17,26,.1)
 }
+
 .h-card div{
 width:46%;
 margin:0 2%
 }
 
+.v-card div{
+width:96%;
+margin:0 2%
+}
+
 @media screen and (max-width:720px){
-	.h-card{
+	.h-card,.v-card{
 		width:98%;
 		margin-left:1%
 	}
 
 }
+
 .img-fits{
 /* If it is an HTML5 element */
 display:block;
@@ -614,20 +553,10 @@ margin:0;
 padding-bottom:56.25%;
 background-color:#eee
 }
-.img-fits:before{
-content:'Loading...';
-position:absolute;
-z-index:1;
-top:45%;
-left:0;
-display:block;
-width:100%;
-height:2em;
-text-align:center
-}
-@supports (fill:#000){
-.img-fits:before{content:'';background:linear-gradient(transparent,transparent),transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%230b93e2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='M20.4 14.5L16 10 4 20'/%3E%3C/svg%3E%0A") center center no-repeat}
-}
+.v-card .img-fits{width:100%}
+.img-fits:before{content:'Loading...';position:absolute;z-index:1;top:45%;left:0;display:block;width:100%;height:2em;text-align:center}
+:lang(fr) .img-fits:before{content:'Chargement...'}
+@supports (fill:#000){.img-fits:before{content:'';background:linear-gradient(transparent,transparent),transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%230b93e2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='M20.4 14.5L16 10 4 20'/%3E%3C/svg%3E%0A") center center no-repeat}}
 .img-fits img{
 position:absolute;
 z-index:2;
@@ -640,7 +569,8 @@ width:auto;
 min-width:100%;
 height:100%;
 min-height:100%;
-margin:auto
+margin:auto;
+color:#eee
 }
 
 
@@ -865,23 +795,37 @@ select:active:focus{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:
 
 	<div class="outer">
 
-	<p>Horizontal "Card" models with equal parts. <br />The only one caveat require to set an height to the "Card" container. But that's so few annoying in regard of the feature which fits its image size into its content in a perfect cross-browsers way:</p>
+		<p>Horizontal & Vertical "Card" models with equal parts. <br />A perfect cross-browsers way to fit an image into its content. But keep in mind, text can't have an exceed height of the image where sizes ratio is applied in order to avoid illustration deformations:</p>
 
-	<article class="h-card _1/2 #f9c-bg">
-		<div class="_outer">
-			<h2>Card Title</h2>
-			<p>Text content comes here... Card Text... Card Text... Card Text... Card Text...</p>
-		</div>
-		<figure class="img-fits _1/2 fl-r">
-			<img src="http://lorempixel.com/600/400/" loading="lazy" alt="-">
-		</figure>
-	</article>
+		<article class="h-card _1/2 #f9c-bg">
+			<div class="_outer">
+				<h2>Card Title</h2>
+				<p>Text content comes here... Card Text... Card Text... Card Text... Card Text...</p>
+			</div>
+			<figure class="img-fits _1/2 protect">
+				<img src="http://lorempixel.com/600/400/" loading="lazy" alt="-">
+			</figure>
+		</article>
 
 	</div>
 
 	<div class="outer">
 
-		
+		<article class="v-card _1/2 #f9c-bg">
+			<div class="_outer">
+				<h2>Card Title</h2>
+				<p>Text content comes here... Card Text... Card Text... Card Text... Card Text...</p>
+			</div>
+			<figure class="img-fits _1/2 protect">
+				<img src="http://lorempixel.com/600/400/" loading="lazy" alt="-">
+			</figure>
+		</article>
+
+	</div>
+
+	<div class="outer">
+
+
 
 	</div>
 
